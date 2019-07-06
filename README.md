@@ -17,6 +17,8 @@ Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)
 
 且听风吟 [http://www.qtfy7.com](http://www.qtfy7.com)  
 
+全能影视 [http://www.qnvod.net](http://www.qnvod.net)  
+
 奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com)  
 
 微云 [https://www.weiyun.com](https://www.weiyun.com)  
@@ -26,6 +28,12 @@ V2Ray [https://connect.freev2ray.org](http://freev2.org)
 零散坑 [https://03k.org](https://03k.org)  
 
 GitLab [https://gitlab.com](https://gitlab.com/huaiping)  
+
+Django [https://www.djangoproject.com](https://www.djangoproject.com)  
+
+Node.js [https://nodejs.org](https://nodejs.org)  
+
+Rails [https://rubyonrails.org](https://rubyonrails.org)  
 
 Vue.js [https://vuejs.org](https://cn.vuejs.org)  
 
