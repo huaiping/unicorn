@@ -1,4 +1,4 @@
-**MySQL笔记（Debian 9.9 + Docker 18.09.6 + MySQL 5.7）**
+**MySQL笔记（Debian 10.0 + Docker 18.09.7 + MySQL 5.7）**
 ```
 docker pull mysql/mysql-server:5.7
 

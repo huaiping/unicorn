@@ -1,4 +1,4 @@
-**MongoDB笔记（Debian 9.9 + MongoDB 4.0.10）**
+**MongoDB笔记（Debian 10.0 + MongoDB 4.0.10）**
 ```
 sudo apt install curl
 curl https://www.mongodb.org/static/pgp/server-4.0.asc | sudo apt-key add -

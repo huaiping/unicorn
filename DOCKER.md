@@ -1,4 +1,4 @@
-**Docker笔记（Debian 9.9 + Docker 18.09.7-ce）**
+**Docker笔记（Debian 10.0 + Docker 18.09.7-ce）**
 ```
 sudo apt remove docker docker-engine docker.io
 sudo apt update

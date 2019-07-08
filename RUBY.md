@@ -1,6 +1,6 @@
-**Ruby笔记（Debian 9.9 + Ruby 2.3.3 + Rails 5.2.3）**
+**Ruby笔记（Debian 10.0 + Ruby 2.5.5 + Rails 5.2.3）**
 ```
-sudo apt install curl build-essential ruby2.3 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
+sudo apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
 sudo apt install apache2 mysql-server libapache2-mod-passenger
 curl -sL http://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install nodejs
