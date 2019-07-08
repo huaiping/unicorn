@@ -105,7 +105,7 @@ PHP and MSSQL on Ubuntu
 ```
 sudo apt install php5-sybase
 ```
-Certbot 0.28.0
+Certbot 0.31.0
 ```
 sudo certbot renew --dry-run
 crontab -e

@@ -54,7 +54,7 @@ Rails in Docker
 ```
 docker pull debian:latest
 docker run --name cynthia -i -t -p 3000:3000 -v /home/data:/data debian:latest /bin/bash
-apt install curl build-essential ruby2.3 ruby-dev libmariadb-dev libxml2-dev zlib1g-dev
+apt install curl build-essential ruby2.5 ruby-dev libmariadb-dev libxml2-dev zlib1g-dev
 curl -sL http://deb.nodesource.com/setup_10.x | bash -
 apt install nodejs
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/

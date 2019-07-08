@@ -6,7 +6,7 @@ sudo apt install nodejs
 ```
 /etc/apt/sources.list.d/nodesource.list
 ```
-deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_10.x stretch main
+deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_10.x buster main
 ```
 Express
 ```
