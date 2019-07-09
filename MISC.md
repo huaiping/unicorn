@@ -1,11 +1,11 @@
 **Miscellaneous（Debian 10.0）**
 
-Sudo 1.8.19
+Sudo 1.8.27
 ```
 visudo
 username ALL=(ALL) ALL
 ```
-Fcitx 4.2.9.1
+Fcitx 4.2.9.6
 ```
 sudo dpkg-reconfigure locales
 sudo apt install fcitx fcitx-sunpinyin fcitx-config-gtk2 fcitx-ui-classic
@@ -16,7 +16,7 @@ configure中添加sunpinyin
 ```
 sudo sed -i 's/stretch/buster/g' /etc/apt/sources.list
 ```
-Git 2.11
+Git 2.20.1
 ```
 sudo apt install git
 
@@ -111,7 +111,7 @@ sudo certbot renew --dry-run
 crontab -e
 30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
 ```
-Redis 3.2.6
+Redis 5.0.3
 ```
 sudo apt install redis-server
 openssl rand 60 | openssl base64 -A
@@ -123,10 +123,6 @@ requirepass xxxxxxxxxxxxxxxxxxx
 
 sudo systemctl restart redis.service
 sudo systemctl status redis
-```
-MongoDB 3.2.11
-```
-sudo apt install mongodb-server
 ```
 ```
 帐号权限
