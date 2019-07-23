@@ -27,7 +27,7 @@ Element [https://element.eleme.cn](https://element.eleme.cn)
 
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
-V2Ray [https://connect.freev2ray.org](http://freev2.org)  
+V2Ray [https://v2.freev2ray.org](http://freev2.org)  
 
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
