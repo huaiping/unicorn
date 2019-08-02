@@ -78,6 +78,9 @@ sudo umount /dev/sdb1
 sudo mkfs.vfat -I /dev/sdb
 ```
 ```
+apt install flameshot
+```
+```
 /etc/inputrc
 set bell-style none
 
