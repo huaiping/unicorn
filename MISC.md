@@ -185,3 +185,29 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install dotnet-sdk-2.2
 ```
+CentOS 7.6 minimal
+```
+yum install epel-release
+yum upgrade
+yum -y groupinstall "X Window System" "Fonts"
+ yum -y groupinstall "Cinnamon"
+yum install lightdm
+ yum install cinnamon
+yum --enablerepo=epel -y install cinnamon*
+yum install gnome-terminal
+systemctl set-default graphical.target
+echo "exec /usr/bin/cinnamon-session" >> ~/.xinitrc
+startx
+
+yum install ntfs-3g
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+yum install fcitx*
+yum install im-chooser
+$ imsettings-switch fcitx
+注销
+
+https://www.google.cn/chrome
+yum install redhat-lsb-core liberation-fonts
+rpm -ivh google-chrome-stable.rpm
+```
