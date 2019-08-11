@@ -1,4 +1,4 @@
-**Node.js笔记（Debian 10.0 + Node.js 10.16.1 + npm 6.9.0）**
+**Node.js笔记（Debian 10.0 + Node.js 10.16.2 + npm 6.9.0）**
 ```
 sudo apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -

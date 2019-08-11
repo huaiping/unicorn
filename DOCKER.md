@@ -1,6 +1,6 @@
 **Docker笔记（Debian 10.0 + Docker 19.03.1-ce）**
 ```
-sudo apt remove docker docker-engine docker.io
+sudo apt remove docker docker-engine docker.io containerd runc
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -8,7 +8,7 @@ sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 sudo apt update
-sudo apt install docker-ce
+sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 ```
 https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian
@@ -45,7 +45,8 @@ docker run -i -t centos /bin/bash        # 运行centos镜像
 docker rmi <image-id>                    # 删除镜像
 docker search httpd                      # 查找Hub上的httpd镜像
 docker commit 8a7db469d429 xxxx
-
+```
+```
 docker pull registry.docker-cn.com/library/ubuntu:16.04
 docker pull hub.c.163.com/library/tomcat:latest
 

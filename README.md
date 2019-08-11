@@ -25,6 +25,8 @@ Vue.js [https://vuejs.org](https://cn.vuejs.org)
 
 Element [https://element.eleme.cn](https://element.eleme.cn)  
 
+Flutter [https://flutter.dev](https://flutter.dev)  
+
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
 V2Ray [https://v2.freev2ray.org](http://freev2.org)  

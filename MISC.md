@@ -58,7 +58,7 @@ rm phpMyAdmin-4.9.0.1-all-languages.tar.gz
 rm -rf phpMyAdmin-4.9.0.1-all-languages
 cp /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
-Composer 1.8.6 + Laravel 5.8
+Composer 1.9.0 + Laravel 5.8
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
@@ -171,7 +171,7 @@ rm -rf $backFileName
 ```
 sudo npm cache clean -f
 sudo npm install -g n
-sudo n stable 或 sudo n 10.16.0
+sudo n stable 或 sudo n 10.16.2
 ```
 .NET Core 2.2
 ```
