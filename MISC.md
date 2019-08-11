@@ -168,11 +168,6 @@ mongodump -h 127.0.0.1:27017 -d mall -u mall -p 123 -o $backFileName
 tar zcvf $backFileName.tar.gz $backFileName
 rm -rf $backFileName
 ```
-```
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable 或 sudo n 10.16.2
-```
 .NET Core 2.2
 ```
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg

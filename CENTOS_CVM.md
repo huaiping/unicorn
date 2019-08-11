@@ -94,7 +94,7 @@ http {
         }
     }
     server {
-        listen 443 ssl;
+        listen 443 ssl http2;
         server_name xxx.net;
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers HIGH:!aNULL:!MD5;

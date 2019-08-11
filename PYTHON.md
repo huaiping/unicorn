@@ -17,19 +17,19 @@ extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 <VirtualHost *:80>
     ServerName xxx.net
-    WSGIScriptAlias / /var/www/pandora/django.wsgi
-    <Directory "/var/www/pandora">
+    WSGIScriptAlias / /var/www/demo/django.wsgi
+    <Directory "/var/www/demo">
         Options FollowSymLinks Indexes
         AllowOverride all
         Require all granted
     </Directory>
 
-    Alias /robots.txt /var/www/pandora/static/robots.txt
-    Alias /static /var/www/pandora/static
+    Alias /robots.txt /var/www/demo/static/robots.txt
+    Alias /static /var/www/demo/static
     <Location "/static">
         SetHandler None
     </Location>
-    <Directory "/var/www/pandora/static">
+    <Directory "/var/www/demo/static">
         Require all granted
     </Directory>
 
@@ -38,10 +38,10 @@ extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 </VirtualHost>
 ```
 ```
-django-admin.py startproject pandora
-cd pandora
+django-admin.py startproject demo
+cd demo
 ```
-pandora/django.wsgi
+demo/django.wsgi
 ```
 # -*- coding: utf-8 -*-
 
@@ -49,14 +49,14 @@ import os
 import sys
 import django.core.handlers.wsgi
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'pandora.settings'
-app_path = "/var/www/pandora/"
+os.environ['DJANGO_SETTINGS_MODULE'] = 'demo.settings'
+app_path = "/var/www/demo/"
 sys.path.append(app_path)
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 ```
-pandora/setting.py
+demo/setting.py
 ```
 LANGUAGE_CODE = 'zh_CN'
 TIME_ZONE = 'Asia/Shanghai'

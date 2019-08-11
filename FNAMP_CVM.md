@@ -2,7 +2,7 @@
 
 /etc/freebsd-update.conf
 ```
-ServerName update1.chinafreebsd.cn
+ServerName update.chinafreebsd.cn
 ```
 10.1 -> 10.4 -> 11.0 -> 11.1 -> 11.2 -> 11.3 -> 12.0
 ```
