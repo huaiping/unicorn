@@ -14,8 +14,8 @@ sudo gem update --system
 gem install bundler
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com
 
-chown www-data:www-data -R /var/www/cynthia
-cd /var/www/cynthia
+chown www-data:www-data -R /var/www/demo
+cd /var/www/demo
 bundle install
 rake db:create
 ```
@@ -29,13 +29,13 @@ rake db:create
 ```
 /etc/apache2/sites-available/000-default.conf
 ```
-DocumentRoot /var/www/cynthia/public
-<Directory /var/www/cynthia/public>
+DocumentRoot /var/www/demo/public
+<Directory /var/www/demo/public>
     RailsEnv development
     Options -MultiViews
     AllowOverride All
     Require all granted
-    RailsBaseURI /cynthia
+    RailsBaseURI /demo
     #PassengerResolveSymlinksInDocumentRoot on
 </Directory>
 ```
@@ -60,7 +60,7 @@ apt install nodejs
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 gem install mysql2 bundler rails
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com
-cd cynthia
+cd demo
 bundle install
 bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java
 rails server
