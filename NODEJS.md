@@ -15,6 +15,10 @@ CentOS 7.6
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 yum install nodejs
 ```
+/etc/yum.repos.d/
+```
+repo
+```
 Express
 ```
 npm config set registry https://registry.npm.taobao.org
