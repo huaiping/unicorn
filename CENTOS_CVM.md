@@ -126,11 +126,6 @@ curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
 yum install nodejs
 ```
 ```
-yum install ssh
-service sshd start
-chkconfig sshd on
-```
-```
 systemctl stop firewalld.service 
 systemctl disable firewalld.service
 ```

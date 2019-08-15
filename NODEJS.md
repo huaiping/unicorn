@@ -1,4 +1,5 @@
-**Node.js笔记（Debian 10.0 + Node.js 10.16.2 + npm 6.9.0）**
+**Node.js笔记（Node.js 10.16.2 + npm 6.9.0）**
+Debian 10.0
 ```
 sudo apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
@@ -7,6 +8,11 @@ sudo apt install nodejs
 /etc/apt/sources.list.d/nodesource.list
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_10.x buster main
+```
+CentOS 7.6
+```
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+yum install nodejs
 ```
 Express
 ```
