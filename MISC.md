@@ -208,7 +208,7 @@ rpm -ivh google-chrome-stable.rpm
 
 rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 yum install vlc
-Preference修改编码和字体
+Tools -> Preferences -> Subtitles/OSD 修改编码和字体
 
 https://code.visualstudio.com/docs/setup/linux
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -216,5 +216,8 @@ sudo ...
 yum check-update
 sudo yum install code
 
-yum install filezilla shutter
+rpm -ivh http://mirrors.whsir.com/centos/7/x86_64/RPM/rar-5.7.1-1.el7.x86_64.rpm
+yum install rar
+
+sudo yum install filezilla shutter
 ```

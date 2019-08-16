@@ -1,4 +1,4 @@
-**Node.js笔记（Node.js 10.16.2 + npm 6.9.0）**
+**Node.js笔记（Node.js 10.16.3 + npm 6.9.0）**
 
 Debian 10.0
 ```
@@ -12,12 +12,12 @@ deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_10.x buster main
 ```
 CentOS 7.6
 ```
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash -
 yum install nodejs
 ```
-/etc/yum.repos.d/
+/etc/yum.repos.d/nodesource-el7.repo
 ```
-repo
+https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_10.x/el/7/
 ```
 Express
 ```
@@ -80,5 +80,5 @@ npm uninstall express       # 删除指定的模块
 ```
 sudo npm cache clean -f
 sudo npm install -g n
-sudo n stable 或 sudo n 10.16.2
+sudo n stable 或 sudo n 10.16.3
 ```
