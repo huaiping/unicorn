@@ -1,4 +1,6 @@
-**Docker笔记（Debian 10.0 + Docker 19.03.1-ce）**
+**Docker笔记（Docker 19.03.1-ce）**
+
+Debian 10.0
 ```
 sudo apt remove docker docker-engine docker.io containerd runc
 sudo apt update
@@ -12,6 +14,15 @@ sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 ```
 https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian
+```
+CentOS 7.6
+```
+sudo yum remove docker docker-client docker-client-latest docker-common \
+    docker-latest docker-latest-logrotate docker-logrotate docker-engine
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker
 ```
 ```
 sudo docker pull debian:latest
