@@ -1,11 +1,11 @@
-**MongoDB笔记（Debian 10.0 + MongoDB 4.0.10）**
+**MongoDB笔记（Debian 10.0 + MongoDB 4.2）**
 ```
-sudo apt install curl
-curl https://www.mongodb.org/static/pgp/server-4.0.asc | sudo apt-key add -
+https://docs.mongodb.com/manual/administration/install-on-linux/
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 ```
-/etc/apt/sources.list.d/mongodb-org-4.0.list
+/etc/apt/sources.list.d/mongodb-org-4.2.list
 ```
-deb https://repo.mongodb.org/apt/debian stretch/mongodb-org/4.0 main
+deb https://repo.mongodb.org/apt/debian stretch/mongodb-org/4.2 main
 ```
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/mongodb/apt/debian
@@ -13,8 +13,8 @@ deb https://mirrors.tuna.tsinghua.edu.cn/mongodb/apt/debian
 ```
 sudo apt update
 sudo apt install mongodb-org
+sudo service mongod start
 sudo systemctl enable mongod
-sudo systemctl start mongod
 sudo systemctl status mongod
 ```
 /etc/mongod.conf
