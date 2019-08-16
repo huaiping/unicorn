@@ -9,7 +9,7 @@ mysql_secure_installation
 mysql -u root -p
 MariaDB>grant all privileges on *.* to 'user123'@'%' Identified by 'pass123';
 
-gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+gem sources --add https://mirrors.aliyun.com/rubygems/ --remove https://rubygems.org/
 sudo gem update --system
 gem install bundler
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com

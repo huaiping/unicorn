@@ -69,7 +69,7 @@ php artisan serve
 ```
 composer -V
 composer self-update
-composer config -g repo.packagist composer https://packagist.phpcomposer.com
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 ```
 sudo dd if=x.iso of=/dev/sdb bs=4M; sync
