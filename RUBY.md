@@ -12,7 +12,7 @@ MariaDB>grant all privileges on *.* to 'user123'@'%' Identified by 'pass123';
 gem sources --add https://mirrors.aliyun.com/rubygems/ --remove https://rubygems.org/
 sudo gem update --system
 gem install bundler
-bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems/
 
 chown www-data:www-data -R /var/www/demo
 cd /var/www/demo

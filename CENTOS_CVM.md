@@ -122,7 +122,7 @@ http {
 ```
 ```
 yum install python34
-curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 yum install nodejs
 ```
 ```
