@@ -98,14 +98,6 @@ https://mirrors.cloud.tencent.com
 https://mirrors.163.com
 https://mirrors.ustc.edu.cn
 https://mirrors.tuna.tsinghua.edu.cn
-https://mirror.lzu.edu.cn
-https://mirror.bjtu.edu.cn
-```
-```
-listen 443 ssl http2 default_server;
-openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
-add the following line under ssl_certificate_key:
-ssl_dhparam /etc/nginx/ssl/dhparam.pem;
 ```
 ```
 ssh-keygen -t rsa
