@@ -115,12 +115,12 @@ certbot certonly --webroot -w /var/www/example -d xxx.net -d www.xxx.net
 ```
 /etc/nginx/sites-enabled/default
 ```
-openssl dhparam -out /etc/nginx/dhparam.pem 4096
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096
 ```
 ```
 listen 443 ssl http2;
 
-add_header Strict-Transport-Security "max-age=6307200; includeSubdomains; preload";
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
 add_header X-Frame-Options DENY;
 add_header X-Content-Type-Options nosniff;
 
@@ -132,5 +132,5 @@ ssl_session_cache shared:SSL:10m;
 ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
 ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
-ssl_dhparam /etc/nginx/dhparam.pem;
+ssl_dhparam /etc/ssl/certs/dhparam.pem;
 ```
