@@ -60,3 +60,36 @@ docker inspect --format='{{.NetworkSettings.IPAddress}}' mysql-master
 dpkg-reconfigure tzdata
 Asia Shanghai
 ```
+
+MySQL 8.0.12只需以下几步
+```
+master上创建帐号用于复制
+grant replication slave, replication client on *.* to 'slave'@'%' identified by '123456';
+```
+```
+master启用gtid
+/etc/mysql/my.conf
+server-id=1
+gtid_mode=ON
+enforce-gtid-consistency=true
+```
+```
+slave启用gtid
+server-id=2  #id不能重复
+gtid_mode=ON
+enforce-gtid-consistency=true
+```
+```
+slave配置master信息
+change master TO master_host='192.168.50.111', master_port=3307, master_user='repl',
+master_password='password', master_auto_position=1;
+```
+```
+启动slave
+start slave
+```
+```
+查看slave状态
+Slave_IO_Running/Slave_SQL_Running两个都是yes表示配置成功
+show slave status;
+```
