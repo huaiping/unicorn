@@ -58,3 +58,8 @@ mysql> show slave status \G;
 mysql> start slave;
 mysql> show slave status \G;
 ```
+宿主时间不一致的问题
+```
+dpkg-reconfigure tzdata
+Asia Shanghai
+```
