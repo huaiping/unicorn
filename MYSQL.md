@@ -18,6 +18,7 @@ log-bin=mysql-bin
 ```
 service mysql restart
 docker start mysql-master
+
 docker exec -it mysql-master /bin/bash
 mysql -u root -p
 mysql> CREATE USER 'slave'@'%' IDENTIFIED BY '123456';
@@ -34,6 +35,10 @@ server-id=101
 log-bin=mysql-slave-bin
 relay_log=edu-mysql-relay-bin
 ```
+```
+service mysql restart
+docker start mysql-master
+```
 链接Master和Slave
 ```
 主mysql> show master status;
@@ -43,13 +48,10 @@ relay_log=edu-mysql-relay-bin
 docker inspect --format='{{.NetworkSettings.IPAddress}}' mysql-master
 ```
 ```
-service mysql restart
-docker start mysql-master
-docker exec -it mysql-master /bin/bash
+docker exec -it mysql-slave /bin/bash
 mysql -u root -p
-
-从mysql> change master to master_host='172.17.0.2', master_user='slave', master_password='123456',
- master_port=3306, master_log_file='mysql-bin.000001', master_log_pos= 617, master_connect_retry=30;
+mysql> change master to master_host='172.17.0.2', master_user='slave', master_password='123456',
+ master_port=3306, master_log_file='mysql-bin.000001', master_log_pos=617, master_connect_retry=30;
 
 检查 Slave IO Running 和 Slave SQL Running
 mysql> show slave status \G;
