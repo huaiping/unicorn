@@ -9,7 +9,7 @@ docker ps
 ```
 docker exec -it mysql-master /bin/bash
 ```
-nano /etc/mysql/my.cnf
+/etc/mysql/my.cnf
 ```
 [mysqld]
 server-id=100
@@ -28,7 +28,7 @@ mysql> GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'slave'@'%';
 ```
 docker exec -it mysql-slave /bin/bash
 ```
-nano /etc/mysql/my.cnf
+/etc/mysql/my.cnf
 ```
 [mysqld]
 server-id=101
@@ -53,7 +53,7 @@ mysql -u root -p
 mysql> change master to master_host='172.17.0.2', master_user='slave', master_password='123456',
  master_port=3306, master_log_file='mysql-bin.000001', master_log_pos=617, master_connect_retry=30;
 
-检查 Slave IO Running 和 Slave SQL Running
+检查 Slave_IO_Running 和 Slave_SQL_Running
 mysql> show slave status \G;
 mysql> start slave;
 mysql> show slave status \G;
