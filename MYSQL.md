@@ -37,7 +37,7 @@ relay_log=edu-mysql-relay-bin
 ```
 ```
 service mysql restart
-docker start mysql-master
+docker start mysql-slave
 ```
 链接Master和Slave
 ```
