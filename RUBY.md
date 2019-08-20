@@ -2,7 +2,7 @@
 ```
 sudo apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
 sudo apt install apache2 mysql-server libapache2-mod-passenger
-curl -sL http://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL http://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt install nodejs
 
 mysql_secure_installation

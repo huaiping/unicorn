@@ -54,7 +54,7 @@ mysql> show slave status \G;
 docker inspect --format='{{.NetworkSettings.IPAddress}}' mysql-master
 ```
 ```
-宿主时间不一致的问题
+时间不一致的问题
 dpkg-reconfigure tzdata
 Asia Shanghai
 ```
