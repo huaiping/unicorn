@@ -1,4 +1,4 @@
-**Nginx学习笔记(CentOS 7.0 + Nginx 1.15 + KeepAlive)**
+**Nginx学习笔记（CentOS 7.6 + Nginx 1.16 + Keepalived 1.3.5）**
 ```
 yum install openssl-devel popt-devel ipvsadm libnl*
 yum install keepalived
@@ -19,18 +19,17 @@ global_defs {
 }
 
 vrrp_instance VI_1 {
-  state MASTER          //双机热备（主）
-  interface eth4        //选择网络（用ip add 查看网络，选择其中1个）
-  virtual_router_id 51  //和(副机)一样
-  priority 100          //主机选100(副机要低于100)
+  state MASTER            //双机热备（主）
+  interface eth4          //选择网络（用ip add 查看网络）
+  virtual_router_id 51    //和(副机)一样
+  priority 100            //主机选100(副机要低于100)
   advert_int 1
   authentication {
     auth_type PASS
-    auth_pass 1111    //密码（主副要保持一致）
+    auth_pass 1111        //密码（主副要保持一致）
   }
   virtual_ipaddress {
-  192.168.70.84         //虚拟ip
-  #192.168.70.83
+    192.168.70.84           //虚拟ip
   }
 }
 ```
@@ -59,8 +58,7 @@ vrrp_instance VI_1 {
     auth_pass 1111
   }
   virtual_ipaddress {
-  #192.168.70.83
-  192.168.70.84
+    192.168.70.84
   }
 }
 ```
