@@ -3,7 +3,7 @@
 yum install openssl-devel popt-devel ipvsadm libnl*
 yum install keepalived
 ```
-vim /etc/keepalived/keepalived.conf
+/etc/keepalived/keepalived.conf
 ```
 主服务器配置 192.168.70.169
 global_defs {
@@ -29,7 +29,7 @@ vrrp_instance VI_1 {
     auth_pass 1111        //密码（主副要保持一致）
   }
   virtual_ipaddress {
-    192.168.70.84           //虚拟ip
+    192.168.70.84         //虚拟ip
   }
 }
 ```
