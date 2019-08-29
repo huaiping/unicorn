@@ -14,6 +14,11 @@ sudo reboot
 configure中添加sunpinyin
 ```
 ```
+sudo apt install intel-microcode
+sudo apt install firmware-realtek
+sudo apt install nvidia-driver
+```
+```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
 ```
 Git 2.20.1
