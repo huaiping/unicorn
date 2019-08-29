@@ -14,11 +14,11 @@ sudo reboot
 configure中添加sunpinyin
 ```
 ```
-sudo sed -i 's/stretch/buster/g' /etc/apt/sources.list
+sed -i 's/stretch/buster/g' /etc/apt/sources.list
 ```
 Git 2.20.1
 ```
-sudo apt install git
+apt install git
 
 ssh-keygen -t rsa -b 4096 -C "xxx@xxx.cn"
 cat ~/.ssh/id_rsa.pub
@@ -113,7 +113,7 @@ AuthorizedKeysFile      %h/.ssh/authorized_keys
 ```
 PHP and MSSQL on Ubuntu
 ```
-sudo apt install php5-sybase
+apt install php5-sybase
 ```
 Certbot 0.31.0
 ```

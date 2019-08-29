@@ -10,7 +10,7 @@ wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add 
 deb https://repo.mongodb.org/apt/debian stretch/mongodb-org/4.2 main
 ```
 ```
-deb https://mirrors.tuna.tsinghua.edu.cn/mongodb/apt/debian
+deb https://mirrors.aliyun.com/mongodb/apt/debian
 ```
 ```
 sudo apt update

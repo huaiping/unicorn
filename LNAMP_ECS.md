@@ -2,9 +2,9 @@
 
 /etc/apt/sources.list
 ```
-deb http://mirrors.aliyun.com/debian/            wheezy                   main  non-free  contrib
-deb http://mirrors.aliyun.com/debian/            wheezy-proposed-updates  main  non-free  contrib
-deb http://mirrors.aliyun.com/debian-security/   wheezy/updates           main  non-free  contrib
+deb http://mirrors.aliyun.com/debian/            wheezy                   main  contrib  non-free
+deb http://mirrors.aliyun.com/debian/            wheezy-proposed-updates  main  contrib  non-free
+deb http://mirrors.aliyun.com/debian-security/   wheezy/updates           main  contrib  non-free
 ```
 ```
 apt-get update

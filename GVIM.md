@@ -1,6 +1,6 @@
 **GVim笔记（Debian 10.0 + Vim 8.1）**
 ```
-sudo apt install vim-gtk
+apt install vim-gtk
 ```
 /etc/vim/vimrc
 ```

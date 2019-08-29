@@ -2,35 +2,35 @@
 
 Debian 10.0
 ```
-sudo apt remove docker docker-engine docker.io containerd runc
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+apt remove docker docker-engine docker.io containerd runc
+apt update
+apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository \
+apt-key fingerprint 0EBFCD88
+add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io
+apt update
+apt install docker-ce docker-ce-cli containerd.io
 ```
 ```
-https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian
+https://mirrors.aliyun.com/docker-ce/linux/debian
 ```
 CentOS 7.6
 ```
-sudo yum remove docker docker-client docker-client-latest docker-common docker-latest \
-     docker-latest-logrotate docker-logrotate docker-engine
-sudo yum install yum-utils device-mapper-persistent-data lvm2
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io
-sudo systemctl start docker.service
-sudo systemctl enable docker.service
+yum remove docker docker-client docker-client-latest docker-common docker-latest \
+    docker-latest-logrotate docker-logrotate docker-engine
+yum install yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install docker-ce docker-ce-cli containerd.io
+systemctl start docker.service
+systemctl enable docker.service
 ```
 ```
-sudo docker pull debian:latest
-sudo docker run --name test01 -i -t -p 9090:80 -v /home/data:/data debian:latest /bin/bash
+docker pull debian:latest
+docker run --name test01 -i -t -p 9090:80 -v /home/data:/data debian:latest /bin/bash
 
-sudo docker start test01
-sudo docker attach test01
+docker start test01
+docker attach test01
 
 docker:/# apt update
 docker:/# apt install nano
