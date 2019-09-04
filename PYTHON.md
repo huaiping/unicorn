@@ -1,4 +1,4 @@
-**Python笔记（Debian 10.0 + Python 3.7.3 + Django 2.2.4）**
+**Python笔记（Debian 10.0 + Python 3.7.3 + Django 2.2.5）**
 
 python3 -V
 ```
