@@ -6,10 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>主题班会</title>
-<link href="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.10.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.6.4/video-js.min.css">
 <style>
 body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
 p {color:#fff; margin:0 auto;}
@@ -34,11 +35,23 @@ img {vertical-align:middle;}
 
     <div class="section">
         <div id="p2">
-            <img src="http://b.hiphotos.baidu.com/image/pic/item/908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg" style="width:35vw;" class="rounded animated fadeInDown slow" />
-            <img src="http://f.hiphotos.baidu.com/image/pic/item/0e2442a7d933c8956c0e8eeadb1373f08202002a.jpg" style="width:35vw;" class="rounded animated bounceInRight delay-2s" />
+            <img src="http://b.hiphotos.baidu.com/image/pic/item/908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg" style="width:35vw;" class="rounded animated fadeInDown slow">
+            <img src="http://f.hiphotos.baidu.com/image/pic/item/0e2442a7d933c8956c0e8eeadb1373f08202002a.jpg" style="width:35vw;" class="rounded animated bounceInRight delay-2s">
             <p style="text-indent:2em; text-align:left; margin-top:5vh; width:70vw; font-size:3vh;">同学们，爱国是一种坚定的民族精神，更是一种振兴中华的责任感。我们青少年要用这种强大的精神力量去描绘祖国未来的宏图，将一片丹心献给祖国。祖国在我心中，祖国在你心中，祖国在我们中华儿女的心中，让我们一起向着“心系祖国，健康成长”的目标前进吧！</p>
+            <div id="exitfullscreen" style="float:right; margin-right:2vw; margin-bottom: 1px;">
+                <button type="button" class="btn btn-outline-light" onclick="exitFullScreen()"><i class="fas fa-expand"></i></button>
+            </div>
         </div>
     </div>
+
+    <div class="section">
+        <div id="p3" style="width:70vw; text-align:center;">
+            <video class="video-js vjs-big-play-centered" data-setup='{}'>
+              <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
     <!--
     <div class="section">第一屏</div>
     <div class="section">
@@ -53,32 +66,40 @@ img {vertical-align:middle;}
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.js"></script>
+<script src="https://cdn.bootcss.com/video.js/7.6.4/video.min.js"></script>
 <script>
 $(document).bind("contextmenu",function(){
-    return false;
+  return false;
 });
 $(document).bind("selectstart",function(){
-    return false;
+  return false;
 });
 
 $(function(){
-    $('#content').fullpage({
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        navigation: true,
-        slidesNavigation: true,
-        sectionsColor : ['#cf4647', '#1bbc9b']
-    });
+  $('#content').fullpage({
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    navigation: true,
+    slidesNavigation: true,
+    sectionsColor : ['#cf4647', '#1bbc9b', '#cf4647']
+  });
 });
 </script>
 <script>
 function fullScreen(){
-    var el = document.documentElement;
-    var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
-    if(typeof rfs != "undefined" && rfs) {
-        rfs.call(el);
-        document.getElementById("fullscreen").hidden = true;
-    };
-    return;
+  var el = document.documentElement;
+  var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+  if (typeof rfs != "undefined" && rfs) {
+    rfs.call(el);
+  };
+  return;
+}
+
+function exitFullScreen() {
+  var el = document;
+  var cfs = el.cancelFullScreen || el.webkitExitFullscreen || el.mozCancelFullScreen || el.exitFullscreen || el.msExitFullscreen;
+  if (typeof cfs != "undefined" && cfs) {
+    cfs.call(el);
+  }
 }
 </script>
 </body>
