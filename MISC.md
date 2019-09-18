@@ -177,7 +177,7 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install dotnet-sdk-2.2
 ```
-CentOS 7.6 minimal
+CentOS 7.7.1908 minimal
 ```
 yum install epel-release
 yum upgrade

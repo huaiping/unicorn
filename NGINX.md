@@ -1,4 +1,4 @@
-**Nginx学习笔记（CentOS 7.6 + Nginx 1.16 + Keepalived 1.3.5）**
+**Nginx学习笔记（CentOS 7.7 + Nginx 1.16 + Keepalived 1.3.5）**
 ```
 yum install openssl-devel popt-devel ipvsadm libnl*
 yum install keepalived

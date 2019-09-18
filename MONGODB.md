@@ -19,7 +19,7 @@ sudo service mongod start
 sudo systemctl enable mongod
 sudo systemctl status mongod
 ```
-CentOS 7.6
+CentOS 7.7.1908
 
 /etc/yum.repos.d/mongodb-org-4.2.repo
 ```

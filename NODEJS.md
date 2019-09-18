@@ -10,7 +10,7 @@ sudo apt install nodejs
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_10.x buster main
 ```
-CentOS 7.6
+CentOS 7.7.1908
 ```
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 yum install nodejs
