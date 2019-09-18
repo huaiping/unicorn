@@ -1,14 +1,14 @@
-**Python笔记（Debian 10.1 + Python 3.7.3 + Django 2.2.5）**
+**Python笔记（Django 2.2.5）**
 
-Debian 10.1 + Python 3.7.3 + Django 2.2.5
+Debian 10.1 + Python 3.7.3
 ```
 sudo apt install apache2 libapache2-mod-wsgi-py3 python3-pip mysql-server libmariadbd-dev
 sudo pip3 install Django
 sudo pip3 install mysqlclient
 ```
-CentOS 7.7 + Python 3.6.8 + Django 2.2.5
+CentOS 7.7 + Python 3.6.8
 ```
-sudo apt install httpd python36 python3-pip mysql-server libmariadbd-dev
+sudo apt install httpd python36 python3-pip mariadb-server libmariadbd-dev
 sudo pip3 install mod_wsgi
 sudo pip3 install Django
 sudo pip3 install mysqlclient
