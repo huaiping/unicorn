@@ -8,7 +8,7 @@ sudo pip3 install mysqlclient
 ```
 CentOS 7.7 + Python 3.6.8
 ```
-sudo apt install httpd python36 python3-pip mariadb-server libmariadbd-dev
+sudo yum install httpd python36 python3-pip mariadb-server gcc httpd-devel python36-devel
 sudo pip3 install mod_wsgi
 sudo pip3 install Django
 sudo pip3 install mysqlclient
