@@ -64,4 +64,6 @@ docker pull hub.c.163.com/library/tomcat:latest
 
 docker run --name master -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
 docker run --name wordpress --link master:mysql -p 88:80 -v /data:/var/lib/mysql -d wordpress
+
+docker run --name t2 -tdi --privileged=true -p 8989:80 centos:latest /usr/sbin/init
 ```
