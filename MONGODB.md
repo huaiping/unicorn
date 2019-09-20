@@ -13,11 +13,11 @@ deb https://repo.mongodb.org/apt/debian stretch/mongodb-org/4.2 main
 deb https://mirrors.aliyun.com/mongodb/apt/debian
 ```
 ```
-sudo apt update
-sudo apt install mongodb-org
-sudo service mongod start
-sudo systemctl enable mongod
-sudo systemctl status mongod
+apt update
+apt install mongodb-org
+service mongod start
+systemctl enable mongod
+systemctl status mongod
 ```
 CentOS 7.7.1908
 
@@ -31,7 +31,7 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 ```
 ```
-sudo yum install mongodb-org
+yum install mongodb-org
 ```
 /etc/mongod.conf
 ```
@@ -39,7 +39,7 @@ security:
   authorization: enabled
 ```
 ```
-sudo systemctl restart mongod
+systemctl restart mongod
 ```
 ```
 mongo
