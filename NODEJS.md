@@ -2,9 +2,9 @@
 
 Debian 10.1
 ```
-sudo apt install curl apt-transport-https gnupg2 lsb-release
+apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-sudo apt install nodejs
+apt install nodejs
 ```
 /etc/apt/sources.list.d/nodesource.list
 ```
@@ -22,7 +22,7 @@ baseurl=https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_10.x/el/7/$basearch
 Express
 ```
 npm config set registry https://registry.npm.taobao.org
-sudo npm install -g express-generator
+npm install -g express-generator
 express -e demo
 cd demo
 npm install ejs --save
@@ -57,7 +57,7 @@ pm2 save
 ```
 Grunt
 ```
-sudo npm install -g grunt-cli
+npm install -g grunt-cli
 cd demo
 npm init
 npm install grunt --save-dev
@@ -67,7 +67,7 @@ npm install grunt-contrib-uglify --save-dev
 npm常用命令
 ```
 npm -v                      # 显示版本，检查npm是否正确安装
-sudo npm update -g npm      # 升级npm模块
+npm update -g npm      # 升级npm模块
 npm install express         # 安装express模块
 npm install -g express      # 全局安装express模块
 npm list                    # 列出已安装模块
@@ -78,7 +78,7 @@ npm update -g express       # 升级全局安装的express模块
 npm uninstall express       # 删除指定的模块
 ```
 ```
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable 或 sudo n 10.16.3
+npm cache clean -f
+npm install -g n
+n stable 或 sudo n 10.16.3
 ```

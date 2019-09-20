@@ -9,14 +9,14 @@ pip3 install mysqlclient
 CentOS 7.7.1908 + Python 3.6.8
 ```
 yum install epel-release
-yum install httpd python3-pip mariadb-server gcc httpd-devel mariadb-devel python3-devel
+yum install httpd python3-pip mariadb-server gcc httpd-devel python3-devel mariadb-devel
 pip3 install mod_wsgi django mysqlclient
 ```
 /etc/pip.conf
 ```
 [global]
 trusted-host = mirrors.aliyun.com
-index-url = http://mirrors.aliyun.com/pypi/simple
+index-url = https://mirrors.aliyun.com/pypi/simple
 extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 /etc/apache2/sites-available/000-default.conf

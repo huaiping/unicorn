@@ -1,16 +1,16 @@
 **Ruby笔记（Debian 10.1 + Ruby 2.5.5 + Rails 6.0.0）**
 ```
-sudo apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
-sudo apt install apache2 mysql-server libapache2-mod-passenger
+apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
+apt install apache2 mysql-server libapache2-mod-passenger
 curl -sL http://deb.nodesource.com/setup_10.x | sudo bash -
-sudo apt install nodejs
+apt install nodejs
 
 mysql_secure_installation
 mysql -u root -p
 MariaDB>grant all privileges on *.* to 'user123'@'%' Identified by 'pass123';
 
 gem sources --add https://mirrors.aliyun.com/rubygems/ --remove https://rubygems.org/
-sudo gem update --system
+gem update --system
 gem install bundler
 bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems/
 
