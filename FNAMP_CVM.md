@@ -4,7 +4,7 @@
 ```
 ServerName update.chinafreebsd.cn
 ```
-10.1 -> 10.4 -> 11.0 -> 11.1 -> 11.2 -> 11.3 -> 12.0
+10.1 -> 10.4 -> 11.0 -> 11.3 -> 12.0
 ```
 freebsd-update -r 10.4-RELEASE upgrade
 freebsd-update install
