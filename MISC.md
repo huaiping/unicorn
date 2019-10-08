@@ -9,14 +9,12 @@ Fcitx 4.2.9.6
 ```
 sudo dpkg-reconfigure locales
 sudo apt install fcitx fcitx-sunpinyin fcitx-config-gtk2 fcitx-ui-classic
-sudo apt install bash-completion fonts-wqy-microhei
+sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
 ```
-sudo apt install intel-microcode
-sudo apt install firmware-realtek
-sudo apt install nvidia-driver
+apt install intel-microcode firmware-realtek nvidia-driver
 ```
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
@@ -41,10 +39,6 @@ gpg --armor --export <Pub_key_ID>
 把GPG key 加到github帐号
 git config --global user.signingkey <Pub_key_ID>
 git config --global commit.gpgsign true
-```
-```
-sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock
 ```
 Vue
 ```
