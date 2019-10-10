@@ -67,7 +67,7 @@ npm install grunt-contrib-uglify --save-dev
 npm常用命令
 ```
 npm -v                      # 显示版本，检查npm是否正确安装
-npm update -g npm      # 升级npm模块
+npm update -g npm           # 升级npm模块
 npm install express         # 安装express模块
 npm install -g express      # 全局安装express模块
 npm list                    # 列出已安装模块
