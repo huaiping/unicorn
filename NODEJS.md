@@ -1,23 +1,23 @@
-**Node.js笔记（Node.js 10.16.3 + npm 6.9.0）**
+**Node.js笔记（Node.js 12.13.0 + npm 6.12.0）**
 
 Debian 10.1
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
-curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
 apt install nodejs
 ```
 /etc/apt/sources.list.d/nodesource.list
 ```
-deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_10.x buster main
+deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_12.x buster main
 ```
 CentOS 7.7.1908
 ```
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
 yum install nodejs
 ```
 /etc/yum.repos.d/nodesource-el7.repo
 ```
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_10.x/el/7/$basearch
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_12.x/el/7/$basearch
 ```
 Express
 ```
@@ -80,5 +80,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 10.16.3
+n stable 或 sudo n 12.13.0
 ```

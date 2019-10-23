@@ -1,4 +1,4 @@
-**CentOS笔记（CentOS 7.4 + Nginx 1.12 + Apache 2.4 + MariaDB 5.5 + PHP 5.4 + Tomcat 7.0 + Nodejs 10）**
+**CentOS笔记（CentOS 7.4 + Nginx 1.12 + Apache 2.4 + MariaDB 5.5 + PHP 5.4 + Tomcat 7.0 + Nodejs 12）**
 ```
 yum install mariadb-server
 systemctl start mariadb.service
@@ -120,7 +120,7 @@ http {
 }
 ```
 ```
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
 yum install nodejs
 ```
 ```
