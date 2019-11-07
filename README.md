@@ -45,8 +45,6 @@ GitLab [https://gitlab.com](https://gitlab.com/huaiping)
 
 万网 [https://wanwang.aliyun.com](https://wanwang.aliyun.com)  
 
-DMS [https://dms-net.aliyun.com](https://dms-net.aliyun.com)  
-
 且听风吟 [http://www.qtfy7.com](http://www.qtfy7.com)  
 
 全能影视 [http://www.qnvod.net](http://www.qnvod.net)  
