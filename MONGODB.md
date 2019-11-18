@@ -1,13 +1,13 @@
 **MongoDB笔记（MongoDB 4.2）**
 
-Debian 10.1
+Debian 10.2
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 ```
 /etc/apt/sources.list.d/mongodb-org-4.2.list
 ```
-deb https://repo.mongodb.org/apt/debian stretch/mongodb-org/4.2 main
+deb https://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main
 ```
 ```
 deb https://mirrors.aliyun.com/mongodb/apt/debian
