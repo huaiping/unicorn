@@ -46,19 +46,14 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-phpMyAdmin 4.9.1
+phpMyAdmin 4.9.2
 ```
 mkdir /usr/share/phpmyadmin
-mkdir /etc/phpmyadmin
-mkdir -p /var/lib/phpmyadmin/tmp
-chown -R www-data:www-data /var/lib/phpmyadmin
-touch /etc/phpmyadmin/htpasswd.setup
-cd /tmp
-wget https://files.phpmyadmin.net/phpMyAdmin/4.9.1/phpMyAdmin-4.9.1-all-languages.tar.gz
-tar xfz phpMyAdmin-4.9.1-all-languages.tar.gz
-mv phpMyAdmin-4.9.1-all-languages/* /usr/share/phpmyadmin/
-rm phpMyAdmin-4.9.1-all-languages.tar.gz
-rm -rf phpMyAdmin-4.9.1-all-languages
+wget https://files.phpmyadmin.net/phpMyAdmin/4.9.2/phpMyAdmin-4.9.2-all-languages.tar.gz
+tar xfz phpMyAdmin-4.9.2-all-languages.tar.gz
+mv phpMyAdmin-4.9.2-all-languages/* /usr/share/phpmyadmin/
+rm phpMyAdmin-4.9.2-all-languages.tar.gz
+rm -rf phpMyAdmin-4.9.2-all-languages
 cp /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
 Composer 1.9.1 + Laravel 6.0
