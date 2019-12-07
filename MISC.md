@@ -56,7 +56,7 @@ rm phpMyAdmin-4.9.2-all-languages.tar.gz
 rm -rf phpMyAdmin-4.9.2-all-languages
 cp /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
-Composer 1.9.1 + Laravel 6.0
+Composer 1.9.1 + Laravel 6.5.2
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
@@ -158,7 +158,7 @@ mongodump -h 127.0.0.1:27017 -d mall -u mall -p 123 -o $backFileName
 tar zcvf $backFileName.tar.gz $backFileName
 rm -rf $backFileName
 ```
-.NET Core 3.0
+.NET Core 3.1
 ```
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
@@ -168,7 +168,8 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 sudo apt update
 sudo apt install apt-transport-https
-sudo apt install dotnet-sdk-3.0
+sudo apt update
+sudo apt install dotnet-sdk-3.1
 ```
 CentOS 7.7.1908 minimal
 ```
