@@ -3,6 +3,7 @@
 Debian 10.2 + Python 3.7.3
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip mysql-server libmariadbd-dev
+pip3 install --upgrade pip
 pip3 install Django
 pip3 install mysqlclient
 ```
