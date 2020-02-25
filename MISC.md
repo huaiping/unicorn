@@ -56,7 +56,7 @@ rm phpMyAdmin-4.9.3-all-languages.tar.gz
 rm -rf phpMyAdmin-4.9.3-all-languages
 cp /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
-Composer 1.9.1 + Laravel 6.13.1
+Composer 1.9.3 + Laravel 6.15.1
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
