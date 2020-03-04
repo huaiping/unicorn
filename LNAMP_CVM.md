@@ -14,7 +14,7 @@ apt install mariadb-server mariadb-client
 apt install openjdk-11-jdk tomcat9 tomcat9-admin
 apt install apache2 php libapache2-mod-php libapache2-mod-rpaf libmariadb-java
  php-gd php-mysql php-mcrypt php-memcached libapache2-mod-wsgi-py3 python3-pip
-cp /usr/share/java/mysql-connector-java-5.1.42.jar /usr/share/tomcat8/lib/
+cp /usr/share/java/mariadb-java-client-2.3.0.jar /usr/share/tomcat8/lib/
 ```
 ```
 mysql_secure_installation
