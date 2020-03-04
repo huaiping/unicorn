@@ -1,4 +1,4 @@
-**LNAMP笔记（Debian 9.3 + Nginx 1.10 + Apache 2.4 + MariaDB 10.1 + PHP 7.0 + Tomcat 8.5 + Python 3.5）**
+**LNAMP笔记（Debian 10.3 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.3 + Tomcat 9.0 + Python 3.7）**
 
 ~~/etc/apt/sources.list~~
 ```
@@ -11,14 +11,13 @@ apt update
 apt upgrade
 apt dist-upgrade
 apt install mariadb-server mariadb-client
-apt install openjdk-8-jdk tomcat8 tomcat8-admin
-apt install apache2 php libapache2-mod-php libapache2-mod-rpaf libapache2-mod-jk libmysql-java
- php-gd php-mysql php-mcrypt php-memcached phpmyadmin libapache2-mod-wsgi-py3 python3-pip
+apt install openjdk-11-jdk tomcat9 tomcat9-admin
+apt install apache2 php libapache2-mod-php libapache2-mod-rpaf libmariadb-java
+ php-gd php-mysql php-mcrypt php-memcached libapache2-mod-wsgi-py3 python3-pip
 cp /usr/share/java/mysql-connector-java-5.1.42.jar /usr/share/tomcat8/lib/
 ```
 ```
 mysql_secure_installation
-ln -s /usr/share/phpmyadmin/ /var/www/
 ```
 ```
 mysql -u root -p
@@ -32,22 +31,18 @@ Listen 127.0.0.1:81
 ```
 RPAheader X-Forwarded-For
 ```
-/etc/tomcat8/tomcat-users.xml
+/etc/tomcat9/tomcat-users.xml
 ```
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
-/etc/tomcat8/server.xml
+/etc/tomcat9/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
 <Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>        #取消注释
 <Context path="" docBase="/var/www" debug="0" reloadable="true"/>     #在<Host>节点里面添加
-```
-/etc/libapache2-mod-jk/workers.properties
-```
-workers.java_home=/usr/lib/jvm/java-8-openjdk-amd64
 ```
 /etc/apache2/sites-available/default
 ```
@@ -55,7 +50,7 @@ ServerName 127.0.0.1                         /etc/apache2/conf-available/securit
 <VirtualHost *:81>                           ServerTokens Prod
     ServerAdmin xxx@xxx.net                  ServerSignature Off
     DocumentRoot /var/www
-    …                                        /etc/php/7.0/apache2/php.ini
+    …                                        /etc/php/7.3/apache2/php.ini
 </VirtualHost>                               expose_php = off
                                              date.timezone = Asia/Shanghai
 a2enmod rewrite ssl                          upload_max_filesize = 10M
@@ -111,7 +106,7 @@ ssl_protocols添加 TLSv1.1 TLSv1.2                           server_name java.x
 ```
 ```
 apt install certbot
-certbot certonly --webroot -w /var/www/example -d xxx.net -d www.xxx.net
+certbot certonly --webroot -w /var/www/example -d xxx.net -m xxx@live.cn --agree-tos
 ```
 /etc/nginx/sites-enabled/default
 ```
