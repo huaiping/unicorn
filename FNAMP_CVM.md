@@ -20,7 +20,7 @@ pkg-static install -f pkg
 pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
 ```
 ```
-pkg install nginx apache24 mariadb102-server openjdk8 tomcat85 py36-certbot
+pkg install nginx apache24 mariadb102-server phpmyadmin openjdk8 tomcat85 py36-certbot
 pkg install php74 mod_php74 php74-gd php74-mbstring php74-mcrypt php74-pdo_mysql php74-json
  php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java node npm
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-8.5/lib/
@@ -28,8 +28,10 @@ cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat
 ```
 sysrc apache24_enable=yes
 service apache24 start
-sysrc mysql_enable=yes
+sysrc mysql_enable="YES"
 service mysql-server start
+sysrc mysql_args="--bind-address=127.0.0.1"
+service mysql-server restart
 sysrc nginx_enable=yes
 service nginx start
 ```
