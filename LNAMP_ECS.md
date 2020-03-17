@@ -71,9 +71,8 @@ a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 /etc/apache2/apache2.conf                    /etc/nginx/nginx.conf
 AllowOverride All                            server_tokens = off
 ```
-```
-apt install nginx
 /etc/nginx/proxy_params
+```
 proxy_set_header            Host $host;
 proxy_set_header            X-Real-IP $remote_addr;
 proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
