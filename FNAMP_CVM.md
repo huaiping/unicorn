@@ -1,4 +1,4 @@
-**FNAMP笔记（FreeBSD 11.1 + Nginx 1.8 + Apache 2.4 + MariaDB 10.2 + PHP 7.1 + Tomcat 8.5 + Nodejs 8.8）**
+**FNAMP笔记（FreeBSD 12.1 + Nginx 1.8 + Apache 2.4 + MariaDB 10.2 + PHP 7.1 + Tomcat 8.5 + Nodejs 8.8）**
 
 ~~/etc/freebsd-update.conf~~
 ```
@@ -9,6 +9,7 @@ freebsd-update -r 11.3-RELEASE upgrade
 freebsd-update install
 reboot
 freebsd-update install
+tzsetup
 ```
 /etc/pkg/FreeBSD.conf
 ```
@@ -20,16 +21,17 @@ pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
 ```
 ```
 pkg install nginx apache24 mariadb102-server openjdk8 tomcat85 py36-certbot
-pkg install php71 mod_php71 php71-gd php71-mbstring php71-mcrypt php71-pdo_mysql php71-json
- php71-session php71-mysqli php71-ctype php71-filter ap24-mod_rpaf2 mysql-connector-java node npm
+pkg install php74 mod_php74 php74-gd php74-mbstring php74-mcrypt php74-pdo_mysql php74-json
+ php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java node npm
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-8.5/lib/
 ```
-/etc/rc.conf
 ```
-apache24_enable="YES"
-mysql_enable="YES"
-nginx_enable="YES"
-tomcat85_enable="YES"
+sysrc apache24_enable=yes
+service apache24 start
+sysrc mysql_enable=yes
+service mysql-server start
+sysrc nginx_enable=yes
+service nginx start
 ```
 ~~/usr/local/etc/mysql/my.cnf~~
 ```
