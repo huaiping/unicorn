@@ -102,7 +102,7 @@ server {                                                upstream php {
                                                         }
 ssl_certificate /etc/ssl/xxx.crt;                       server {
 ssl_certificate_key /etc/ssl/xxx.key;                       listen 80;
-ssl_protocols添加 TLSv1.2 TLSv1.3                           server_name java.xxx.net;
+ssl_protocols添加 TLSv1.2 TLSv1.3                            server_name java.xxx.net;
                                                             location / {
                                                                 proxy_pass http://java;
                                                                 proxy_redirect off;
@@ -130,7 +130,7 @@ add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; prelo
 add_header X-Frame-Options DENY;
 add_header X-Content-Type-Options nosniff;
 
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+ssl_protocols TLSv1.2 TLSv1.3;
 ssl_ciphers TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:HIGH:!aNULL:!MD5;
 ssl_prefer_server_ciphers on;
 ssl_session_cache shared:SSL:10m;
