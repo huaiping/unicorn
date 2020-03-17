@@ -26,36 +26,9 @@ cp -pr /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config
 ```
 apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
 ```
-```
-apt install openjdk-11-jdk tomcat9 tomcat9-admin libmariadb-java
-cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
-```
-```
-apt install apache2 libapache2-mod-wsgi-py3 python3-pip
-```
-```
-apt install nginx libapache2-mod-rpaf
-```
 /etc/apache2/ports.conf
 ```
 Listen 127.0.0.1:81
-```
-/etc/apache2/mods-enable/rpaf.conf
-```
-RPAheader X-Forwarded-For
-```
-/etc/tomcat9/tomcat-users.xml
-```
-<role rolename="admin-gui"/>
-<role rolename="manager-gui"/>
-<user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
-```
-/etc/tomcat9/server.xml
-```
-<Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
- redirectPort="8443"/>
-<Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>        #取消注释
-<Context path="" docBase="/var/www" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 /etc/apache2/sites-available/default
 ```
@@ -70,6 +43,33 @@ a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 
 /etc/apache2/apache2.conf                    /etc/nginx/nginx.conf
 AllowOverride All                            server_tokens = off
+```
+```
+apt install openjdk-11-jdk tomcat9 tomcat9-admin libmariadb-java
+cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
+```
+/etc/tomcat9/tomcat-users.xml
+```
+<role rolename="admin-gui"/>
+<role rolename="manager-gui"/>
+<user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
+```
+/etc/tomcat9/server.xml
+```
+<Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
+ redirectPort="8443"/>
+<Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>        #取消注释
+<Context path="" docBase="/var/www" debug="0" reloadable="true"/>     #在<Host>节点里面添加
+```
+```
+apt install apache2 libapache2-mod-wsgi-py3 python3-pip
+```
+```
+apt install nginx libapache2-mod-rpaf
+```
+/etc/apache2/mods-enable/rpaf.conf
+```
+RPAheader X-Forwarded-For
 ```
 /etc/nginx/proxy_params
 ```
