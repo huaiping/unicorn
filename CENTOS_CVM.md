@@ -1,4 +1,4 @@
-**CentOS笔记（CentOS 7.4 + Nginx 1.12 + Apache 2.4 + MariaDB 5.5 + PHP 5.4 + Tomcat 7.0 + Nodejs 12）**
+**CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Nodejs 12）**
 ```
 yum install mariadb-server
 systemctl start mariadb.service
@@ -7,36 +7,36 @@ mysql_secure_installation
 ```
 ```
 yum install httpd
-yum install php php-mysql php-gd php-pdo php-mbstring php-mcrypt phpmyadmin
+yum install php php-mysqlnd php-gd php-pdo php-mbstring php-mcrypt
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
 /etc/httpd/conf/httpd.conf
 ```
- 42 Listen 81
- 86 ServerAdmin xxx@live.cn
- 95 ServerName xxx.net
-151 AllowOverride All
-164 Directory index.php index.html
+Listen 81
+ServerAdmin xxx@live.cn
+ServerName xxx.net
+AllowOverride All
+Directory index.php index.html
 ```
 /etc/php.ini
 ```
-375 expose_php = Off
-878 date.timezone = Asia/Shanghai
+expose_php = Off
+date.timezone = Asia/Shanghai
 ```
 ~~/etc/phpMyAdmin/config.inc.php~~
 ```
 $cfg['Servers'][$i]['auth_type'] = 'http';
 ```
 ```
-yum install java-1.8.0-openjdk tomcat tomcat-webapps tomcat-admin-webapps mysql-connector-java
+yum install java-11-openjdk-devel tomcat tomcat-webapps tomcat-admin-webapps mysql-connector-java
 cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
 systemctl start tomcat.service
 systemctl enable tomcat.service
 ```
 /usr/share/tomcat/conf/tomcat.conf
 ```
-JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64"
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-1.8.0.151-1.b12.el7_4.x86_64"
 ```
 /usr/share/tomcat/conf/tomcat-users.xml
 ```

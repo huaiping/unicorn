@@ -19,7 +19,7 @@ pkg-static install -f pkg
 pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
 ```
 ```
-pkg install nginx apache24 mariadb102-server openjdk8 tomcat85 py27-certbot
+pkg install nginx apache24 mariadb102-server openjdk8 tomcat85 py36-certbot
 pkg install php71 mod_php71 php71-gd php71-mbstring php71-mcrypt php71-pdo_mysql php71-json
  php71-session php71-mysqli php71-ctype php71-filter ap24-mod_rpaf2 mysql-connector-java node npm
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-8.5/lib/
@@ -140,7 +140,6 @@ http {
 }
 ```
 ```
-pkg install py27-certbot
 certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -d www.xxx.net
 ```
 ```
