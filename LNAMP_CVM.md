@@ -2,9 +2,9 @@
 
 ~~/etc/apt/sources.list~~
 ```
-deb http://mirrors.tencentyun.com/debian           stretch          main  contrib  non-free
-deb http://mirrors.tencentyun.com/debian           stretch-updates  main  contrib  non-free
-deb http://mirrors.tencentyun.com/debian-security  stretch/updates  main
+deb http://mirrors.tencentyun.com/debian            buster          main  contrib   non-free
+deb http://mirrors.tencentyun.com/debian            buster-updates  main  contrib   non-free
+deb http://mirrors.tencentyun.com/debian-security/  buster/updates  main  non-free  contrib
 ```
 ```
 apt update
@@ -12,9 +12,9 @@ apt upgrade
 apt dist-upgrade
 apt install mariadb-server mariadb-client
 apt install openjdk-11-jdk tomcat9 tomcat9-admin
-apt install apache2 php libapache2-mod-php libapache2-mod-rpaf libmariadb-java
- php-gd php-mysql php-mcrypt php-memcached libapache2-mod-wsgi-py3 python3-pip
-cp /usr/share/java/mariadb-java-client-2.3.0.jar /usr/share/tomcat8/lib/
+apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
+ libapache2-mod-rpaf libmariadb-java libapache2-mod-wsgi-py3 python3-pip
+cp /usr/share/java/mariadb-java-client-2.3.0.jar /usr/share/tomcat9/lib/
 ```
 ```
 mysql_secure_installation
@@ -96,7 +96,7 @@ server {                                                upstream php {
                                                         }
 ssl_certificate /etc/ssl/xxx.crt;                       server {
 ssl_certificate_key /etc/ssl/xxx.key;                       listen 80;
-ssl_protocols添加 TLSv1.1 TLSv1.2                           server_name java.xxx.net;
+ssl_protocols添加 TLSv1.2 TLSv1.3                           server_name java.xxx.net;
                                                             location / {
                                                                 proxy_pass http://java;
                                                                 proxy_redirect off;
