@@ -1,6 +1,6 @@
 **FNAMP笔记（FreeBSD 11.1 + Nginx 1.8 + Apache 2.4 + MariaDB 10.2 + PHP 7.1 + Tomcat 8.5 + Nodejs 8.8）**
 
-/etc/freebsd-update.conf
+~~/etc/freebsd-update.conf~~
 ```
 ServerName update.chinafreebsd.cn
 ```

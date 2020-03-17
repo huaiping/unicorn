@@ -108,7 +108,7 @@ server {
 }
 server {
     listen 80;
-     server_name java.xxx.net;
+    server_name java.xxx.net;
     location / {
         proxy_pass http://java;
         proxy_redirect off;
