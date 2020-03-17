@@ -14,7 +14,7 @@ apt install mariadb-server mariadb-client
 apt install openjdk-11-jdk tomcat9 tomcat9-admin
 apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
  libapache2-mod-rpaf libmariadb-java libapache2-mod-wsgi-py3 python3-pip
-cp /usr/share/java/mariadb-java-client-2.3.0.jar /usr/share/tomcat9/lib/
+cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 ```
 ```
 mysql_secure_installation
@@ -22,6 +22,12 @@ mysql_secure_installation
 ```
 mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
+```
+```
+wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-languages.tar.gz
+tar zxvf phpMyAdmin-4.9.4-all-languages.tar.gz
+mv phpMyAdmin-4.9.4-all-languages /usr/share/phpmyadmin
+cp -pr /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
 /etc/apache2/ports.conf
 ```
@@ -52,8 +58,8 @@ ServerName 127.0.0.1                         /etc/apache2/conf-available/securit
     DocumentRoot /var/www
     …                                        /etc/php/7.3/apache2/php.ini
 </VirtualHost>                               expose_php = off
-                                             date.timezone = Asia/Shanghai
-a2enmod rewrite ssl                          upload_max_filesize = 10M
+                                             upload_max_filesize = 10M
+a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 
 /etc/apache2/apache2.conf                    /etc/nginx/nginx.conf
 AllowOverride All                            server_tokens = off
@@ -107,6 +113,11 @@ ssl_protocols添加 TLSv1.2 TLSv1.3                           server_name java.x
 ```
 apt install certbot
 certbot certonly --webroot -w /var/www/example -d xxx.net -m xxx@live.cn --agree-tos
+```
+```
+certbot renew --dry-run
+crontab -e
+30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
 ```
 /etc/nginx/sites-enabled/default
 ```

@@ -46,13 +46,6 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-phpMyAdmin 4.9.4
-```
-wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-languages.tar.gz
-tar zxvf phpMyAdmin-4.9.3-all-languages.tar.gz
-mv phpMyAdmin-4.9.4-all-languages /usr/share/phpmyadmin
-cp -pr /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
-```
 Composer 1.9.3 + Laravel 7.0
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
@@ -109,12 +102,6 @@ AuthorizedKeysFile      %h/.ssh/authorized_keys
 PHP and MSSQL on Ubuntu
 ```
 apt install php5-sybase
-```
-Certbot 0.31.0
-```
-sudo certbot renew --dry-run
-crontab -e
-30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
 ```
 Redis 5.0.3
 ```
