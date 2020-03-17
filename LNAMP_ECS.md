@@ -18,9 +18,9 @@ mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-languages.tar.gz
-tar zxvf phpMyAdmin-4.9.4-all-languages.tar.gz
-mv phpMyAdmin-4.9.4-all-languages /usr/share/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.1/phpMyAdmin-5.0.1-all-languages.tar.gz
+tar zxvf phpMyAdmin-5.0.1-all-languages.tar.gz
+mv phpMyAdmin-5.0.1-all-languages /usr/share/phpmyadmin
 cp -pr /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
 ```
