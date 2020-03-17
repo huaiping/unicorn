@@ -63,6 +63,38 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 ```
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip
+pip3 install --upgrade pip
+```
+/etc/pip.conf
+```
+[global]
+trusted-host = mirrors.aliyun.com
+index-url = https://mirrors.aliyun.com/pypi/simple
+extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```
+/etc/apache2/sites-available/000-default.conf
+```
+<VirtualHost *:8000>
+    ServerName xxx.net
+    WSGIScriptAlias / /var/www/demo/django.wsgi
+    <Directory "/var/www/demo">
+        Options FollowSymLinks Indexes
+        AllowOverride all
+        Require all granted
+    </Directory>
+
+    Alias /robots.txt /var/www/demo/static/robots.txt
+    Alias /static /var/www/demo/static
+    <Location "/static">
+        SetHandler None
+    </Location>
+    <Directory "/var/www/demo/static">
+        Require all granted
+    </Directory>
+
+    ErrorLog "/var/log/apache2/py-error.log"
+    CustomLog "/var/log/apache2/py-access.log" combined
+</VirtualHost>
 ```
 ```
 apt install nginx libapache2-mod-rpaf
