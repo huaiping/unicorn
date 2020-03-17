@@ -7,6 +7,7 @@ deb http://mirrors.tencentyun.com/debian            buster-updates  main  contri
 deb http://mirrors.tencentyun.com/debian-security/  buster/updates  main  non-free  contrib
 ```
 ```
+dpkg-reconfigure tzdata
 apt update
 apt upgrade
 apt dist-upgrade
@@ -62,7 +63,7 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 <Context path="" docBase="/var/www" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-apt install apache2 libapache2-mod-wsgi-py3 python3-pip
+apt install apache2 libapache2-mod-wsgi-py3 python3-pip libmariadbd-dev
 pip3 install --upgrade pip
 ```
 /etc/pip.conf
@@ -74,7 +75,7 @@ extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 /etc/apache2/sites-available/000-default.conf
 ```
-<VirtualHost *:8000>
+<VirtualHost *:81>
     ServerName xxx.net
     WSGIScriptAlias / /var/www/demo/django.wsgi
     <Directory "/var/www/demo">
@@ -150,7 +151,7 @@ server {
 ```
 ```
 apt install certbot
-certbot certonly --webroot -w /var/www/example -d xxx.net -m xxx@live.cn --agree-tos
+certbot certonly --webroot -w /var/www/demo -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
