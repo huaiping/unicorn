@@ -10,16 +10,10 @@ deb http://mirrors.tencentyun.com/debian-security/  buster/updates  main  non-fr
 apt update
 apt upgrade
 apt dist-upgrade
+```
+```
 apt install mariadb-server mariadb-client
-apt install openjdk-11-jdk tomcat9 tomcat9-admin
-apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
- libapache2-mod-rpaf libmariadb-java libapache2-mod-wsgi-py3 python3-pip
-cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
-```
-```
 mysql_secure_installation
-```
-```
 mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 ```
@@ -28,6 +22,19 @@ wget https://files.phpmyadmin.net/phpMyAdmin/4.9.4/phpMyAdmin-4.9.4-all-language
 tar zxvf phpMyAdmin-4.9.4-all-languages.tar.gz
 mv phpMyAdmin-4.9.4-all-languages /usr/share/phpmyadmin
 cp -pr /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
+```
+```
+apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
+```
+```
+apt install openjdk-11-jdk tomcat9 tomcat9-admin libmariadb-java
+cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
+```
+```
+apt install apache2 libapache2-mod-wsgi-py3 python3-pip
+```
+```
+apt install nginx libapache2-mod-rpaf
 ```
 /etc/apache2/ports.conf
 ```
@@ -79,36 +86,36 @@ proxy_buffers               8 128k;
 ```
 /etc/nginx/sites-available/default
 ```
-server {                                                upstream php {
-    listen 80;                                              server 127.0.0.1:81;
-    root /var/www;                                      }
-    index index.html index.htm;                         upstream java {
-    server_name localhost;                                  server 127.0.0.1:8080;
-    proxy_redirect http://dev.xxx.net:81/ /;            }
-    location ~ \.php$ {                                 server {
-        proxy_pass http://127.0.0.1:81;                     server_name _;
-        include proxy_params;                               return 404;
-    }                                                   }
-    location ~ .*.jsp$ {                                server {
-        index index.jsp;                                    listen 80;
-        proxy_pass http://127.0.0.1:8080;                   root /var/www;
-        include proxy_params;                               index index.php index.html;
-    }                                                       server_name php.xxx.net;
-    location ~* (.*)\.(jpg|gif|png|html|js|css)$ {          proxy_redirect http://php.xxx.net:81/ /;
-        root /var/www/html;                                 location / {
-        expires 10m;                                            proxy_pass http://php;
-    }                                                           include proxy_params;
-}                                                           }
-                                                        }
-ssl_certificate /etc/ssl/xxx.crt;                       server {
-ssl_certificate_key /etc/ssl/xxx.key;                       listen 80;
-ssl_protocols添加 TLSv1.2 TLSv1.3                            server_name java.xxx.net;
-                                                            location / {
-                                                                proxy_pass http://java;
-                                                                proxy_redirect off;
-                                                                include proxy_params;
-                                                            }
-                                                        }
+upstream php {
+    server 127.0.0.1:81;
+}
+upstream java {
+    server 127.0.0.1:8080;
+}
+server {
+    server_name _;
+    return 404;
+}
+server {
+    listen 80;
+    root /var/www;
+    index index.php index.html;
+    server_name php.xxx.net;
+    proxy_redirect http://php.xxx.net:81/ /;
+    location / {
+        proxy_pass http://php;
+        include proxy_params;
+    }
+}
+server {
+    listen 80;
+     server_name java.xxx.net;
+    location / {
+        proxy_pass http://java;
+        proxy_redirect off;
+        include proxy_params;
+    }
+}
 ```
 ```
 apt install certbot
