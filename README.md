@@ -9,6 +9,8 @@ cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)
 
 Howtoforge [https://www.howtoforge.com](https://www.howtoforge.com)  
 
+Linuxize [https://linuxize.com](https://linuxize.com)  
+
 CSDN [https://www.csdn.net](https://www.csdn.net)  
 
 Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)  

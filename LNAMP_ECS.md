@@ -165,17 +165,26 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096
 ```
 listen 443 ssl http2;
 
-add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
-add_header X-Frame-Options DENY;
-add_header X-Content-Type-Options nosniff;
+ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
+ssl_session_timeout 1d;
+ssl_session_cache shared:SSL:10m;
+ssl_session_tickets off;
 
 ssl_protocols TLSv1.2 TLSv1.3;
 ssl_ciphers TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:HIGH:!aNULL:!MD5;
 ssl_prefer_server_ciphers on;
-ssl_session_cache shared:SSL:10m;
 
 ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
 ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
-ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
+ssl_staping on;
+ssl_staping_verify on;
+resolver 8.8.8.8 8.8.4.4 valid=300s;
+resolver_timeout 30s;
+
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+add_header X-Frame-Options DENY;
+add_header X-Content-Type-Options nosniff;
 ```
