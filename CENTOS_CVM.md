@@ -51,7 +51,7 @@ JAVA_HOME="/usr/lib/jvm/java-11-openjdk-1.8.0.151-1.b12.el7_4.x86_64"
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-rpm -Uvh https://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+rpm -Uvh https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.16.1-1.el8.ngx.x86_64.rpm
 yum install nginx
 systemctl start nginx.service
 systemctl enable nginx.service
@@ -85,17 +85,11 @@ http {
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
-        location /phpMyAdmin/ {
-            proxy_pass http://php;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        }
     }
     server {
         listen 443 ssl http2;
         server_name xxx.net;
-        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_protocols TLSv1.1 TLSv1.2;
         ssl_ciphers HIGH:!aNULL:!MD5;
         ssl_prefer_server_ciphers on;
         ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
@@ -122,17 +116,4 @@ http {
 ```
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
 yum install nodejs
-```
-```
-systemctl stop firewalld.service 
-systemctl disable firewalld.service
-```
-/etc/selinux/config
-```
-#SELINUX=enforcing
-#SELINUXTYPE=targeted
-SELINUX=disabled
-```
-```
-setenforce 0
 ```
