@@ -11,6 +11,8 @@ Howtoforge [https://www.howtoforge.com](https://www.howtoforge.com)
 
 Linuxize [https://linuxize.com](https://linuxize.com)  
 
+TecMint [https://tecmint.com](https://tecmint.com)  
+
 CSDN [https://www.csdn.net](https://www.csdn.net)  
 
 Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)  
