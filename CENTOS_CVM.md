@@ -51,7 +51,7 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.17.tar.gz
+wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
 tar xvf apache-tomcat-9.0.33.tar.gz -C /usr/share/
 ln -s /usr/share/apache-tomcat-9.0.33/ /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/tomcat
@@ -108,6 +108,11 @@ systemctl enable nginx.service
 yum install epel-release
 yum install certbot
 certbot certonly --webroot -w /var/www/xxx.net -d xxx.net -m xxx@live.cn --agree-tos
+```
+```
+certbot renew --dry-run
+crontab -e
+30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
 ```
 /etc/nginx/conf.d/default.conf
 ```
