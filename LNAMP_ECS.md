@@ -19,13 +19,13 @@ mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.0.1/phpMyAdmin-5.0.1-all-languages.tar.gz
-tar zxvf phpMyAdmin-5.0.1-all-languages.tar.gz
-mv phpMyAdmin-5.0.1-all-languages /usr/share/phpmyadmin
-cp -pr /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
-```
-```
 apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
+```
+```
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
+mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
+cp /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
 ```
 /etc/apache2/ports.conf
 ```

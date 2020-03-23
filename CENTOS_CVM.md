@@ -24,15 +24,63 @@ Directory index.php index.html
 expose_php = Off
 date.timezone = Asia/Shanghai
 ```
+```
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.zip
+unzip phpMyAdmin-5.0.2-all-languages.zip
+mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
+cd /usr/share/phpmyadmin
+mv config.sample.inc.php config.inc.php
+nano config.inc.php
+$cfg['blowfish_secret'] = 'xxx';
+mkdir /usr/share/phpmyadmin/tmp
+chown -R apache:apache /usr/share/phpmyadmin
+chmod 777 /usr/share/phpmyadmin/tmp
+```
 ~~/etc/phpMyAdmin/config.inc.php~~
 ```
 $cfg['Servers'][$i]['auth_type'] = 'http';
 ```
 ```
-yum install java-11-openjdk-devel tomcat tomcat-webapps tomcat-admin-webapps mysql-connector-java
+yum install java-11-openjdk-devel mysql-connector-java
 cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
 systemctl start tomcat.service
 systemctl enable tomcat.service
+```
+```
+groupadd --system tomcat
+useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
+```
+```
+wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.17.tar.gz
+tar xvf apache-tomcat-9.0.33.tar.gz -C /usr/share/
+ln -s /usr/share/apache-tomcat-9.0.33/ /usr/share/tomcat
+chown -R tomcat:tomcat /usr/share/tomcat
+chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.33/
+```
+vim /etc/systemd/system/tomcat.service
+```
+[Unit]
+Description=Tomcat Server
+After=syslog.target network.target
+[Service]
+Type=forking
+User=tomcat
+Group=tomcat
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+Environment='JAVA_OPTS=-Djava.awt.headless=true'
+Environment=CATALINA_HOME=/usr/share/tomcat
+Environment=CATALINA_BASE=/usr/share/tomcat
+Environment=CATALINA_PID=/usr/share/tomcat/temp/tomcat.pid
+Environment='CATALINA_OPTS=-Xms512M -Xmx1024M'
+ExecStart=/usr/share/tomcat/bin/catalina.sh start
+ExecStop=/usr/share/tomcat/bin/catalina.sh stop
+[Install]
+WantedBy=multi-user.target
+```
+```
+systemctl daemon-reload
+systemctl start tomcat
+systemctl enable tomcat
 ```
 /usr/share/tomcat/conf/tomcat.conf
 ```
