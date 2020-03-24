@@ -10,7 +10,7 @@ deb http://mirrors.tencentyun.com/debian-security/  buster/updates  main  non-fr
 dpkg-reconfigure tzdata
 apt update
 apt upgrade
-apt dist-upgrade
+apt full-upgrade
 ```
 ```
 apt install mariadb-server mariadb-client

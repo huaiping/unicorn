@@ -25,16 +25,6 @@ pkg install php74 mod_php74 php74-gd php74-mbstring php74-mcrypt php74-pdo_mysql
  php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java node12 npm
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-9/lib/
 ```
-```
-sysrc apache24_enable="YES"
-service apache24 start
-sysrc mysql_enable="YES"
-service mysql-server start
-sysrc mysql_args="--bind-address=127.0.0.1"
-service mysql-server restart
-sysrc nginx_enable="YES"
-service nginx start
-```
 ~~/usr/local/etc/mysql/my.cnf~~
 ```
 [mysqld]
@@ -43,7 +33,10 @@ socket = /tmp/mysql.sock
 bind-address = 127.0.0.1
 ```
 ```
-/usr/local/etc/rc.d/mysql-server onestart
+sysrc mysql_enable="YES"
+service mysql-server start
+sysrc mysql_args="--bind-address=127.0.0.1"
+service mysql-server restart
 mysql_secure_installation
 
 cd /usr/local/www/phpMyAdmin
@@ -86,6 +79,12 @@ RPAFenable On
 RPAFsethostname On
 RPAFproxy_ips 127.0.0.1
 RPAFheader X-Forwarded-For
+```
+```
+sysrc apache24_enable="YES"
+service apache24 start
+sysrc nginx_enable="YES"
+service nginx start
 ```
 /etc/fstab
 ```
@@ -150,5 +149,5 @@ certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -d www.xxx
 /usr/local/etc/rc.d/apache24 start     或 service apache24 start
 /usr/local/etc/rc.d/mysql-server start 或 service mysql-server start
 /usr/local/etc/rc.d/nginx start        或 service nginx start
-/usr/local/etc/rc.d/tomcat9 start     或 service tomcat9 start
+/usr/local/etc/rc.d/tomcat9 start      或 service tomcat9 start
 ```
