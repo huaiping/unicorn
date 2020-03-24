@@ -1,13 +1,13 @@
 **CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Nodejs 12）**
 ```
-yum install mariadb-server
+dnf install mariadb-server
 systemctl start mariadb.service
 systemctl enable mariadb.service
 mysql_secure_installation
 ```
 ```
-yum install httpd
-yum install php php-mysqlnd php-gd php-pdo php-mbstring php-mcrypt
+dnf install httpd
+dnf install php php-mysqlnd php-gd php-pdo php-mbstring php-mcrypt
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
@@ -41,7 +41,7 @@ chmod 777 /usr/share/phpmyadmin/tmp
 $cfg['Servers'][$i]['auth_type'] = 'http';
 ```
 ```
-yum install java-11-openjdk-devel mysql-connector-java
+dnf install java-11-openjdk-devel mysql-connector-java
 cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
 systemctl start tomcat.service
 systemctl enable tomcat.service
@@ -51,13 +51,13 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
+wget http://downloads.apache.org/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
 tar xvf apache-tomcat-9.0.33.tar.gz -C /usr/share/
 ln -s /usr/share/apache-tomcat-9.0.33/ /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.33/
 ```
-vim /etc/systemd/system/tomcat.service
+/etc/systemd/system/tomcat.service
 ```
 [Unit]
 Description=Tomcat Server
@@ -100,13 +100,13 @@ JAVA_HOME="/usr/lib/jvm/java-11-openjdk-1.8.0.151-1.b12.el7_4.x86_64"
 ```
 ```
 rpm -Uvh https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.16.1-1.el8.ngx.x86_64.rpm
-yum install nginx
+dnf install nginx
 systemctl start nginx.service
 systemctl enable nginx.service
 ```
 ```
-yum install epel-release
-yum install certbot
+dnf install epel-release
+dnf install certbot
 certbot certonly --webroot -w /var/www/xxx.net -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
