@@ -51,7 +51,7 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget http://downloads.apache.org/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
 tar xvf apache-tomcat-9.0.33.tar.gz -C /usr/share/
 ln -s /usr/share/apache-tomcat-9.0.33/ /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/tomcat
