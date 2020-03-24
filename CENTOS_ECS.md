@@ -1,4 +1,7 @@
-**CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Nodejs 12）**
+**CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Nodejs 10）**
+```
+dnf makecache
+```
 ```
 dnf install mariadb-server
 systemctl start mariadb.service
@@ -25,8 +28,8 @@ expose_php = Off
 date.timezone = Asia/Shanghai
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.zip
-unzip phpMyAdmin-5.0.2-all-languages.zip
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
+tar xvf phpMyAdmin-5.0.2-all-languages.tar.gz
 mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
 cd /usr/share/phpmyadmin
 mv config.sample.inc.php config.inc.php
@@ -41,12 +44,6 @@ chmod 777 /usr/share/phpmyadmin/tmp
 $cfg['Servers'][$i]['auth_type'] = 'http';
 ```
 ```
-dnf install java-11-openjdk-devel mysql-connector-java
-cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
-systemctl start tomcat.service
-systemctl enable tomcat.service
-```
-```
 groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
@@ -54,6 +51,8 @@ useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
 tar xvf apache-tomcat-9.0.33.tar.gz -C /usr/share/
 ln -s /usr/share/apache-tomcat-9.0.33/ /usr/share/tomcat
+dnf install java-11-openjdk-devel mysql-connector-java
+cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
 chown -R tomcat:tomcat /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.33/
 ```
@@ -79,8 +78,8 @@ WantedBy=multi-user.target
 ```
 ```
 systemctl daemon-reload
-systemctl start tomcat
-systemctl enable tomcat
+systemctl start tomcat.service
+systemctl enable tomcat.service
 ```
 /usr/share/tomcat/conf/tomcat.conf
 ```
@@ -99,7 +98,6 @@ JAVA_HOME="/usr/lib/jvm/java-11-openjdk-1.8.0.151-1.b12.el7_4.x86_64"
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-rpm -Uvh https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.16.1-1.el8.ngx.x86_64.rpm
 dnf install nginx
 systemctl start nginx.service
 systemctl enable nginx.service
@@ -167,6 +165,5 @@ http {
 }
 ```
 ```
-curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
-yum install nodejs
+dnf install nodejs npm
 ```

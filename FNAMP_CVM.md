@@ -92,13 +92,13 @@ RPAFheader X-Forwarded-For
 fdesc   /dev/fd         fdescfs         rw      0       0
 proc    /proc           procfs          rw      0       0
 ```
-/usr/local/apache-tomcat-8.0/conf/tomcat-users.xml
+/usr/local/apache-tomcat-9.0/conf/tomcat-users.xml
 ```
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
-/usr/local/apache-tomcat-8.0/conf/server.xml
+/usr/local/apache-tomcat-9.0/conf/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
@@ -150,5 +150,5 @@ certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -d www.xxx
 /usr/local/etc/rc.d/apache24 start     或 service apache24 start
 /usr/local/etc/rc.d/mysql-server start 或 service mysql-server start
 /usr/local/etc/rc.d/nginx start        或 service nginx start
-/usr/local/etc/rc.d/tomcat85 start     或 service tomcat85 start
+/usr/local/etc/rc.d/tomcat9 start     或 service tomcat9 start
 ```
