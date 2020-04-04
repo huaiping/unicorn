@@ -39,6 +39,8 @@ V2Ray [https://view.freev2ray.org](http://freev2.org)
 
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
+Rufus [https://rufus.ie](https://rufus.ie)  
+
 七牛云 [https://www.qiniu.com](https://www.qiniu.com)  
 
 微云 [https://www.weiyun.com](https://www.weiyun.com)  
