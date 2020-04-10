@@ -8,9 +8,9 @@
 <title>主题班会</title>
 <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.7.5/video-js.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.7.6/video-js.min.css">
 <style>
 body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
 p {color:#fff; margin:0 auto;}
@@ -28,14 +28,14 @@ img {vertical-align:middle;}
         <p style="font-size:15vh;">向阳生长 逆风飞翔</p>
         <p style="margin-top:3vh; font-size:9vh;">成长•感恩•责任 主题教育班会</p>
         <p style="margin-top:3vh; font-size:8vh;">高二（8）班</p>
-        <p style="margin-top:3vh; font-size:8vh;"><span id="Timer">2020年3月25日</span></p>
+        <p style="margin-top:3vh; font-size:8vh;">2020年3月25日</p>
     </div>
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.js"></script>
-<script src="https://cdn.bootcss.com/video.js/7.7.5/video.min.js"></script>
+<script src="https://cdn.bootcss.com/video.js/7.7.6/video.min.js"></script>
 <script>
 $(document).bind("contextmenu",function(){
   return false;
@@ -52,37 +52,6 @@ $(function(){
     sectionsColor : ['#cf4647', '#1bbc9b', '#cf4647']
   });
 });
-</script>
-
-<script type="text/javascript">
-    $(function () {
-        setInterval("GetTime()", 1000);
-    });
-    //获取时间并设置格式
-    function GetTime() {
-        var mon, day, now, hour, min, ampm, time, str, tz, end, beg, sec;
-        mon = new Array("一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月");
-        day = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六");
-        now = new Date();
-        hour = now.getHours();
-        min = now.getMinutes();
-        sec = now.getSeconds();
-        if (hour < 10) {
-            hour = "0" + hour;
-        }
-        if (min < 10) {
-            min = "0" + min;
-        }
-        if (sec < 10) {
-            sec = "0" + sec;
-        }
-        $("#Timer").html(
-            now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日" + "  " + hour + ":" + min + ":" + sec
-        );
-        //$("#Timer").html(
-        //day[now.getDay()] + ", " + mon[now.getMonth()] + " "
-        //+ now.getDate() + ", " + now.getFullYear() + " " + hour + ":" + min + ":" + sec);
-    }
 </script>
 </body>
 </html>
