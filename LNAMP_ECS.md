@@ -2,9 +2,9 @@
 
 ~~/etc/apt/sources.list~~
 ```
-deb http://mirrors.tencentyun.com/debian            buster          main  contrib   non-free
-deb http://mirrors.tencentyun.com/debian            buster-updates  main  contrib   non-free
-deb http://mirrors.tencentyun.com/debian-security/  buster/updates  main  non-free  contrib
+deb http://mirrors.aliyun.com/debian            buster          main  contrib   non-free
+deb http://mirrors.aliyun.com/debian            buster-updates  main  contrib   non-free
+deb http://mirrors.aliyun.com/debian-security/  buster/updates  main  non-free  contrib
 ```
 ```
 dpkg-reconfigure tzdata
@@ -19,7 +19,7 @@ mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 ```
 ```
-apt install apache2 php libapache2-mod-php php-gd php-mysql php-mcrypt php-memcached
+apt install apache2 php libapache2-mod-php php-gd php-mysql
 ```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
