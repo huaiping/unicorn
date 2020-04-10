@@ -13,6 +13,8 @@ Linuxize [https://linuxize.com](https://linuxize.com)
 
 LinuxHint [https://linuxhint.com](https://linuxhint.com)  
 
+ITzGeek [https://www.itzgeek.com](https://www.itzgeek.com)  
+
 TecMint [https://www.tecmint.com](https://www.tecmint.com)  
 
 CSDN [https://www.csdn.net](https://www.csdn.net)  

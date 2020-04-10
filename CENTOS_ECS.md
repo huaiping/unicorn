@@ -48,13 +48,13 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
-tar xvf apache-tomcat-9.0.33.tar.gz -C /usr/share/
-ln -s /usr/share/apache-tomcat-9.0.33/ /usr/share/tomcat
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
+tar xvf apache-tomcat-9.0.34.tar.gz -C /usr/share/
+ln -s /usr/share/apache-tomcat-9.0.34/ /usr/share/tomcat
 dnf install java-11-openjdk-devel mysql-connector-java
 cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
 chown -R tomcat:tomcat /usr/share/tomcat
-chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.33/
+chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.34/
 ```
 /etc/systemd/system/tomcat.service
 ```
@@ -103,9 +103,11 @@ systemctl start nginx.service
 systemctl enable nginx.service
 ```
 ```
-dnf install epel-release
-dnf install certbot
-certbot certonly --webroot -w /var/www/xxx.net -d xxx.net -m xxx@live.cn --agree-tos
+wget https://dl.eff.org/certbot-auto
+sudo mv certbot-auto /usr/local/bin/certbot-auto
+sudo chown root /usr/local/bin/certbot-auto
+sudo chmod 0755 /usr/local/bin/certbot-auto
+/usr/local/bin/certbot-auto certonly --webroot -w /var/www/demo -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
@@ -140,7 +142,7 @@ http {
     server {
         listen 443 ssl http2;
         server_name xxx.net;
-        ssl_protocols TLSv1.1 TLSv1.2;
+        ssl_protocols TLSv1.2 TLSv1.3;
         ssl_ciphers HIGH:!aNULL:!MD5;
         ssl_prefer_server_ciphers on;
         ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
