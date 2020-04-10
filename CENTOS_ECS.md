@@ -10,7 +10,7 @@ mysql_secure_installation
 ```
 ```
 dnf install httpd
-dnf install php php-mysqlnd php-gd php-pdo php-mbstring php-mcrypt
+dnf install php php-mysqlnd php-gd php-pdo php-mbstring
 systemctl start httpd.service
 systemctl enable httpd.service
 ```

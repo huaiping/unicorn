@@ -19,7 +19,7 @@ service mongod start
 systemctl enable mongod
 systemctl status mongod
 ```
-CentOS 7.7.1908
+CentOS 8.1.1911
 
 /etc/yum.repos.d/mongodb-org-4.2.repo
 ```
@@ -31,7 +31,7 @@ enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 ```
 ```
-yum install mongodb-org
+dnf install mongodb-org
 ```
 /etc/mongod.conf
 ```

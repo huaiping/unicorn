@@ -10,14 +10,14 @@ apt install nodejs
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_12.x buster main
 ```
-CentOS 7.7.1908
+CentOS 8.1.1911
 ```
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
-yum install nodejs
+dnf install nodejs
 ```
-/etc/yum.repos.d/nodesource-el7.repo
+/etc/yum.repos.d/nodesource-el8.repo
 ```
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_12.x/el/7/$basearch
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_12.x/el/8/$basearch
 ```
 Express
 ```
