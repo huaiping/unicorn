@@ -46,10 +46,10 @@ useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
 wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
-tar xvf apache-tomcat-9.0.34.tar.gz -C /usr/share/
-ln -s /usr/share/apache-tomcat-9.0.34/ /usr/share/tomcat
+tar xvf apache-tomcat-9.0.34.tar.gz
+mv apache-tomcat-9.0.34 /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/tomcat
-chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.34/
+chmod +x /usr/share/tomcat/bin/*.sh
 ```
 /etc/systemd/system/tomcat.service
 ```
