@@ -10,7 +10,7 @@ mysql_secure_installation
 ```
 ```
 dnf install httpd
-dnf install php php-mysqlnd php-gd php-pdo php-mbstring
+dnf install php php-mysqlnd php-gd php-pdo php-mbstring php-json php-xml
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
@@ -20,7 +20,7 @@ Listen 81
 ServerAdmin xxx@live.cn
 ServerName xxx.net
 AllowOverride All
-Directory index.php index.html
+DirectoryIndex index.php index.html
 ```
 /etc/php.ini
 ```
@@ -39,11 +39,8 @@ mkdir /usr/share/phpmyadmin/tmp
 chown -R apache:apache /usr/share/phpmyadmin
 chmod 777 /usr/share/phpmyadmin/tmp
 ```
-~~/etc/phpMyAdmin/config.inc.php~~
 ```
-$cfg['Servers'][$i]['auth_type'] = 'http';
-```
-```
+dnf install java-11-openjdk-devel
 groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
@@ -51,8 +48,6 @@ useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
 tar xvf apache-tomcat-9.0.34.tar.gz -C /usr/share/
 ln -s /usr/share/apache-tomcat-9.0.34/ /usr/share/tomcat
-dnf install java-11-openjdk-devel mysql-connector-java
-cp /usr/share/java/mysql-connector-java.jar /usr/share/tomcat/lib/
 chown -R tomcat:tomcat /usr/share/tomcat
 chown -R tomcat:tomcat /usr/share/apache-tomcat-9.0.34/
 ```
@@ -81,9 +76,8 @@ systemctl daemon-reload
 systemctl start tomcat.service
 systemctl enable tomcat.service
 ```
-/usr/share/tomcat/conf/tomcat.conf
 ```
-JAVA_HOME="/usr/lib/jvm/java-11-openjdk-1.8.0.151-1.b12.el7_4.x86_64"
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64"
 ```
 /usr/share/tomcat/conf/tomcat-users.xml
 ```
