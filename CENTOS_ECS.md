@@ -29,7 +29,7 @@ date.timezone = Asia/Shanghai
 ```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
-tar xvf phpMyAdmin-5.0.2-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
 mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
 mv /usr/share/phpmyadmin/config.sample.inc.php /usr/share/phpmyadmin/config.inc.php
 ```
@@ -49,11 +49,12 @@ useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
 wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
-tar xvf apache-tomcat-9.0.34.tar.gz
+tar -zxvf apache-tomcat-9.0.34.tar.gz
 mv apache-tomcat-9.0.34 /usr/share/tomcat
 
 wget https://downloads.mariadb.com/Connectors/java/connector-java-2.6.0/mariadb-java-client-2.6.0.jar
 mv mariadb-java-client-2.6.0.jar /usr/share/tomcat/lib
+
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh
 ```
@@ -88,7 +89,7 @@ systemctl enable tomcat.service
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui" />
 ```
-/usr/share/tomcat/conf/server.xml
+~~/usr/share/tomcat/conf/server.xml~~
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
