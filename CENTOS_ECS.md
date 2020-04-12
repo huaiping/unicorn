@@ -31,10 +31,13 @@ date.timezone = Asia/Shanghai
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
 tar xvf phpMyAdmin-5.0.2-all-languages.tar.gz
 mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
-cd /usr/share/phpmyadmin
-mv config.sample.inc.php config.inc.php
-nano config.inc.php
+mv /usr/share/phpmyadmin/config.sample.inc.php /usr/share/phpmyadmin/config.inc.php
+```
+/usr/share/phpmyadmin/config.inc.php
+```
 $cfg['blowfish_secret'] = 'xxx';
+```
+```
 mkdir /usr/share/phpmyadmin/tmp
 chown -R apache:apache /usr/share/phpmyadmin
 chmod 777 /usr/share/phpmyadmin/tmp
@@ -48,6 +51,9 @@ useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
 tar xvf apache-tomcat-9.0.34.tar.gz
 mv apache-tomcat-9.0.34 /usr/share/tomcat
+
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.6.0/mariadb-java-client-2.6.0.jar
+mv mariadb-java-client-2.6.0.jar /usr/share/tomcat/lib
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh
 ```
@@ -60,7 +66,7 @@ After=syslog.target network.target
 Type=forking
 User=tomcat
 Group=tomcat
-Environment=JAVA_HOME=/usr/lib/jvm/jre
+Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64
 Environment='JAVA_OPTS=-Djava.awt.headless=true'
 Environment=CATALINA_HOME=/usr/share/tomcat
 Environment=CATALINA_BASE=/usr/share/tomcat
@@ -75,9 +81,6 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl start tomcat.service
 systemctl enable tomcat.service
-```
-```
-JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64"
 ```
 /usr/share/tomcat/conf/tomcat-users.xml
 ```
@@ -98,9 +101,9 @@ systemctl enable nginx.service
 ```
 ```
 wget https://dl.eff.org/certbot-auto
-sudo mv certbot-auto /usr/local/bin/certbot-auto
-sudo chown root /usr/local/bin/certbot-auto
-sudo chmod 0755 /usr/local/bin/certbot-auto
+mv certbot-auto /usr/local/bin/certbot-auto
+chown root /usr/local/bin/certbot-auto
+chmod 0755 /usr/local/bin/certbot-auto
 /usr/local/bin/certbot-auto certonly --webroot -w /var/www/demo -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
