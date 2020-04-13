@@ -69,12 +69,15 @@ After=syslog.target network.target
 Type=forking
 User=tomcat
 Group=tomcat
-Environment="JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64"
-Environment="JAVA_OPTS=-Djava.awt.headless=true"
-Environment="CATALINA_HOME=/usr/share/tomcat"
-Environment="CATALINA_BASE=/usr/share/tomcat"
-Environment="CATALINA_PID=/usr/share/tomcat/temp/tomcat.pid"
-Environment="CATALINA_OPTS=-Xms512M -Xmx1024M"
+
+Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64
+Environment='JAVA_OPTS=-Djava.awt.headless=true'
+
+Environment=CATALINA_HOME=/usr/share/tomcat
+Environment=CATALINA_BASE=/usr/share/tomcat
+Environment=CATALINA_PID=/usr/share/tomcat/temp/tomcat.pid
+Environment='CATALINA_OPTS=-Xms512M -Xmx1024M'
+
 ExecStart=/usr/share/tomcat/bin/catalina.sh start
 ExecStop=/usr/share/tomcat/bin/catalina.sh stop
 
