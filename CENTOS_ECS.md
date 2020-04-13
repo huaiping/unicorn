@@ -163,4 +163,5 @@ crontab -e
 ```
 ```
 dnf install nodejs npm
+npm install pm2 -g
 ```
