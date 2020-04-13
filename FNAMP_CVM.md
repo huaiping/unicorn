@@ -5,11 +5,14 @@
 ServerName update.chinafreebsd.cn
 ```
 ```
-freebsd-update -r 11.3-RELEASE upgrade
-freebsd-update install
-reboot
-freebsd-update install
 tzsetup
+freebsd-update fetch
+freebsd-update install
+
+freebsd-update upgrade -r 11.3-RELEASE
+freebsd-update install
+shutdown -r now
+freebsd-update install
 ```
 /etc/pkg/FreeBSD.conf
 ```

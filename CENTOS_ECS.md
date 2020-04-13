@@ -27,6 +27,10 @@ DirectoryIndex index.php index.html
 expose_php = Off
 date.timezone = Asia/Shanghai
 ```
+/etc/http/conf.d/ssl.conf
+```
+#Listen 443
+```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
 tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
