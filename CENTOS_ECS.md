@@ -105,15 +105,15 @@ systemctl enable nginx.service
 ```
 ```
 wget https://dl.eff.org/certbot-auto
-mv certbot-auto /usr/local/bin/certbot-auto
-chown root /usr/local/bin/certbot-auto
-chmod 0755 /usr/local/bin/certbot-auto
-/usr/local/bin/certbot-auto certonly --webroot -w /usr/share/nginx/html -d xxx.net -m xxx@live.cn --agree-tos
+mv certbot-auto /usr/local/bin/certbot
+chown root /usr/local/bin/certbot
+chmod 0755 /usr/local/bin/certbot
+/usr/local/bin/certbot certonly --webroot -w /usr/share/nginx/html -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
 crontab -e
-30 2 * * 1 /usr/local/bin/certbot-auto renew  >> /var/log/le-renew.log
+30 2 * * 1 /usr/local/bin/certbot renew  >> /var/log/le-renew.log
 ```
 /etc/nginx/conf.d/default.conf
 ```
