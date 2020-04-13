@@ -30,18 +30,18 @@ date.timezone = Asia/Shanghai
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
 tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
-mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
-mv /usr/share/phpmyadmin/config.sample.inc.php /usr/share/phpmyadmin/config.inc.php
+mv phpMyAdmin-5.0.2-all-languages /var/www/html/phpmyadmin
+mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 ```
-/usr/share/phpmyadmin/config.inc.php
+/var/www/html/phpmyadmin/config.inc.php
 ```
 $cfg['blowfish_secret'] = 'xxx';
 ```
 ```
-mysql < /usr/share/phpmyadmin/sql/create_tables.sql -u root -p
-mkdir /usr/share/phpmyadmin/tmp
-chown -R apache:apache /usr/share/phpmyadmin
-chmod 777 /usr/share/phpmyadmin/tmp
+mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p
+mkdir /var/www/html/phpmyadmin/tmp
+chown -R apache:apache /var/www/html/phpmyadmin
+chmod 777 /var/www/html/phpmyadmin/tmp
 ```
 ```
 dnf install java-11-openjdk-devel
@@ -153,10 +153,9 @@ crontab -e
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
-        location /phpMyAdmin/ {
+        location /phpmyadmin/ {
             proxy_pass http://php;
-            #proxy_set_header Host $host;
-            #proxy_set_header Host $host:443;
+            proxy_set_header Host $host:443;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
