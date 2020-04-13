@@ -10,7 +10,7 @@ mysql_secure_installation
 ```
 ```
 dnf install httpd
-dnf install php php-mysqlnd php-gd php-pdo php-mbstring php-json php-xml
+dnf install php php-mysqlnd php-cli php-fpm php-gd php-pdo php-mbstring php-json php-xml
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
@@ -38,6 +38,7 @@ mv /usr/share/phpmyadmin/config.sample.inc.php /usr/share/phpmyadmin/config.inc.
 $cfg['blowfish_secret'] = 'xxx';
 ```
 ```
+mysql < /usr/share/phpmyadmin/sql/create_tables.sql -u root -p
 mkdir /usr/share/phpmyadmin/tmp
 chown -R apache:apache /usr/share/phpmyadmin
 chmod 777 /usr/share/phpmyadmin/tmp
@@ -63,18 +64,20 @@ chmod +x /usr/share/tomcat/bin/*.sh
 [Unit]
 Description=Tomcat Server
 After=syslog.target network.target
+
 [Service]
 Type=forking
 User=tomcat
 Group=tomcat
-Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64
-Environment='JAVA_OPTS=-Djava.awt.headless=true'
-Environment=CATALINA_HOME=/usr/share/tomcat
-Environment=CATALINA_BASE=/usr/share/tomcat
-Environment=CATALINA_PID=/usr/share/tomcat/temp/tomcat.pid
-Environment='CATALINA_OPTS=-Xms512M -Xmx1024M'
+Environment="JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.6.10-0.el8_1.x86_64"
+Environment="JAVA_OPTS=-Djava.awt.headless=true"
+Environment="CATALINA_HOME=/usr/share/tomcat"
+Environment="CATALINA_BASE=/usr/share/tomcat"
+Environment="CATALINA_PID=/usr/share/tomcat/temp/tomcat.pid"
+Environment="CATALINA_OPTS=-Xms512M -Xmx1024M"
 ExecStart=/usr/share/tomcat/bin/catalina.sh start
 ExecStop=/usr/share/tomcat/bin/catalina.sh stop
+
 [Install]
 WantedBy=multi-user.target
 ```
@@ -105,16 +108,15 @@ wget https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot-auto
 chown root /usr/local/bin/certbot-auto
 chmod 0755 /usr/local/bin/certbot-auto
-/usr/local/bin/certbot-auto certonly --webroot -w /var/www/demo -d xxx.net -m xxx@live.cn --agree-tos
+/usr/local/bin/certbot-auto certonly --webroot -w /usr/share/nginx/html -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
 crontab -e
-30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
+30 2 * * 1 /usr/local/bin/certbot-auto renew  >> /var/log/le-renew.log
 ```
 /etc/nginx/conf.d/default.conf
 ```
-http {
     upstream php {
         server 127.0.0.1:81;
     }
@@ -127,14 +129,8 @@ http {
     }
     server {
         listen 80;
-        server_name xxx.net;
+        server_name www.xxx.net;
         location / {
-            proxy_read_timeout 300s;
-            proxy_pass http://java;
-            proxy_redirect off;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
     }
     server {
@@ -162,7 +158,6 @@ http {
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
     }
-}
 ```
 ```
 dnf install nodejs npm
