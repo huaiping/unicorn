@@ -35,9 +35,16 @@ img {vertical-align:middle;}
         </div>
     </div>
 </div>
-<script src="//cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.5.0/jquery.slim.min.js"></script>
 <script src="//cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.js"></script>
 <script>
+$(document).bind("contextmenu",function(){
+  return false;
+});
+$(document).bind("selectstart",function(){
+  return false;
+});
+
 $(function(){
     $('#content').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
