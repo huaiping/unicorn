@@ -14,9 +14,13 @@ freebsd-update install
 shutdown -r now
 freebsd-update install
 ```
-/etc/pkg/FreeBSD.conf
+/usr/local/etc/pkg/repos/FreeBSD.conf
 ```
-pkg0.nyi.FreeBSD.org
+FreeBSD: {
+  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+}
+
+pkg update -f
 ```
 ```
 pkg-static install -f pkg
