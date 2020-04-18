@@ -109,6 +109,7 @@ extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 </VirtualHost>
 ```
 ```
+service apache2 restart
 apt install nginx libapache2-mod-rpaf
 ```
 /etc/apache2/mods-enable/rpaf.conf
@@ -129,36 +130,36 @@ proxy_buffers               8 128k;
 ```
 /etc/nginx/sites-available/default
 ```
-upstream php {
-    server 127.0.0.1:81;
-}
-upstream java {
-    server 127.0.0.1:8080;
-}
-server {
-    server_name _;
-    return 404;
-}
-server {
-    listen 80;
-    root /var/www;
-    index index.php index.html;
-    server_name php.xxx.net;
-    proxy_redirect http://php.xxx.net:81/ /;
-    location / {
-        proxy_pass http://php;
-        include proxy_params;
+    upstream php {
+        server 127.0.0.1:81;
     }
-}
-server {
-    listen 80;
-    server_name java.xxx.net;
-    location / {
-        proxy_pass http://java;
-        proxy_redirect off;
-        include proxy_params;
+    upstream java {
+        server 127.0.0.1:8080;
     }
-}
+    server {
+        server_name _;
+        return 404;
+    }
+    server {
+        listen 80;
+        root /var/www;
+        index index.php index.html;
+        server_name php.xxx.net;
+        proxy_redirect http://php.xxx.net:81/ /;
+        location / {
+            proxy_pass http://php;
+            include proxy_params;
+        }
+    }
+    server {
+        listen 80;
+        server_name java.xxx.net;
+        location / {
+            proxy_pass http://java;
+            proxy_redirect off;
+            include proxy_params;
+        }
+    }
 ```
 ```
 apt install certbot
