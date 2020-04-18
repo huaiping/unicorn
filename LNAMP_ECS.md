@@ -19,7 +19,8 @@ mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 ```
 ```
-apt install apache2 php libapache2-mod-php php-bcmath php-json php-mbstring php-mysql php-tokenizer php-xml php-zip
+apt install apache2 php libapache2-mod-php
+apt install php-bcmath php-json php-mbstring php-mysql php-tokenizer php-xml php-zip
 ```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
@@ -30,6 +31,11 @@ cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/conf
 /var/www/html/phpmyadmin/config.inc.php
 ```
 $cfg['blowfish_secret'] = 'xxx';
+```
+```
+mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p
+mkdir /var/www/html/phpmyadmin/tmp
+chmod 777 /var/www/html/phpmyadmin/tmp
 ```
 /etc/apache2/ports.conf
 ```
