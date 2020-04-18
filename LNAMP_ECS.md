@@ -19,19 +19,23 @@ mysql -u root -p
 MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 ```
 ```
-apt install apache2 php libapache2-mod-php php-gd php-mysql
+apt install apache2 php libapache2-mod-php php-bcmath php-json php-mbstring php-mysql php-tokenizer php-xml php-zip
 ```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
 tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
-mv phpMyAdmin-5.0.2-all-languages /usr/share/phpmyadmin
-cp /usr/share/phpmyadmin/config.sample.inc.php  /usr/share/phpmyadmin/config.inc.php
+mv phpMyAdmin-5.0.2-all-languages /var/www/html/phpmyadmin
+cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/config.inc.php
+```
+/var/www/html/phpmyadmin/config.inc.php
+```
+$cfg['blowfish_secret'] = 'xxx';
 ```
 /etc/apache2/ports.conf
 ```
 Listen 127.0.0.1:81
 ```
-/etc/apache2/sites-available/default
+/etc/apache2/sites-available/000-default.conf
 ```
 ServerName 127.0.0.1                         /etc/apache2/conf-available/security.conf
 <VirtualHost *:81>                           ServerTokens Prod
@@ -151,7 +155,7 @@ server {
 ```
 ```
 apt install certbot
-certbot certonly --webroot -w /var/www/demo -d xxx.net -m xxx@live.cn --agree-tos
+certbot certonly --webroot -w /var/www/html -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
@@ -179,8 +183,8 @@ ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
 ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
 
-ssl_staping on;
-ssl_staping_verify on;
+ssl_stapling on;
+ssl_stapling_verify on;
 resolver 8.8.8.8 8.8.4.4 valid=300s;
 resolver_timeout 30s;
 
