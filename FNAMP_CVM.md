@@ -29,7 +29,8 @@ pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
 ```
 pkg install nginx apache24 mariadb103-server phpmyadmin openjdk11 tomcat9 py37-certbot
 pkg install php74 mod_php74 php74-gd php74-mbstring php74-mcrypt php74-pdo_mysql php74-json
- php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java node12 npm
+ php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java
+pkg install node12 npm
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-9/lib/
 ```
 ~~/usr/local/etc/mysql/my.cnf~~
@@ -46,8 +47,7 @@ sysrc mysql_args="--bind-address=127.0.0.1"
 service mysql-server restart
 mysql_secure_installation
 
-cd /usr/local/www/phpMyAdmin
-cp config.sample.inc.php config.inc.php
+cp /usr/local/www/phpMyAdmin/config.sample.inc.php /usr/local/www/phpMyAdmin/config.inc.php
 ```
 /usr/local/www/phpMyAdmin/config.inc.php
 ```
@@ -150,11 +150,11 @@ http {
 }
 ```
 ```
-certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -d www.xxx.net
+certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -m x@live.cn --agree-tos
 ```
 ```
-/usr/local/etc/rc.d/apache24 start     或 service apache24 start
-/usr/local/etc/rc.d/mysql-server start 或 service mysql-server start
-/usr/local/etc/rc.d/nginx start        或 service nginx start
-/usr/local/etc/rc.d/tomcat9 start      或 service tomcat9 start
+/usr/local/etc/rc.d/apache24 start      或  service apache24 start
+/usr/local/etc/rc.d/mysql-server start  或  service mysql-server start
+/usr/local/etc/rc.d/nginx start         或  service nginx start
+/usr/local/etc/rc.d/tomcat9 start       或  service tomcat9 start
 ```

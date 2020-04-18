@@ -10,7 +10,7 @@ mysql_secure_installation
 ```
 ```
 dnf install httpd
-dnf install php php-mysqlnd php-cli php-fpm php-gd php-pdo php-mbstring php-json php-xml
+dnf install php php-cli php-fpm php-gd php-json php-mbstring php-mysqlnd php-pdo php-xml
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
@@ -46,6 +46,7 @@ mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p
 mkdir /var/www/html/phpmyadmin/tmp
 chown -R apache:apache /var/www/html/phpmyadmin
 chmod 777 /var/www/html/phpmyadmin/tmp
+systemctl restart httpd.service
 ```
 ```
 dnf install java-11-openjdk-devel
@@ -97,7 +98,7 @@ systemctl enable tomcat.service
 ```
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
-<user username="admin" password="xxx" roles="admin-gui,manager-gui" />
+<user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
 ~~/usr/share/tomcat/conf/server.xml~~
 ```
@@ -115,7 +116,7 @@ wget https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot
 chown root /usr/local/bin/certbot
 chmod 0755 /usr/local/bin/certbot
-/usr/local/bin/certbot certonly --webroot -w /usr/share/nginx/html -d xxx.net -m xxx@live.cn --agree-tos
+/usr/local/bin/certbot certonly --webroot -w /usr/share/nginx/html -d xxx.net -m x@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
@@ -138,17 +139,30 @@ crontab -e
         listen 80;
         server_name www.xxx.net;
         location / {
+            index index.html;
         }
     }
     server {
         listen 443 ssl http2;
         server_name xxx.net;
+
+        ssl_session_timeout 1d;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_tickets off;
+
         ssl_protocols TLSv1.2 TLSv1.3;
         ssl_ciphers HIGH:!aNULL:!MD5;
         ssl_prefer_server_ciphers on;
+
         ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
         ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
+
+        ssl_stapling on;
+        ssl_stapling_verify on;
+        resolver 8.8.8.8 8.8.4.4 valid=300s;
+        resolver_timeout 30s;
+
         location / {
             proxy_read_timeout 300s;
             proxy_pass http://java;

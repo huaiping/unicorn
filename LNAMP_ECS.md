@@ -16,7 +16,8 @@ apt full-upgrade
 apt install mariadb-server mariadb-client
 mysql_secure_installation
 mysql -u root -p
-MariaDB>grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
+MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
+MariaDB> flush privileges;
 ```
 ```
 apt install apache2 php libapache2-mod-php
@@ -56,7 +57,7 @@ a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 AllowOverride All                            server_tokens = off
 ```
 ```
-apt install openjdk-11-jdk tomcat9 tomcat9-admin libmariadb-java
+apt install openjdk-11-jdk tomcat9 libmariadb-java
 cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 ```
 /etc/tomcat9/tomcat-users.xml
@@ -161,7 +162,7 @@ server {
 ```
 ```
 apt install certbot
-certbot certonly --webroot -w /var/www/html -d xxx.net -m xxx@live.cn --agree-tos
+certbot certonly --webroot -w /var/www/html -d xxx.net -m x@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
