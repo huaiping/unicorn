@@ -12,7 +12,7 @@ mysql_secure_installation
 ```
 ```
 dnf install httpd
-dnf install php php-cli php-fpm php-gd php-json php-mbstring php-mysqlnd php-pdo php-xml
+dnf install php php-cli php-fpm php-gd php-json php-mbstring php-mysqlnd php-pdo php-xml php-zip
 systemctl start httpd.service
 systemctl enable httpd.service
 ```

@@ -21,7 +21,7 @@ MariaDB> flush privileges;
 ```
 ```
 apt install apache2 php libapache2-mod-php
-apt install php-bcmath php-json php-mbstring php-mysql php-tokenizer php-xml php-zip
+apt install php-bcmath php-gd php-json php-mbstring php-mysql php-tokenizer php-xml php-zip
 ```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
