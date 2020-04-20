@@ -9,6 +9,10 @@ dnf install mariadb-server
 systemctl start mariadb.service
 systemctl enable mariadb.service
 mysql_secure_installation
+
+mysql -u root -p
+MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
+MariaDB> flush privileges;
 ```
 ```
 dnf install httpd
@@ -48,7 +52,6 @@ mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p
 mkdir /var/www/html/phpmyadmin/tmp
 chown -R apache:apache /var/www/html/phpmyadmin
 chmod 777 /var/www/html/phpmyadmin/tmp
-systemctl restart httpd.service
 ```
 ```
 dnf install java-11-openjdk-devel

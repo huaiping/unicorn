@@ -109,7 +109,6 @@ extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 </VirtualHost>
 ```
 ```
-service apache2 restart
 apt install nginx libapache2-mod-rpaf
 ```
 /etc/apache2/mods-enable/rpaf.conf

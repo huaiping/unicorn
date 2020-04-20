@@ -1,26 +1,39 @@
-**FNAMP笔记（FreeBSD 10.2 + Nginx 1.8 + Apache 2.4 + MySQL 5.6 + PHP 5.6 + Tomcat 8.0 + Python 2.7）**
+**FNAMP笔记（FreeBSD 11.2 + Nginx 1.16 + Apache 2.4 + MariaDB 10.3 + PHP 7.4 + Tomcat 9.0 + Nodejs 12.13）**
 
+~~/etc/freebsd-update.conf~~
 ```
-#freebsd-update fetch
-#freebsd-update install
-```
-```
-pkg install nginx apache24 mysql56-server tomcat8
-pkg install php56 mod_php56 php56-gd php56-mbstring php56-mcrypt php56-mysql php56-pdo_mysql phpmyadmin
- ap24-mod_jk ap24-mod_rpaf2 mysql-connector-java python py27-setuptools ap24-mod_wsgi4 node npm
-cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-8.0/lib/
-```
-/etc/rc.conf
-```
-apache24_enable="YES"
-mysql_enable="YES"
-nginx_enable="YES"
-tomcat8_enable="YES"
+ServerName update.chinafreebsd.cn
 ```
 ```
-cp /usr/local/share/mysql/my-default.cnf  /usr/local/etc/my.cnf
+tzsetup
+freebsd-update fetch
+freebsd-update install
+
+freebsd-update upgrade -r 11.3-RELEASE
+freebsd-update install
+shutdown -r now
+freebsd-update install
 ```
-/usr/local/etc/my.cnf
+/usr/local/etc/pkg/repos/FreeBSD.conf
+```
+FreeBSD: {
+  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+}
+
+pkg update -f
+```
+```
+pkg-static install -f pkg
+pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
+```
+```
+pkg install nginx apache24 mariadb103-server phpmyadmin openjdk11 tomcat9 py37-certbot
+pkg install php74 mod_php74 php74-gd php74-mbstring php74-mcrypt php74-pdo_mysql php74-json
+ php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java
+pkg install node12 npm-node12
+cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-9/lib/
+```
+~~/usr/local/etc/mysql/my.cnf~~
 ```
 [mysqld]
 port = 3306
@@ -28,11 +41,13 @@ socket = /tmp/mysql.sock
 bind-address = 127.0.0.1
 ```
 ```
-/usr/local/etc/rc.d/mysql-server onestart
+sysrc mysql_enable="YES"
+service mysql-server start
+sysrc mysql_args="--bind-address=127.0.0.1"
+service mysql-server restart
 mysql_secure_installation
 
-cd /usr/local/www/phpMyAdmin
-cp config.sample.inc.php config.inc.php
+cp /usr/local/www/phpMyAdmin/config.sample.inc.php /usr/local/www/phpMyAdmin/config.inc.php
 ```
 /usr/local/www/phpMyAdmin/config.inc.php
 ```
@@ -50,7 +65,7 @@ date.timezone = Asia/Shanghai
 ```
 Listen 81
 ServerName localhost:81
-DirectoryIndex index.php index.jsp index.html
+DirectoryIndex index.php index.html
 
 <FilesMatch "\.php$">
     SetHandler application/x-httpd-php
@@ -63,74 +78,83 @@ Alias /phpmyadmin "/usr/local/www/phpMyAdmin"
     Require all granted
 </Directory>
 ```
+```
+LoadModule rewrite_module libexec/apache24/mod_rewrite.so
+LoadModule rpaf_module libexec/apache24/mod_rpaf.so
+
+RPAFenable On
+RPAFsethostname On
+RPAFproxy_ips 127.0.0.1
+RPAFheader X-Forwarded-For
+```
+```
+sysrc apache24_enable="YES"
+service apache24 start
+sysrc nginx_enable="YES"
+service nginx start
+```
 /etc/fstab
 ```
 fdesc   /dev/fd         fdescfs         rw      0       0
 proc    /proc           procfs          rw      0       0
 ```
-/usr/local/apache-tomcat-8.0/conf/tomcat-users.xml
+/usr/local/apache-tomcat-9.0/conf/tomcat-users.xml
 ```
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
-/usr/local/apache-tomcat-8.0/conf/server.xml
+/usr/local/apache-tomcat-9.0/conf/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
 <Context path="" docBase="/usr/local/www/apache24/data" debug="0" reloadable="true"/>
 ```
-```
-cd /usr/local/etc/apache24
-cp mod_jk.conf.sample Includes/mod_jk.conf
-cp workers.properties.sample Includes/workers.properties
-```
-/usr/local/etc/apache24/Includes/mod_jk.conf
-```
-JkWorkersFile etc/apache24/Includes/workers.properties
-#JkMount /examples/* jsp-hostname
-```
-/usr/local/etc/apache24/Includes/workers.properties
-```
-worker.jsp-hostname.host=localhost
-```
-```
-wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-vi /usr/local/etc/apache24/modules.d/270_mod_wsgi.conf
-```
 /usr/local/etc/nginx/nginx.conf
 ```
 http {
-    upstream webserver {
+    upstream php {
         server 127.0.0.1:81;
+    }
+    upstream java {
+        server 127.0.0.1:8080;
     }
     server {
         server_name _;
         return 404;
     }
     server {
-        listen       80;
-        server_name  localhost;
+        listen 80;
+        server_name xxx.net;
         location / {
-            proxy_pass                   http://webserver;
-            proxy_set_header             Host $host;
-            proxy_set_header             X-Real-IP $remote_addr;
-            proxy_set_header             X-Forwarded-For $proxy_add_x_forwarded_for;
-            client_max_body_size         10m;
-            client_body_buffer_size      128k;
-            proxy_connect_timeout        90;
-            proxy_send_timeout           90;
-            proxy_read_timeout           90;
-            proxy_buffer_size            4 32k;
-            proxy_temp_file_write_size   64k;
+            proxy_pass http://java;
+            proxy_redirect off;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+        location /phpmyadmin/ {
+            proxy_pass http://php;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            client_max_body_size 10m;
+            client_body_buffer_size 128k;
+            proxy_connect_timeout 90;
+            proxy_send_timeout 90;
+            proxy_read_timeout 90;
+            proxy_buffer_size 4 32k;
+            proxy_temp_file_write_size 64k;
         }
     }
 }
 ```
 ```
-/usr/local/etc/rc.d/apache24 start     或 service apache24 start
-/usr/local/etc/rc.d/mysql-server start 或 service mysql-server start
-/usr/local/etc/rc.d/nginx start        或 service nginx start
-/usr/local/etc/rc.d/tomcat8 start      或 service tomcat8 start
+certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -m x@live.cn --agree-tos
+```
+```
+/usr/local/etc/rc.d/apache24 start      或  service apache24 start
+/usr/local/etc/rc.d/mysql-server start  或  service mysql-server start
+/usr/local/etc/rc.d/nginx start         或  service nginx start
+/usr/local/etc/rc.d/tomcat9 start       或  service tomcat9 start
 ```
