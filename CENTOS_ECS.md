@@ -9,7 +9,8 @@ dnf install mariadb-server
 systemctl start mariadb.service
 systemctl enable mariadb.service
 mysql_secure_installation
-
+```
+```
 mysql -u root -p
 MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 MariaDB> flush privileges;

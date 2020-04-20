@@ -15,6 +15,8 @@ apt full-upgrade
 ```
 apt install mariadb-server mariadb-client
 mysql_secure_installation
+```
+```
 mysql -u root -p
 MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
 MariaDB> flush privileges;

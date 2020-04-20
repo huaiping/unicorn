@@ -150,7 +150,7 @@ http {
 }
 ```
 ```
-certbot certonly --webroot -w /usr/local/www/apache24/data -d xxx.net -m x@live.cn --agree-tos
+certbot certonly --webroot -w /usr/local/www/nginx-dist -d xxx.net -m x@live.cn --agree-tos
 ```
 ```
 /usr/local/etc/rc.d/apache24 start      或  service apache24 start
