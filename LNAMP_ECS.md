@@ -33,7 +33,7 @@ cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/conf
 ```
 /var/www/html/phpmyadmin/config.inc.php
 ```
-$cfg['blowfish_secret'] = 'xxx';
+$cfg['blowfish_secret'] = 'CHBj{O6P5]c8LE428ltUqpyp6xaJ2xN5';
 ```
 ```
 mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p

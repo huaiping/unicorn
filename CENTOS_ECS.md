@@ -46,7 +46,7 @@ mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/confi
 ```
 /var/www/html/phpmyadmin/config.inc.php
 ```
-$cfg['blowfish_secret'] = 'xxx';
+$cfg['blowfish_secret'] = 'QzW4Zpi0GD5NPztqkBi{Y0=auzLCCjuW';
 ```
 ```
 mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p
