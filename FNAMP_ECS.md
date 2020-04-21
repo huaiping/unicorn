@@ -52,6 +52,7 @@ date.timezone = Asia/Shanghai
 /usr/local/etc/apache24/httpd.conf
 ```
 Listen 81
+ServerAdmin xxx@live.cn
 ServerName localhost:81
 DirectoryIndex index.php index.html
 
