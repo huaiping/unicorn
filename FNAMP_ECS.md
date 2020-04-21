@@ -1,9 +1,4 @@
-**FNAMP笔记（FreeBSD 11.2 + Nginx 1.16 + Apache 2.4 + MariaDB 10.3 + PHP 7.4 + Tomcat 9.0 + Nodejs 12.13）**
-
-~~/etc/freebsd-update.conf~~
-```
-ServerName update.chinafreebsd.cn
-```
+**FNAMP笔记（FreeBSD 11.2 + Nginx 1.16 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.7）**
 ```
 tzsetup
 freebsd-update fetch
@@ -27,18 +22,11 @@ pkg-static install -f pkg
 pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
 ```
 ```
-pkg install nginx apache24 mariadb103-server phpmyadmin openjdk11 tomcat9 py37-certbot
-pkg install php74 mod_php74 php74-gd php74-mbstring php74-mcrypt php74-pdo_mysql php74-json
- php74-session php74-mysqli php74-ctype php74-filter ap24-mod_rpaf2 mysql-connector-java
+pkg install nginx apache24 mariadb104-server openjdk8 tomcat9 py37-certbot
+pkg install php74 mod_php74 php74-gd php74-json php74-mbstring php74-mysqli php74-pdo_mysql php74-session \
+ phpMyAdmin5-php74 ap24-mod_rpaf2 mysql-connector-java
 pkg install node12 npm-node12
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-9/lib/
-```
-~~/usr/local/etc/mysql/my.cnf~~
-```
-[mysqld]
-port = 3306
-socket = /tmp/mysql.sock
-bind-address = 127.0.0.1
 ```
 ```
 sysrc mysql_enable="YES"
@@ -51,7 +39,7 @@ cp /usr/local/www/phpMyAdmin/config.sample.inc.php /usr/local/www/phpMyAdmin/con
 ```
 /usr/local/www/phpMyAdmin/config.inc.php
 ```
-$cfg['blowfish_secret']='xxx';
+$cfg['blowfish_secret']='Fo1ec5u0n8lpG4hMCOICD8X8cUUTxOF1';
 ```
 ```
 cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
@@ -150,7 +138,7 @@ http {
 }
 ```
 ```
-certbot certonly --webroot -w /usr/local/www/nginx-dist -d xxx.net -m x@live.cn --agree-tos
+certbot certonly --webroot -w /usr/local/www/nginx -d xxx.net -m x@live.cn --agree-tos
 ```
 ```
 /usr/local/etc/rc.d/apache24 start      或  service apache24 start
