@@ -108,7 +108,7 @@ proc    /proc           procfs          rw      0       0
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
-<Context path="" docBase="/usr/local/www/apache24/data" debug="0" reloadable="true"/>
+<Context path="" docBase="ROOT" debug="0" reloadable="true"/>
 ```
 /usr/local/etc/nginx/nginx.conf
 ```
