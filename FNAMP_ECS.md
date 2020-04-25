@@ -26,6 +26,7 @@ pkg install nginx apache24 mariadb104-server openjdk8 tomcat9 python3 py37-pip p
 pkg install php74 mod_php74 php74-gd php74-json php74-mbstring php74-mysqli php74-pdo_mysql \
  php74-session phpMyAdmin5-php74 ap24-mod_rpaf2 mysql-connector-java
 pkg install node12 npm-node12
+pip3 install --upgrade pip
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-9/lib/
 ```
 ```
