@@ -1,4 +1,4 @@
-**CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Nodejs 10.16）**
+**CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
 ```
 timedatectl set-timezone Asia/Shanghai
 dnf makecache
@@ -118,6 +118,8 @@ systemctl start nginx.service
 systemctl enable nginx.service
 ```
 ```
+dnf install http mod_wsgi python3 python3-pip
+
 wget https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot
 chown root /usr/local/bin/certbot
@@ -184,8 +186,4 @@ crontab -e
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
     }
-```
-```
-dnf install nodejs npm
-npm install pm2 -g
 ```
