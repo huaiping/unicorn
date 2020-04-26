@@ -6,10 +6,10 @@ zypper dup
 ```
 ```
 zypper mr -da
-zypper ar -fc https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/oss openSUSE-Aliyun-OSS
-zypper ar -fc https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/non-oss openSUSE-Aliyun-NON-OSS
-zypper ar -fc https://mirrors.aliyun.com/opensuse/update/leap/15.1/oss openSUSE-Aliyun-UPDATE-OSS
-zypper ar -fc https://mirrors.aliyun.com/opensuse/update/leap/15.1/non-oss openSUSE-Aliyun-UPDATE-NON-OSS
+zypper ar -fc https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/oss Aliyun-OSS
+zypper ar -fc https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/non-oss Aliyun-NON-OSS
+zypper ar -fc https://mirrors.aliyun.com/opensuse/update/leap/15.1/oss Aliyun-UPDATE-OSS
+zypper ar -fc https://mirrors.aliyun.com/opensuse/update/leap/15.1/non-oss Aliyun-UPDATE-NON-OSS
 zypper ref
 ```
 ```
@@ -30,21 +30,21 @@ systemctl enable apache2.service
 /srv/www/htdocs/
 ```
 ```
-zypper install php php-mysql php-gd php-mbstring apache2-mod_php7 phpMyAdmin
+zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin
 a2enmod php7
 systemctl restart apache2.service
 ```
 ```
-zypper install openjdk
-wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
-tar -zxvf apache-tomcat-9.0.34.tar.gz
+zypper install java-11-openjdk tomcat
+systemctl start tomcat.service
+systemctl enable tomcat.service
+/srv/tomcat/webapps/
 ```
 ```
-zypper install python3-pip python3-setuptools python3-wheel
+zypper install python3 python3-pip python3-setuptools python3-wheel
 ```
 ```
-zypper in nginx
+zypper install nginx
 systemctl start nginx.service
 systemctl enable nginx.service
-mkdir -p /etc/nginx/ssl/
 ```
