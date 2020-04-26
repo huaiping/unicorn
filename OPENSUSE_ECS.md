@@ -1,4 +1,4 @@
-**openSUSE笔记（openSUSE 15.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.2 + PHP 7.2）**
+**openSUSE笔记（openSUSE 15.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.2 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
 ```
 zypper refresh
 zypper update
@@ -33,6 +33,14 @@ systemctl enable apache2.service
 zypper install php php-mysql php-gd php-mbstring apache2-mod_php7 phpMyAdmin
 a2enmod php7
 systemctl restart apache2.service
+```
+```
+zypper install openjdk
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
+tar -zxvf apache-tomcat-9.0.34.tar.gz
+```
+```
+zypper install python3-pip python3-setuptools python3-wheel
 ```
 ```
 zypper in nginx

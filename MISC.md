@@ -19,6 +19,12 @@ apt install intel-microcode firmware-realtek nvidia-driver
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
 ```
+```
+https://github.com/v2ray/v2ray-core/releases
+https://github.com/2dust/v2rayN/releases
+
+https://github.com/Fndroid/clash_for_windows_pkg/releases
+```
 Git 2.20.1
 ```
 apt install git
