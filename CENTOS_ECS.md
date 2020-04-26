@@ -21,6 +21,10 @@ dnf install php php-cli php-fpm php-gd php-json php-mbstring php-mysqlnd php-pdo
 systemctl start httpd.service
 systemctl enable httpd.service
 ```
+```
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+```
 /etc/httpd/conf/httpd.conf
 ```
 Listen 81
@@ -180,6 +184,7 @@ crontab -e
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
+
         location /phpmyadmin/ {
             proxy_pass http://php;
             proxy_set_header Host $host:443;

@@ -115,7 +115,32 @@ http {
     }
     server {
         listen 80;
+        server_name www.xxx.net;
+        location / {
+            index index.html;
+        }
+    }
+    server {
+        listen 443 ssl http2;
         server_name xxx.net;
+
+        ssl_session_timeout 1d;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_tickets off;
+
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:!aNULL:!MD5;
+        ssl_prefer_server_ciphers on;
+
+        ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
+        ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
+
+        ssl_stapling on;
+        ssl_stapling_verify on;
+        resolver 8.8.8.8 8.8.4.4 valid=300s;
+        resolver_timeout 30s;
+
         location / {
             proxy_pass http://java;
             proxy_redirect off;
@@ -123,6 +148,7 @@ http {
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
+
         location /phpmyadmin/ {
             proxy_pass http://php;
             proxy_set_header Host $host;
