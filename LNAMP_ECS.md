@@ -177,7 +177,7 @@ crontab -e
 ```
 /etc/nginx/sites-enabled/default
 ```
-openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 ```
 listen 443 ssl http2;
