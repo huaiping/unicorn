@@ -21,12 +21,21 @@ systemctl start apache2.service
 systemctl enable apache2.service
 /srv/www/htdocs/
 ```
+/etc/apache2/listen.conf
+```
+Listen 81
+```
 ```
 zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin
 a2enmod php7
 systemctl restart apache2.service
 
 mysql < /usr/share/doc/packages/phpMyAdmin/sql/create_tables.sql -u root -p
+cp /srv/www/htdocs/phpMyAdmin/config.sample.inc.php  /srv/www/htdocs/phpMyAdmin/config.inc.php
+```
+/srv/www/htdocs/phpMyAdmin/config.inc.php
+```
+$cfg['blowfish_secret'] = 'odW{XxY{8UWxAw8q}wuF/6xw5{PiwmmV';
 ```
 ```
 zypper install java-11-openjdk tomcat

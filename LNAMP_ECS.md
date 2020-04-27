@@ -76,7 +76,7 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
-<Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>        #取消注释
+<Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
