@@ -26,6 +26,10 @@ apt install apache2 php libapache2-mod-php
 apt install php-bcmath php-gd php-json php-mbstring php-mysql php-tokenizer php-xml php-zip
 ```
 ```
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+```
+```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
 tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
 mv phpMyAdmin-5.0.2-all-languages /var/www/html/phpmyadmin
@@ -73,7 +77,7 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
 <Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>        #取消注释
-<Context path="" docBase="/var/www" debug="0" reloadable="true"/>     #在<Host>节点里面添加
+<Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip libmariadbd-dev

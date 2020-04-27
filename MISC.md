@@ -18,6 +18,8 @@ apt install intel-microcode firmware-realtek nvidia-driver
 ```
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
+
+sed -i 's/15.1/15.2/g' /etc/zypp/repos.d/*.repo
 ```
 ```
 https://github.com/v2ray/v2ray-core/releases
@@ -130,6 +132,8 @@ useradd test -m
 passwd test
 gpasswd -a test sudo
 su test
+
+usermod -aG wheel username
 ```
 backup.sh
 sh backup.sh    #执行

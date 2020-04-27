@@ -110,7 +110,7 @@ systemctl enable tomcat.service
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
-~~/usr/share/tomcat/conf/server.xml~~
+/usr/share/tomcat/conf/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>

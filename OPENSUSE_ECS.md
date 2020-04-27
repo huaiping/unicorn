@@ -1,17 +1,19 @@
 **openSUSE笔记（openSUSE 15.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.2 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
 ```
-sed -i "s/15.1/15.2/g" /etc/zypp/repos.d/*
-
 zypper refresh
 zypper update
 zypper dup
 ```
 ```
-zypper install mariadb mariadb-client
+zypper install mariadb mariadb-tools
 systemctl start mariadb.service
 systemctl enable mariadb.service
-
 mysql_secure_installation
+```
+```
+mysql -u root -p
+MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
+MariaDB> flush privileges;
 ```
 ```
 zypper install apache2
@@ -21,6 +23,7 @@ systemctl enable apache2.service
 ```
 ```
 zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin
+a2enmod php7
 systemctl restart apache2.service
 
 mysql < /usr/share/doc/packages/phpMyAdmin/sql/create_tables.sql -u root -p
