@@ -49,7 +49,8 @@ systemctl enable tomcat.service
 ```
 /usr/share/tomcat/conf/server.xml
 ```
-<Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
+<Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
+ redirectPort="8443"/>
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
