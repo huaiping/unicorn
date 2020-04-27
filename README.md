@@ -21,6 +21,8 @@ CSDN [https://www.csdn.net](https://www.csdn.net)
 
 Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)  
 
+.NET [https://dotnet.microsoft.com](https://dotnet.microsoft.com)  
+
 Laravel [https://laravel.com](https://laravel.com)  
 
 Django [https://www.djangoproject.com](https://www.djangoproject.com)  
