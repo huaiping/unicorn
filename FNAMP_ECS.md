@@ -84,12 +84,6 @@ RPAFsethostname On
 RPAFproxy_ips 127.0.0.1
 RPAFheader X-Forwarded-For
 ```
-```
-sysrc apache24_enable="YES"
-service apache24 start
-sysrc nginx_enable="YES"
-service nginx start
-```
 /etc/fstab
 ```
 fdesc   /dev/fd         fdescfs         rw      0       0
@@ -106,6 +100,17 @@ proc    /proc           procfs          rw      0       0
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
  redirectPort="8443"/>
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
+```
+```
+sysrc apache24_enable="YES"
+service apache24 start
+sysrc nginx_enable="YES"
+service nginx start
+sysrc tomcat9_enable="YES"
+service tomcat9 start
+```
+```
+certbot certonly --webroot -w /usr/local/www/nginx -d xxx.net -m x@live.cn --agree-tos
 ```
 /usr/local/etc/nginx/nginx.conf
 ```
@@ -171,13 +176,4 @@ http {
         }
     }
 }
-```
-```
-certbot certonly --webroot -w /usr/local/www/nginx -d xxx.net -m x@live.cn --agree-tos
-```
-```
-/usr/local/etc/rc.d/apache24 start      或  service apache24 start
-/usr/local/etc/rc.d/mysql-server start  或  service mysql-server start
-/usr/local/etc/rc.d/nginx start         或  service nginx start
-/usr/local/etc/rc.d/tomcat9 start       或  service tomcat9 start
 ```

@@ -53,6 +53,11 @@ systemctl enable tomcat.service
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
+zypper install nginx
+systemctl start nginx.service
+systemctl enable nginx.service
+```
+```
 zypper install python3 python3-pip python3-setuptools python3-wheel
 
 pip3 install --upgrade pip
@@ -60,11 +65,6 @@ pip3 uninstall configobj
 
 zypper install python3-certbot
 certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m x@live.cn --agree-tos
-```
-```
-zypper install nginx
-systemctl start nginx.service
-systemctl enable nginx.service
 ```
 /etc/nginx/conf.d/default.conf
 ```

@@ -176,10 +176,10 @@ certbot renew --dry-run
 crontab -e
 30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
 ```
-/etc/nginx/sites-enabled/default
 ```
 openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
+/etc/nginx/sites-enabled/default
 ```
 listen 443 ssl http2;
 
