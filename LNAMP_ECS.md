@@ -28,6 +28,7 @@ apt install php-bcmath php-gd php-json php-mbstring php-mysql php-tokenizer php-
 ```
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 ```
 wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz

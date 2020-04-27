@@ -24,6 +24,7 @@ systemctl enable httpd.service
 ```
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 /etc/httpd/conf/httpd.conf
 ```

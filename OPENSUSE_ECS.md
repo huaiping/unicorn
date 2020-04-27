@@ -26,9 +26,13 @@ systemctl enable apache2.service
 Listen 81
 ```
 ```
-zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin
+zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin php-composer
 a2enmod php7
 systemctl restart apache2.service
+```
+```
+composer self-update
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 mysql < /usr/share/doc/packages/phpMyAdmin/sql/create_tables.sql -u root -p
 cp /srv/www/htdocs/phpMyAdmin/config.sample.inc.php  /srv/www/htdocs/phpMyAdmin/config.inc.php

@@ -30,6 +30,7 @@ pkg install node12 npm-node12
 ```
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 pip3 install --upgrade pip
 
