@@ -125,7 +125,8 @@ systemctl enable nginx.service
 ```
 dnf install httpd python3 python3-pip mod_wsgi gcc httpd-devel python3-devel mariadb-devel
 pip3 install --upgrade pip
-
+```
+```
 wget https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot
 chown root /usr/local/bin/certbot
