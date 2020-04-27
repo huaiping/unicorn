@@ -67,6 +67,9 @@ pip3 uninstall configobj
 zypper install python3-certbot
 certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m x@live.cn --agree-tos
 ```
+```
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+```
 /etc/nginx/conf.d/default.conf
 ```
     upstream php {
@@ -89,6 +92,8 @@ certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m x@live.cn --agree-to
     server {
         listen 443 ssl http2;
         server_name xxx.net;
+
+        ssl_dhparam /etc/ssl/certs/dhparam.pem;
 
         ssl_session_timeout 1d;
         ssl_session_cache shared:SSL:10m;
