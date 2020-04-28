@@ -185,7 +185,7 @@ server {
     ssl_session_tickets off;
 
     ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_ciphers TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:HIGH:!aNULL:!MD5;
+    ssl_ciphers HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
 
     ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
@@ -212,4 +212,7 @@ server {
         include proxy_params;
     }
 }
+```
+```
+ssl_ciphers TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:HIGH:!aNULL:!MD5;
 ```
