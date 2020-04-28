@@ -54,6 +54,14 @@ systemctl enable tomcat.service
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
+zypper install libicu
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+wget https://packages.microsoft.com/config/opensuse/15/prod.repo
+mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
+chown root:root /etc/zypp/repos.d/microsoft-prod.repo
+zypper install dotnet-sdk-3.1
+```
+```
 zypper install nginx
 systemctl start nginx.service
 systemctl enable nginx.service

@@ -118,6 +118,10 @@ systemctl enable tomcat.service
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
+rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
+dnf install dotnet-sdk-3.1
+```
+```
 dnf install nginx
 systemctl start nginx.service
 systemctl enable nginx.service

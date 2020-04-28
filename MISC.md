@@ -160,7 +160,6 @@ wget -q https://packages.microsoft.com/config/debian/10/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
-sudo apt update
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install dotnet-sdk-3.1
@@ -205,26 +204,4 @@ rpm -ivh http://mirrors.whsir.com/centos/7/x86_64/RPM/rar-5.7.1-1.el7.x86_64.rpm
 yum install rar
 
 sudo yum install filezilla shutter
-```
-```
-rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-yum install dotnet-sdk-3.1
-
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
-mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget https://packages.microsoft.com/config/debian/10/prod.list
-mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
-chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
-chown root:root /etc/apt/sources.list.d/microsoft-prod.list
-apt-get update
-apt-get install apt-transport-https
-apt-get update
-apt-get install dotnet-sdk-3.1
-
-zypper install libicu
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-wget https://packages.microsoft.com/config/opensuse/15/prod.repo
-mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
-chown root:root /etc/zypp/repos.d/microsoft-prod.repo
-zypper install dotnet-sdk-3.1
 ```
