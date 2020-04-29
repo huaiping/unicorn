@@ -142,6 +142,9 @@ certbot renew --dry-run
 crontab -e
 30 2 * * 1 /usr/local/bin/certbot renew  >> /var/log/le-renew.log
 ```
+```
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+```
 /etc/nginx/conf.d/default.conf
 ```
     upstream php {

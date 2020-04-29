@@ -28,6 +28,18 @@ pkg install php74 mod_php74 php74-gd php74-json php74-mbstring php74-mysqli php7
 pkg install node12 npm-node12
 ```
 ```
+sysrc mysql_enable="YES"
+service mysql-server start
+mysql_secure_installation
+sysrc mysql_args="--bind-address=127.0.0.1"
+service mysql-server restart
+```
+```
+mysql -u root -p
+MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
+MariaDB> flush privileges;
+```
+```
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
@@ -35,13 +47,6 @@ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 pip3 install --upgrade pip
 
 cp /usr/local/share/java/class/mysql-connector-java.jar /usr/local/apache-tomcat-9/lib/
-```
-```
-sysrc mysql_enable="YES"
-service mysql-server start
-sysrc mysql_args="--bind-address=127.0.0.1"
-service mysql-server restart
-mysql_secure_installation
 
 cp /usr/local/www/phpMyAdmin/config.sample.inc.php /usr/local/www/phpMyAdmin/config.inc.php
 ```
