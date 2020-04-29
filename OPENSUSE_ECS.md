@@ -25,6 +25,11 @@ systemctl enable apache2.service
 ```
 Listen 81
 ```
+/etc/php7/apache2/php.ini
+```
+expose_php = Off
+date.timezone = Asia/Shanghai
+```
 ```
 zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin php-composer
 a2enmod php7
@@ -74,6 +79,11 @@ pip3 uninstall configobj
 
 zypper install python3-certbot
 certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m x@live.cn --agree-tos
+```
+```
+certbot renew --dry-run
+crontab -e
+30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
 ```
 ```
 openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
