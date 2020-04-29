@@ -168,6 +168,8 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
         listen 443 ssl http2;
         server_name xxx.net;
 
+        ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
         ssl_session_timeout 1d;
         ssl_session_cache shared:SSL:10m;
         ssl_session_tickets off;
