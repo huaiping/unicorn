@@ -21,6 +21,11 @@ systemctl start apache2.service
 systemctl enable apache2.service
 /srv/www/htdocs/
 ```
+```
+zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin php-composer
+a2enmod php7
+systemctl restart apache2.service
+```
 /etc/apache2/listen.conf
 ```
 Listen 81
@@ -29,11 +34,6 @@ Listen 81
 ```
 expose_php = Off
 date.timezone = Asia/Shanghai
-```
-```
-zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin php-composer
-a2enmod php7
-systemctl restart apache2.service
 ```
 ```
 composer self-update
