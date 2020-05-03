@@ -26,6 +26,9 @@ https://github.com/v2ray/v2ray-core/releases
 https://github.com/2dust/v2rayN/releases
 
 https://github.com/Fndroid/clash_for_windows_pkg/releases
+
+https://github.com/Wind4/vlmcsd/releases
+https://github.com/myanaloglife/py-kms
 ```
 Git 2.20.1
 ```
