@@ -30,6 +30,9 @@ https://github.com/Fndroid/clash_for_windows_pkg/releases
 https://github.com/Wind4/vlmcsd/releases
 https://github.com/myanaloglife/py-kms
 ```
+```
+https://ssl-config.mozilla.org
+```
 Git 2.20.1
 ```
 apt install git
