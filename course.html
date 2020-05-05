@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>主题班会</title>
 <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.6.5/video-js.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.8.1/video-js.min.css">
 <style>
 body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
 p {color:#fff; margin:0 auto;}
@@ -28,9 +28,6 @@ img {vertical-align:middle;}
         <p style="font-size:18vh;">祖国在我心中</p>
         <p style="margin-top:5vh; font-size:10vh;">爱国主义教育主题班会</p>
         <p style="margin-top:5vh; font-size:10vh;">高二（8）班</p>
-        <div id="fullscreen" style="float:right; margin-right:2vw; margin-bottom: 1px;">
-            <button type="button" class="btn btn-outline-light" onclick="fullScreen()"><i class="fas fa-expand"></i></button>
-        </div>
     </div>
 
     <div class="section">
@@ -47,26 +44,13 @@ img {vertical-align:middle;}
               <source src="http://www.thxf.gov.cn/vod/gcdr.mp4" type="video/mp4">
             </video>
         </div>
-        <div id="exitfullscreen" style="float:right; margin-right:2vw;">
-          <button type="button" class="btn btn-outline-light" onclick="exitFullScreen()"><i class="fas fa-expand"></i></button>
-      </div>
     </div>
-
-    <!--
-    <div class="section">第一屏</div>
-    <div class="section">
-        <div class="slide">第二屏的第一屏</div>
-        <div class="slide">第二屏的第二屏</div>
-        <div class="slide">第二屏的第三屏</div>
-        <div class="slide">第二屏的第四屏</div>
-    </div>
-    -->
 </div>
 
 <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.js"></script>
-<script src="https://cdn.bootcss.com/video.js/7.6.5/video.min.js"></script>
+<script src="https://cdn.bootcss.com/video.js/7.8.1/video.min.js"></script>
 <script>
 $(document).bind("contextmenu",function(){
   return false;
@@ -83,24 +67,6 @@ $(function(){
     sectionsColor : ['#cf4647', '#1bbc9b', '#cf4647']
   });
 });
-</script>
-<script>
-function fullScreen(){
-  var el = document.documentElement;
-  var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
-  if (typeof rfs != "undefined" && rfs) {
-    rfs.call(el);
-  };
-  return;
-}
-
-function exitFullScreen() {
-  var el = document;
-  var cfs = el.cancelFullScreen || el.webkitExitFullscreen || el.mozCancelFullScreen || el.exitFullscreen || el.msExitFullscreen;
-  if (typeof cfs != "undefined" && cfs) {
-    cfs.call(el);
-  }
-}
 </script>
 </body>
 </html>
