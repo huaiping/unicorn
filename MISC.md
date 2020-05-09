@@ -54,6 +54,21 @@ gpg --armor --export <Pub_key_ID>
 git config --global user.signingkey <Pub_key_ID>
 git config --global commit.gpgsign true
 ```
+Read the Docs
+```
+pip3 install sphinx sphinx_rtd_theme recommonmark
+mkdir docs
+cd docs
+sphinx-quickstart
+
+source/conf.py
+extensions = ['recommonmark']
+html_theme = "sphinx_rtd_theme"
+
+make clean
+make html
+```
+
 Vue
 ```
 npm install -g @vue/cli
