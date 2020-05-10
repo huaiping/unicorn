@@ -1,6 +1,6 @@
 **Node.js笔记（Node.js 12.16.3 + npm 6.14.4）**
 
-Debian 10.3
+Debian 10.4
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
