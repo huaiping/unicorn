@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>听力训练</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/video.js/7.8.1/video-js.min.css">
+<style>
+body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
+p {color:#fff; margin:0 auto;}
+.section {text-align:center;}
+img {vertical-align:middle;}
+#fp-nav ul li a.active span,.fp-slidesNav ul li a.active span {background:#fff;}
+#fp-nav ul li a span,.fp-slidesNav ul li a span {border:1px solid #fff;}
+</style>
+</head>
+<body>
+<div id="content">
+    <div class="section">
+        <div style="width:70vw; margin:0 auto;">
+            <video controls="controls" poster="poster.png" class="video-js vjs-fluid vjs-big-play-centered" data-setup='{}'>
+              <source src="https://huaiping.net/test.mp3" type="audio/mp3">
+            </video>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.js"></script>
+<script src="https://cdn.bootcss.com/video.js/7.8.1/video.min.js"></script>
+<script>
+$(document).bind("contextmenu",function(){
+  return false;
+});
+$(document).bind("selectstart",function(){
+  return false;
+});
+
+$(function(){
+  $('#content').fullpage({
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    navigation: true,
+    slidesNavigation: true,
+    sectionsColor : ['#ffffff']
+  });
+});
+</script>
+</body>
+</html>
