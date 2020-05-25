@@ -15,13 +15,37 @@ body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino S
 #fp-nav ul li a span,.fp-slidesNav ul li a span {border:1px solid #fff;}
 :focus {outline:none;}
 </style>
+<script>
+  function getRequest() {
+    var url = location.search;
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for (var i = 0; i < strs.length; i++) {
+        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+      }
+    }else{
+      theRequest = null;
+    }
+    return theRequest;
+  }
+</script>
 </head>
 <body>
 <div id="content">
   <div class="section">
     <div style="width:70vw; margin:0 auto;">
       <video controls="controls" poster="poster.png" class="video-js vjs-fluid vjs-big-play-centered" data-setup='{}'>
-        <source src="https://huaiping.net/test.mp3" type="audio/mp3">
+        <script>
+          var GET = getRequest();
+          if (GET) {
+            var id = GET.id;
+            document.write("<source src=\"https://huaiping.net/" + id + ".mp3\" type=\"audio/mp3\">");
+          } else {
+            document.write("<source src=\"https://huaiping.net/test.mp3\" type=\"audio/mp3\">");
+          }
+        </script>
       </video>
     </div>
   </div>
