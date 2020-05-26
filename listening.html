@@ -38,7 +38,7 @@ body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino S
         <script>
           var GET = getRequest();
           if (GET) {
-            var id = GET.id;
+            var id = parseInt(GET.id.replace(/[^\d]/g,""));
             document.write("<source src=\"https://huaiping.net/" + id + ".mp3\" type=\"audio/mp3\">");
           } else {
             document.write("<source src=\"https://huaiping.net/test.mp3\" type=\"audio/mp3\">");
