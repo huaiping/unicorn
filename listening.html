@@ -11,8 +11,6 @@
 <style>
 body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
 .section {text-align:center;}
-#fp-nav ul li a.active span,.fp-slidesNav ul li a.active span {background:#fff;}
-#fp-nav ul li a span,.fp-slidesNav ul li a span {border:1px solid #fff;}
 :focus {outline:none;}
 </style>
 <script>
@@ -65,8 +63,7 @@ $(document).bind("selectstart",function(){
 $(function(){
   $('#content').fullpage({
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    navigation: true,
-    slidesNavigation: true,
+    navigation: false,
     sectionsColor : ['#cf4647']
   });
 });
