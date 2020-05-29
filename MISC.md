@@ -2,6 +2,8 @@
 
 Sudo 1.8.27
 ```
+usermod -aG sudo bob 或 gpasswd -a bob sudo
+
 visudo
 username ALL=(ALL) ALL
 ```
@@ -95,7 +97,7 @@ sudo umount /dev/sdb1
 sudo mkfs.vfat -I /dev/sdb
 ```
 ```
-apt install flameshot
+apt install vlc filezilla flameshot
 ```
 ```
 /etc/inputrc
