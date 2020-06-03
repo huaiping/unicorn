@@ -1,4 +1,4 @@
-**Node.js笔记（Node.js 12.17.0 + npm 6.14.4）**
+**Node.js笔记（Node.js 12.18.0 + npm 6.14.4）**
 
 Debian 10.4
 ```
