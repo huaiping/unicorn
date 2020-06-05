@@ -11,6 +11,7 @@
 <style>
 .card::after {content:''; width:100%; position:absolute; background:#fb3449; bottom:0; height:0; transition:height .3s linear;}
 .card:hover::after {height:8px;}
+.ellipsis {text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 </style>
 </head>
 <body>
@@ -77,7 +78,7 @@
       <div class="card">
         <img src="meeting.png" class="card-img-top" alt="meeting">
         <div class="card-body">
-          <h6 class="card-title">安全教育：预防溺水</h6>
+          <h6 class="card-title ellipsis">安全教育：预防溺水和网络沉迷</h6>
           <p class="card-text mb-2"><i class="fas fa-location-arrow"></i> 腾讯课堂</p>
           <p class="card-text mb-2"><i class="far fa-calendar-alt"></i> 2020年6月3日</p>
           <a href="https://huaiping.net/pdfjs/web/viewer.html?file=https://huaiping.net/M0603.pdf" class="btn btn-success"><i class="far fa-check-circle"></i> 已完成</a>
