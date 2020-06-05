@@ -35,6 +35,13 @@ https://github.com/myanaloglife/py-kms
 ```
 https://ssl-config.mozilla.org
 ```
+```
+pwgen -s 14 5 或 pwgen -cnys 14 5
+
+openssl rand -base64 14
+
+gpg2 --gen-random --armor 1 14
+```
 Git 2.20.1
 ```
 apt install git
@@ -77,7 +84,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 1.10.6 + Laravel 7.x
+Composer 1.10.7 + Laravel 7.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
