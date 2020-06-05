@@ -48,23 +48,22 @@ body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino S
     </div>
   </div>
 </div>
-
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/fullPage.js/3.0.3/fullpage.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.8.2/video.min.js"></script>
 <script>
-$(document).bind("contextmenu",function(){
-  return false;
-});
-$(document).bind("selectstart",function(){
-  return false;
-});
 $(function(){
   $('#content').fullpage({
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     navigation: false,
     sectionsColor : ['#cf4647']
   });
+});
+$(document).bind("contextmenu",function(){
+  return false;
+});
+$(document).bind("selectstart",function(){
+  return false;
 });
 </script>
 </body>
