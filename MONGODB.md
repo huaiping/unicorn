@@ -19,7 +19,7 @@ service mongod start
 systemctl enable mongod
 systemctl status mongod
 ```
-CentOS 8.1.1911
+CentOS 8.2.2004
 
 /etc/yum.repos.d/mongodb-org-4.2.repo
 ```

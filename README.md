@@ -41,6 +41,8 @@ Flutter [https://flutter.dev](https://flutter.dev)
 
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
+iShadow [https://my.ishadowx.biz](http://isx.yt)  
+
 V2Ray [https://view.freev2ray.org](http://freev2.org)  
 
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  

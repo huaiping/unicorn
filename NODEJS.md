@@ -10,7 +10,7 @@ apt install nodejs
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_12.x buster main
 ```
-CentOS 8.1.1911
+CentOS 8.2.2004
 ```
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
 dnf install nodejs
