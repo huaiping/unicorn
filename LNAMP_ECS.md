@@ -145,7 +145,7 @@ proxy_buffers               8 128k;
 ```
 ```
 apt install certbot
-certbot certonly --webroot -w /var/www/html -d xxx.net -m x@live.cn --agree-tos
+certbot certonly --webroot -w /var/www/html -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run
@@ -212,7 +212,4 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
             include proxy_params;
         }
     }
-```
-```
-ssl_ciphers TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:HIGH:!aNULL:!MD5;
 ```

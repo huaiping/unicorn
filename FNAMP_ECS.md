@@ -115,7 +115,7 @@ sysrc tomcat9_enable="YES"
 service tomcat9 start
 ```
 ```
-certbot certonly --webroot -w /usr/local/www/nginx -d xxx.net -m x@live.cn --agree-tos
+certbot certonly --webroot -w /usr/local/www/nginx -d xxx.net -m xxx@live.cn --agree-tos
 ```
 /usr/local/etc/nginx/nginx.conf
 ```

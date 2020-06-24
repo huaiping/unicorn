@@ -78,7 +78,7 @@ pip3 install --upgrade pip
 pip3 uninstall configobj
 
 zypper install python3-certbot
-certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m x@live.cn --agree-tos
+certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run

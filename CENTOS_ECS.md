@@ -69,7 +69,7 @@ wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.36/bin/apache-tomcat
 tar -zxvf apache-tomcat-9.0.36.tar.gz
 mv apache-tomcat-9.0.36 /usr/share/tomcat
 
-wget https://downloads.mariadb.com/Connectors/java/connector-java-2.6.0/mariadb-java-client-2.6.0.jar
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.6.1/mariadb-java-client-2.6.1.jar
 mv mariadb-java-client-2.6.0.jar /usr/share/tomcat/lib
 
 chown -R tomcat:tomcat /usr/share/tomcat
@@ -135,7 +135,7 @@ wget https://dl.eff.org/certbot-auto
 mv certbot-auto /usr/local/bin/certbot
 chown root /usr/local/bin/certbot
 chmod 0755 /usr/local/bin/certbot
-/usr/local/bin/certbot certonly --webroot -w /usr/share/nginx/html -d xxx.net -m x@live.cn --agree-tos
+/usr/local/bin/certbot certonly --webroot -w /usr/share/nginx/html -d xxx.net -m xxx@live.cn --agree-tos
 ```
 ```
 certbot renew --dry-run

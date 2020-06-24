@@ -27,6 +27,8 @@ sed -i 's/15.1/15.2/g' /etc/zypp/repos.d/*.repo
 https://github.com/v2ray/v2ray-core/releases
 https://github.com/2dust/v2rayN/releases
 
+https://github.com/Trojan-Qt5/Trojan-Qt5/releases
+
 https://github.com/Fndroid/clash_for_windows_pkg/releases
 
 https://github.com/Wind4/vlmcsd/releases
