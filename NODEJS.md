@@ -80,5 +80,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 12.18.1
+n stable 或 sudo n 12.18.2
 ```
