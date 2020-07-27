@@ -1,4 +1,4 @@
-**openSUSE笔记（openSUSE 15.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.2 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
+**openSUSE笔记（openSUSE 15.2 + Nginx 1.16 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.6）**
 ```
 zypper refresh
 zypper update
@@ -75,7 +75,6 @@ systemctl enable nginx.service
 zypper install python3 python3-pip python3-setuptools python3-wheel
 
 pip3 install --upgrade pip
-pip3 uninstall configobj
 
 zypper install python3-certbot
 certbot certonly --webroot -w /srv/www/htdocs -d xxx.net -m xxx@live.cn --agree-tos
