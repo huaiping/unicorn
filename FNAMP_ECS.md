@@ -1,10 +1,10 @@
-**FNAMP笔记（FreeBSD 11.2 + Nginx 1.16 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.7）**
+**FNAMP笔记（FreeBSD 11.3 + Nginx 1.18 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.7）**
 ```
 tzsetup
 freebsd-update fetch
 freebsd-update install
 
-freebsd-update upgrade -r 11.3-RELEASE
+freebsd-update upgrade -r 11.4-RELEASE
 freebsd-update install
 shutdown -r now
 freebsd-update install
@@ -149,9 +149,9 @@ http {
         ssl_ciphers HIGH:!aNULL:!MD5;
         ssl_prefer_server_ciphers on;
 
-        ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
-        ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
+        ssl_certificate /usr/local/etc/letsencrypt/live/xxx.net/fullchain.pem;
+        ssl_certificate_key /usr/local/etc/letsencrypt/live/xxx.net/privkey.pem;
+        ssl_trusted_certificate /usr/local/etc/letsencrypt/live/xxx.net/chain.pem;
 
         ssl_stapling on;
         ssl_stapling_verify on;
