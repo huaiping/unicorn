@@ -1,4 +1,4 @@
-**Ruby笔记（Debian 10.5 + Ruby 2.5.5 + Rails 6.0.3.2）**
+**Ruby笔记（Debian 10.5 + Ruby 2.5.5 + Rails 6.0.3.3）**
 ```
 apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
 apt install apache2 mysql-server libapache2-mod-passenger
