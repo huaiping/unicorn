@@ -44,9 +44,9 @@ date.timezone = Asia/Shanghai
 #Listen 443
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.0.2-all-languages.tar.gz
-mv phpMyAdmin-5.0.2-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.0.3/phpMyAdmin-5.0.3-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.0.3-all-languages.tar.gz
+mv phpMyAdmin-5.0.3-all-languages /var/www/html/phpmyadmin
 mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php
@@ -65,9 +65,9 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.38/bin/apache-tomcat-9.0.38.tar.gz
-tar -zxvf apache-tomcat-9.0.38.tar.gz
-mv apache-tomcat-9.0.38 /usr/share/tomcat
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.39/bin/apache-tomcat-9.0.39.tar.gz
+tar -zxvf apache-tomcat-9.0.39.tar.gz
+mv apache-tomcat-9.0.39 /usr/share/tomcat
 
 wget https://downloads.mariadb.com/Connectors/java/connector-java-2.6.2/mariadb-java-client-2.6.2.jar
 mv mariadb-java-client-2.6.2.jar /usr/share/tomcat/lib
