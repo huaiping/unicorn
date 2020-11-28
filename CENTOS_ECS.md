@@ -119,7 +119,7 @@ systemctl enable tomcat.service
 ```
 ```
 rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-dnf install dotnet-sdk-3.1
+dnf install dotnet-sdk-5.0
 ```
 ```
 dnf install nginx

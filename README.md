@@ -29,10 +29,6 @@ Django [https://www.djangoproject.com](https://www.djangoproject.com)
 
 Rails [https://rubyonrails.org](https://rubyonrails.org)  
 
-Vue.js [https://vuejs.org](https://cn.vuejs.org)  
-
-Element [https://element.eleme.cn](https://element.eleme.cn)  
-
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
 iShadow [https://my.ishadowx.biz](http://isx.yt)  
@@ -60,6 +56,8 @@ I Tell You [https://msdn.itellyou.cn](https://msdn.itellyou.cn)
 全能影视 [http://www.qnvod.net](http://www.qnvod.net)  
 
 奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com)  
+
+中国色 [http://zhongguose.com](http://zhongguose.com)  
 
 智学网 [https://www.zhixue.com](https://www.zhixue.com/login.html)  
 

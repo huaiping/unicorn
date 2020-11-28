@@ -81,13 +81,9 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
-mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget https://packages.microsoft.com/config/debian/10/prod.list
-mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
-chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
-chown root:root /etc/apt/sources.list.d/microsoft-prod.list
-apt install dotnet-sdk-3.1
+wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
+apt install dotnet-sdk-5.0
 ```
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip libmariadbd-dev
