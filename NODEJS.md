@@ -1,6 +1,6 @@
 **Node.js笔记（Node.js 14.15.1 + npm 6.14.8）**
 
-Debian 10.6
+Debian 10.7
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
