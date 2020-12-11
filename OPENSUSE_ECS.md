@@ -73,7 +73,6 @@ systemctl enable nginx.service
 ```
 ```
 zypper install python3 python3-pip python3-setuptools python3-wheel
-
 pip3 install --upgrade pip
 
 zypper install python3-certbot

@@ -1,4 +1,4 @@
-**CentOS笔记（CentOS 8.1 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
+**CentOS笔记（CentOS 8.2 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
 ```
 timedatectl set-timezone Asia/Shanghai
 dnf makecache
@@ -69,8 +69,8 @@ wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat
 tar -zxvf apache-tomcat-9.0.41.tar.gz
 mv apache-tomcat-9.0.41 /usr/share/tomcat
 
-wget https://downloads.mariadb.com/Connectors/java/connector-java-2.6.2/mariadb-java-client-2.6.2.jar
-mv mariadb-java-client-2.6.2.jar /usr/share/tomcat/lib
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.1/mariadb-java-client-2.7.1.jar
+mv mariadb-java-client-2.7.1.jar /usr/share/tomcat/lib
 
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh
