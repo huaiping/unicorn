@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>网课中心</title>
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <style>
 .card::after {content:''; width:100%; position:absolute; background:#fb3449; bottom:0; height:0; transition:height .3s linear;}
 .card:hover::after {height:8px;}
@@ -333,7 +333,7 @@
 </div>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
 <script>
 $(document).bind("contextmenu",function(){
   return false;
@@ -346,7 +346,7 @@ $(document).bind("selectstart",function(){
   var timedate = new Date("June,7,2021");
   var now = new Date();
   var date = timedate.getTime() - now.getTime();
-  var time = Math.floor(date/(1000*60*60*24));
+  var time = Math.ceil(date/(1000*60*60*24));
   var countdown = document.getElementById("countdown");
   if (time >= 0) {
     countdown.innerHTML = "离高考只有" + time + "天";
