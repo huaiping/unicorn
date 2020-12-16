@@ -27,8 +27,6 @@ Laravel [https://laravel.com](https://laravel.com)
 
 Django [https://www.djangoproject.com](https://www.djangoproject.com)  
 
-Rails [https://rubyonrails.org](https://rubyonrails.org)  
-
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
 iShadow [https://my.ishadowx.biz](http://isx.yt)  

@@ -7,7 +7,7 @@ pip3 install --upgrade pip
 pip3 install Django
 pip3 install mysqlclient
 ```
-CentOS 8.2.2004 + Python 3.6.8
+CentOS 8.3.2011 + Python 3.6.8
 ```
 yum install epel-release
 yum install httpd python3-pip mariadb-server gcc httpd-devel python3-devel mariadb-devel
