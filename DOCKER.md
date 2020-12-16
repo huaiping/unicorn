@@ -15,7 +15,7 @@ apt install docker-ce docker-ce-cli containerd.io
 ```
 https://mirrors.aliyun.com/docker-ce/linux/debian
 ```
-CentOS 8.3.2011
+CentOS 8.3
 ```
 yum remove docker docker-client docker-client-latest docker-common docker-latest \
     docker-latest-logrotate docker-logrotate docker-engine

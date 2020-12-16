@@ -1,4 +1,4 @@
-**Node.js笔记（Node.js 14.15.1 + npm 6.14.8）**
+**Node.js笔记（Node.js 14.15.2 + npm 6.14.9）**
 
 Debian 10.7
 ```
@@ -10,7 +10,7 @@ apt install nodejs
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_14.x buster main
 ```
-CentOS 8.3.2011
+CentOS 8.3
 ```
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 dnf install nodejs
@@ -80,5 +80,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 14.15.1
+n stable 或 sudo n 14.15.2
 ```
