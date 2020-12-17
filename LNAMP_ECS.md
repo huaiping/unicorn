@@ -2,9 +2,9 @@
 
 ~~/etc/apt/sources.list~~
 ```
-deb http://mirrors.aliyun.com/debian            buster          main  contrib   non-free
-deb http://mirrors.aliyun.com/debian            buster-updates  main  contrib   non-free
-deb http://mirrors.aliyun.com/debian-security/  buster/updates  main  non-free  contrib
+deb https://mirrors.aliyun.com/debian            buster          main  contrib  non-free
+deb https://mirrors.aliyun.com/debian            buster-updates  main  contrib  non-free
+deb https://mirrors.aliyun.com/debian-security/  buster/updates  main  contrib  non-free
 ```
 ```
 dpkg-reconfigure tzdata
@@ -75,8 +75,7 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 ```
 /etc/tomcat9/server.xml
 ```
-<Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000"
- redirectPort="8443"/>
+<Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
 <Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
@@ -146,7 +145,7 @@ certbot certonly --webroot -w /var/www/html -d xxx.net -m xxx@live.cn --agree-to
 ```
 certbot renew --dry-run
 crontab -e
-30 2 * * 1 /usr/bin/certbot renew  >> /var/log/le-renew.log
+30 2 * * 1 /usr/bin/certbot renew >> /var/log/le-renew.log
 ```
 ```
 openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
