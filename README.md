@@ -5,6 +5,10 @@
 
 cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)  
 
+虎嗅网 [https://www.huxiu.com](https://www.huxiu.com)  
+
+36氪 [https://36kr.com](https://36kr.com)  
+
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
 Howtoforge [https://www.howtoforge.com](https://www.howtoforge.com)  

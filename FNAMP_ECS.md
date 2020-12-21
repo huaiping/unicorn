@@ -1,10 +1,10 @@
-**FNAMP笔记（FreeBSD 11.3 + Nginx 1.18 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.7）**
+**FNAMP笔记（FreeBSD 12.2 + Nginx 1.18 + Apache 2.4 + MariaDB 10.5 + PHP 8.0 + Tomcat 9.0 + Python 3.7）**
 ```
 tzsetup
 freebsd-update fetch
 freebsd-update install
 
-freebsd-update upgrade -r 11.4-RELEASE
+freebsd-update upgrade -r 12.2-RELEASE
 freebsd-update install
 shutdown -r now
 freebsd-update install
@@ -22,10 +22,10 @@ pkg-static install -f pkg
 pwd_mkdb -p /etc/master.passwd        # user 'mysql' disappeared during update
 ```
 ```
-pkg install nginx apache24 mariadb104-server openjdk8 tomcat9 python3 py37-pip py37-certbot
-pkg install php74 mod_php74 php74-gd php74-json php74-mbstring php74-mysqli php74-pdo_mysql \
- php74-session phpMyAdmin5-php74 ap24-mod_rpaf2 mysql-connector-java
-pkg install node12 npm-node12
+pkg install nginx apache24 mariadb105-server openjdk8 tomcat9 python3 py37-pip py37-certbot
+pkg install php80 mod_php80 php80-gd php80-json php80-mbstring php80-mysqli php80-pdo_mysql \
+ php80-session phpMyAdmin5-php80 ap24-mod_rpaf2 mysql-connector-java
+pkg install node14 npm-node14
 ```
 ```
 sysrc mysql_enable="YES"
