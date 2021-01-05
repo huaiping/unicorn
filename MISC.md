@@ -29,8 +29,6 @@ https://github.com/2dust/v2rayN/releases
 
 https://github.com/NetchX/Netch/releases
 
-https://github.com/Trojan-Qt5/Trojan-Qt5/releases
-
 https://github.com/Fndroid/clash_for_windows_pkg/releases
 
 https://github.com/Wind4/vlmcsd/releases
