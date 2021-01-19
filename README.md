@@ -23,14 +23,6 @@ TecMint [https://www.tecmint.com](https://www.tecmint.com)
 
 Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)  
 
-Node.js [https://nodejs.org](https://nodejs.org)  
-
-.NET [https://dotnet.microsoft.com](https://dotnet.microsoft.com)  
-
-Laravel [https://laravel.com](https://laravel.com)  
-
-Django [https://www.djangoproject.com](https://www.djangoproject.com)  
-
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
 iShadow [https://my.ishadowx.biz](http://isx.yt)  
