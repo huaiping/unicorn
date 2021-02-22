@@ -37,7 +37,11 @@ Rufus [https://rufus.ie](https://rufus.ie)
 
 微云 [https://www.weiyun.com](https://www.weiyun.com)  
 
-I Tell You [https://msdn.itellyou.cn](https://msdn.itellyou.cn)  
+I Tell You [https://msdn.itellyou.cn](https://www.itellyou.com)  
+
+Office Tool Plus [https://otp.landian.vip](https://otp.landian.vip)  
+
+Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 
 零散坑 [https://03k.org](https://03k.org)  
 
