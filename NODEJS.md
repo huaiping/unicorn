@@ -1,4 +1,4 @@
-**Node.js笔记（Node.js 14.15.4 + npm 6.14.10）**
+**Node.js笔记（Node.js 14.16.0 + npm 6.14.11）**
 
 Debian 10.8
 ```
@@ -6,18 +6,10 @@ apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 apt install nodejs
 ```
-/etc/apt/sources.list.d/nodesource.list
-```
-deb https://mirrors.tuna.tsinghua.edu.cn/nodesource/deb_14.x buster main
-```
 CentOS 8.3
 ```
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 dnf install nodejs
-```
-/etc/yum.repos.d/nodesource-el8.repo
-```
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/nodesource/rpm_14.x/el/8/$basearch
 ```
 Express
 ```
@@ -80,5 +72,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 14.15.4
+n stable 或 sudo n 14.16.0
 ```

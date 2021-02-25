@@ -86,7 +86,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.0.9 + Laravel 8.x
+Composer 2.0.11 + Laravel 8.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php

@@ -44,9 +44,9 @@ date.timezone = Asia/Shanghai
 #Listen 443
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.0.4-all-languages.tar.gz
-mv phpMyAdmin-5.0.4-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.1.0-all-languages.tar.gz
+mv phpMyAdmin-5.1.0-all-languages /var/www/html/phpmyadmin
 mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php
@@ -69,8 +69,8 @@ wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat
 tar -zxvf apache-tomcat-9.0.43.tar.gz
 mv apache-tomcat-9.0.43 /usr/share/tomcat
 
-wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.1/mariadb-java-client-2.7.1.jar
-mv mariadb-java-client-2.7.1.jar /usr/share/tomcat/lib
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.2/mariadb-java-client-2.7.2.jar
+mv mariadb-java-client-2.7.2.jar /usr/share/tomcat/lib
 
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh
