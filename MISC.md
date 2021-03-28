@@ -1,4 +1,4 @@
-**Miscellaneous（Debian 10.8）**
+**Miscellaneous（Debian 10.9）**
 
 Sudo 1.8.27
 ```

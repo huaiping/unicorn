@@ -1,6 +1,6 @@
 **MongoDB笔记（MongoDB 4.4）**
 
-Debian 10.8
+Debian 10.9
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -

@@ -1,6 +1,6 @@
 **Python笔记（Django 3.1.7）**
 
-Debian 10.8 + Python 3.7.3
+Debian 10.9 + Python 3.7.3
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip mysql-server libmariadbd-dev
 pip3 install --upgrade pip

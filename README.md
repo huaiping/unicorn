@@ -27,7 +27,7 @@ BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)
 
 iShadow [https://my.ishadowx.biz](http://isx.yt)  
 
-V2Ray [https://view.freev2ray.org](http://freev2.org)  
+V2Ray [https://view.freev2ray.org](https://view.freev2ray.org)  
 
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
@@ -37,7 +37,7 @@ Rufus [https://rufus.ie](https://rufus.ie)
 
 微云 [https://www.weiyun.com](https://www.weiyun.com)  
 
-I Tell You [https://msdn.itellyou.cn](https://www.itellyou.com)  
+I Tell You [https://msdn.itellyou.cn](https://msdn.itellyou.cn)  
 
 Office Tool Plus [https://otp.landian.vip](https://otp.landian.vip)  
 
@@ -53,7 +53,7 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 全能影视 [http://www.qnvod.net](http://www.qnvod.net)  
 
-奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com)  
+奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com/index.html)  
 
 中国色 [http://zhongguose.com](http://zhongguose.com)  
 
