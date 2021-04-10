@@ -1,4 +1,4 @@
-**Node.js笔记（Node.js 14.16.0 + npm 6.14.11）**
+**Node.js笔记（Node.js 14.16.1 + npm 6.14.12）**
 
 Debian 10.9
 ```
@@ -72,5 +72,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 14.16.0
+n stable 或 sudo n 14.16.1
 ```

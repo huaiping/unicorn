@@ -9,6 +9,10 @@ cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)
 
 36氪 [https://36kr.com](https://36kr.com)  
 
+IT之家 [https://www.ithome.com](https://www.ithome.com)  
+
+蓝点网 [https://www.landiannews.com](https://www.landiannews.com)  
+
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
 Howtoforge [https://www.howtoforge.com](https://www.howtoforge.com)  
