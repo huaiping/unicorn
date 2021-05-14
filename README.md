@@ -49,11 +49,7 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 零散坑 [https://03k.org](https://03k.org)  
 
-万网 [https://wanwang.aliyun.com](https://wanwang.aliyun.com)  
-
 奈菲影视 [https://www.nfmovies.com](https://www.nfmovies.com)  
-
-且听风吟 [http://www.qtfy7.com](http://www.qtfy7.com)  
 
 全能影视 [http://www.qnvod.net](http://www.qnvod.net)  
 

@@ -1,4 +1,4 @@
-**Python笔记（Django 3.2）**
+**Python笔记（Django 3.2.3）**
 
 Debian 10.9 + Python 3.7.3
 ```
