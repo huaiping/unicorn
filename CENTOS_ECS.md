@@ -1,4 +1,4 @@
-**CentOS笔记（CentOS 8.3 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
+**CentOS笔记（CentOS 8.4 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
 ```
 timedatectl set-timezone Asia/Shanghai
 dnf makecache
@@ -44,9 +44,9 @@ date.timezone = Asia/Shanghai
 #Listen 443
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.1.0-all-languages.tar.gz
-mv phpMyAdmin-5.1.0-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.1.1-all-languages.tar.gz
+mv phpMyAdmin-5.1.1-all-languages /var/www/html/phpmyadmin
 mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php

@@ -1,4 +1,4 @@
-**Docker笔记（Docker 20.10.3-ce）**
+**Docker笔记（Docker 20.10.7-ce）**
 
 Debian 10.9
 ```
@@ -15,7 +15,7 @@ apt install docker-ce docker-ce-cli containerd.io
 ```
 https://mirrors.aliyun.com/docker-ce/linux/debian
 ```
-CentOS 8.3
+CentOS 8.4
 ```
 yum remove docker docker-client docker-client-latest docker-common docker-latest \
     docker-latest-logrotate docker-logrotate docker-engine

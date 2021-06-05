@@ -6,7 +6,7 @@ apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 apt install nodejs
 ```
-CentOS 8.3
+CentOS 8.4
 ```
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 dnf install nodejs
