@@ -65,12 +65,12 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.48/bin/apache-tomcat-9.0.48.tar.gz
-tar -zxvf apache-tomcat-9.0.48.tar.gz
-mv apache-tomcat-9.0.48 /usr/share/tomcat
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz
+tar -zxvf apache-tomcat-9.0.52.tar.gz
+mv apache-tomcat-9.0.52 /usr/share/tomcat
 
-wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.2/mariadb-java-client-2.7.2.jar
-mv mariadb-java-client-2.7.2.jar /usr/share/tomcat/lib
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.4/mariadb-java-client-2.7.4.jar
+mv mariadb-java-client-2.7.4.jar /usr/share/tomcat/lib
 
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh

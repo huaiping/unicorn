@@ -1,6 +1,6 @@
-**Docker笔记（Docker 20.10.7-ce）**
+**Docker笔记（Docker 20.10.8-ce）**
 
-Debian 10.9
+Debian 10.10
 ```
 apt remove docker docker-engine docker.io containerd runc
 apt update

@@ -1,6 +1,6 @@
-**Node.js笔记（Node.js 14.17.1 + npm 6.14.13）**
+**Node.js笔记（Node.js 14.17.4 + npm 6.14.14）**
 
-Debian 10.9
+Debian 10.10
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
@@ -72,5 +72,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 14.17.1
+n stable 或 sudo n 14.17.4
 ```
