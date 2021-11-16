@@ -41,7 +41,7 @@ Rufus [https://rufus.ie](https://rufus.ie)
 
 微云 [https://www.weiyun.com](https://www.weiyun.com)  
 
-I Tell You [https://msdn.itellyou.cn](https://msdn.itellyou.cn)  
+I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)  
 
 Office Tool Plus [https://otp.landian.vip](https://otp.landian.vip)  
 
@@ -51,12 +51,14 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 奈菲影视 [https://www.nfmovies.com](https://www.nfmovies.com)  
 
-全能影视 [http://www.qnvod.net](http://www.qnkk8.com)  
+全能影视 [http://www.qnkk8.com](http://www.qnkk8.com)  
 
 奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com/index.html)  
 
 中国色 [http://zhongguose.com](http://zhongguose.com)  
 
 智学网 [https://www.zhixue.com](https://www.zhixue.com/login.html)  
+
+智慧校园 [https://zhongrenjiaoyu.cn](https://zhongrenjiaoyu.cn)  
 
 升学e网通 [https://www.ewt360.com](https://www.ewt360.com)
