@@ -51,7 +51,7 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 奈菲影视 [https://www.nfmovies.com](https://www.nfmovies.com)  
 
-全能影视 [http://www.qnvod.net](http://www.qnvod.net)  
+全能影视 [http://www.qnvod.net](http://www.qnkk8.com)  
 
 奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com/index.html)  
 
