@@ -11,7 +11,7 @@ cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)
 
 IT之家 [https://www.ithome.com](https://www.ithome.com)  
 
-蓝点网 [https://www.landiannews.com](https://www.landian.vip)  
+蓝点网 [https://www.landian.vip](https://www.landian.vip)  
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
@@ -49,12 +49,4 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com/index.html)  
 
-中国色 [http://zhongguose.com](http://zhongguose.com)  
-
-智学网 [https://www.zhixue.com](https://www.zhixue.com/login.html)  
-
-智慧校园 [https://www.zhongrenjiaoyu.cn](https://www.zhongrenjiaoyu.cn)  
-
-青骄第二课堂 [https://www.2-class.com](https://www.2-class.com)  
-
-升学e网通 [https://www.ewt360.com](https://www.ewt360.com)
+中国色 [http://zhongguose.com](http://zhongguose.com)
