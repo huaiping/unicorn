@@ -11,7 +11,7 @@ cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)
 
 IT之家 [https://www.ithome.com](https://www.ithome.com)  
 
-蓝点网 [https://www.landiannews.com](https://www.landiannews.com)  
+蓝点网 [https://www.landiannews.com](https://www.landian.vip)  
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
@@ -29,10 +29,6 @@ Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)
 
 BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
-iShadow [https://my.ishadowx.biz](http://isx.yt)  
-
-V2Ray [https://view.freev2ray.org](https://view.freev2ray.org)  
-
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
 Rufus [https://rufus.ie](https://rufus.ie)  
@@ -42,8 +38,6 @@ Rufus [https://rufus.ie](https://rufus.ie)
 微云 [https://www.weiyun.com](https://www.weiyun.com)  
 
 I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)  
-
-Office Tool Plus [https://otp.landian.vip](https://otp.landian.vip)  
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 

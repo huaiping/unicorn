@@ -1,6 +1,6 @@
 <?php
 /*
-CREATE DATABASE IF NOT EXISTS `exams` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `exams` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE `edongnan` (
   `xh` int(6) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `edongnan` (
   `jm` int(4) NOT NULL,
   `kh` int(15) NOT NULL,
   PRIMARY KEY (`xh`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 */
 
 
