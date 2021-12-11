@@ -15,7 +15,7 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
-Howtoforge [https://www.howtoforge.com](https://www.howtoforge.com)  
+Howtoforge [https://howtoforge.com](https://howtoforge.com)  
 
 Linuxize [https://linuxize.com](https://linuxize.com)  
 

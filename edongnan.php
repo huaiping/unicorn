@@ -3,13 +3,13 @@
 CREATE DATABASE IF NOT EXISTS `exams` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE `edongnan` (
-  `xh` int(6) NOT NULL,
-  `xm` varchar(20) NOT NULL,
-  `bj` int(2) NOT NULL,
-  `zf` int(4) NOT NULL,
-  `bm` int(2) NOT NULL,
-  `jm` int(4) NOT NULL,
-  `kh` int(15) NOT NULL,
+  `xh` varchar(6) NOT NULL,
+  `xm` varchar(16) NOT NULL,
+  `bj` varchar(22) NOT NULL,
+  `zf` varchar(6) NOT NULL,
+  `bm` varchar(2) NOT NULL,
+  `jm` varchar(4) NOT NULL,
+  `kh` varchar(12) NOT NULL,
   PRIMARY KEY (`xh`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 */
