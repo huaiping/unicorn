@@ -43,6 +43,8 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 零散坑 [https://03k.org](https://03k.org)  
 
+秀美影视 [https://www.15rom.com](https://www.15rom.com)  
+
 奈菲影视 [https://www.nfmovies.com](https://www.nfmovies.com)  
 
 全能影视 [http://www.qnkk8.com](http://www.qnkk8.com)  
