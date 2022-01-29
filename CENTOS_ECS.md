@@ -44,9 +44,9 @@ date.timezone = Asia/Shanghai
 #Listen 443
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.1.1-all-languages.tar.gz
-mv phpMyAdmin-5.1.1-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.1.2-all-languages.tar.gz
+mv phpMyAdmin-5.1.2-all-languages /var/www/html/phpmyadmin
 mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php
