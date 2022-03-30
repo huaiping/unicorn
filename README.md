@@ -11,7 +11,7 @@ cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)
 
 IT之家 [https://www.ithome.com](https://www.ithome.com)  
 
-蓝点网 [https://www.landian.vip](https://www.landian.vip)  
+蓝点网 [https://www.landian.vip](https://otp.landian.vip)  
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
