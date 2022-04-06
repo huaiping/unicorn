@@ -15,6 +15,8 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
+零散坑 [https://03k.org](https://03k.org)  
+
 Howtoforge [https://howtoforge.com](https://howtoforge.com)  
 
 Linuxize [https://linuxize.com](https://linuxize.com)  
@@ -33,19 +35,13 @@ DistroWatch [https://distrowatch.com](https://distrowatch.com)
 
 Rufus [https://rufus.ie](https://rufus.ie)  
 
-七牛云 [https://www.qiniu.com](https://www.qiniu.com)  
-
-微云 [https://www.weiyun.com](https://www.weiyun.com)  
-
 I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)  
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 
-零散坑 [https://03k.org](https://03k.org)  
+策驰影院 [https://www.ypdcn.com](https://www.ypdcn.com)  
 
 秀美影视 [https://www.caidedao.com](https://www.caidedao.com)  
-
-奈菲影视 [https://www.nfmovies.com](https://www.nfmovies.com)  
 
 全能影视 [http://www.qnkk8.com](http://www.qnkk8.com)  
 
