@@ -1,13 +1,13 @@
-**Python笔记（Django 3.2.4）**
+**Python笔记（Django 4.0.3）**
 
-Debian 10.10 + Python 3.7.3
+Debian 11.3 + Python 3.7.3
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip mysql-server libmariadbd-dev
 pip3 install --upgrade pip
 pip3 install Django
 pip3 install mysqlclient
 ```
-CentOS 8.4 + Python 3.6.8
+CentOS 8.5 + Python 3.6.8
 ```
 yum install epel-release
 yum install httpd python3-pip mariadb-server gcc httpd-devel python3-devel mariadb-devel

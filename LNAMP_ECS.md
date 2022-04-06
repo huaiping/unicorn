@@ -1,4 +1,4 @@
-**LNAMP笔记（Debian 10.9 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.3 + Tomcat 9.0 + Python 3.7）**
+**LNAMP笔记（Debian 11.3 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.3 + Tomcat 9.0 + Python 3.7）**
 
 ~~/etc/apt/sources.list~~
 ```
@@ -31,9 +31,9 @@ mv composer.phar /usr/local/bin/composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.1.1-all-languages.tar.gz
-mv phpMyAdmin-5.1.1-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.1.3-all-languages.tar.gz
+mv phpMyAdmin-5.1.3-all-languages /var/www/html/phpmyadmin
 cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php
@@ -80,9 +80,9 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
-apt install dotnet-sdk-5.0
+apt install dotnet-sdk-6.0
 ```
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip libmariadbd-dev

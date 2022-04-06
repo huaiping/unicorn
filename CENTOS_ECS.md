@@ -1,4 +1,4 @@
-**CentOS笔记（CentOS 8.4 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
+**CentOS笔记（CentOS 8.5 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.2 + Tomcat 9.0 + Python 3.6）**
 ```
 timedatectl set-timezone Asia/Shanghai
 dnf makecache
@@ -44,9 +44,9 @@ date.timezone = Asia/Shanghai
 #Listen 443
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.1.2-all-languages.tar.gz
-mv phpMyAdmin-5.1.2-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.1.3-all-languages.tar.gz
+mv phpMyAdmin-5.1.3-all-languages /var/www/html/phpmyadmin
 mv /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php
@@ -65,12 +65,12 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz
-tar -zxvf apache-tomcat-9.0.52.tar.gz
-mv apache-tomcat-9.0.52 /usr/share/tomcat
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
+tar -zxvf apache-tomcat-9.0.62.tar.gz
+mv apache-tomcat-9.0.62 /usr/share/tomcat
 
-wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.4/mariadb-java-client-2.7.4.jar
-mv mariadb-java-client-2.7.4.jar /usr/share/tomcat/lib
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.5/mariadb-java-client-2.7.5.jar
+mv mariadb-java-client-2.7.5.jar /usr/share/tomcat/lib
 
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh
@@ -118,7 +118,7 @@ systemctl enable tomcat.service
 ```
 ```
 rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-dnf install dotnet-sdk-5.0
+dnf install dotnet-sdk-6.0
 ```
 ```
 dnf install nginx

@@ -1,4 +1,4 @@
-**Miscellaneous（Debian 10.10）**
+**Miscellaneous（Debian 11.3）**
 
 Sudo 1.8.27
 ```
@@ -86,7 +86,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.1.5 + Laravel 8.x
+Composer 2.3.3 + Laravel 8.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
