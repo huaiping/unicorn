@@ -59,7 +59,7 @@ docker search httpd                      # 查找Hub上的httpd镜像
 docker commit 8a7db469d429 xxxx
 ```
 ```
-docker pull registry.docker-cn.com/library/ubuntu:16.04
+docker pull registry.docker-cn.com/library/ubuntu:20.04
 docker pull hub.c.163.com/library/tomcat:latest
 
 docker run --name master -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
