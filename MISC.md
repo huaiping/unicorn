@@ -86,7 +86,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.3.3 + Laravel 8.x
+Composer 2.3.10 + Laravel 9.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
@@ -138,10 +138,6 @@ RSAAuthentication yes
 PubkeyAuthentication yes
 AuthorizedKeysFile      %h/.ssh/authorized_keys
 /etc/init.d/sshd restart
-```
-PHP and MSSQL on Ubuntu
-```
-apt install php5-sybase
 ```
 Redis 5.0.3
 ```

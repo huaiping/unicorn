@@ -3,12 +3,12 @@
 Debian 11.4
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 apt install nodejs
 ```
 CentOS 8.5
 ```
-curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
 dnf install nodejs
 ```
 Express
@@ -72,5 +72,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 16.14.2
+n stable 或 sudo n 18.7.0
 ```

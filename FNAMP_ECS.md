@@ -1,10 +1,10 @@
-**FNAMP笔记（FreeBSD 13.0 + Nginx 1.18 + Apache 2.4 + MariaDB 10.5 + PHP 8.0 + Tomcat 9.0 + Python 3.7）**
+**FNAMP笔记（FreeBSD 13.1 + Nginx 1.18 + Apache 2.4 + MariaDB 10.5 + PHP 8.0 + Tomcat 9.0 + Python 3.7）**
 ```
 tzsetup
 freebsd-update fetch
 freebsd-update install
 
-freebsd-update upgrade -r 13.0-RELEASE
+freebsd-update upgrade -r 13.1-RELEASE
 freebsd-update install
 shutdown -r now
 freebsd-update install

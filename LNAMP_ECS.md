@@ -1,4 +1,4 @@
-**LNAMP笔记（Debian 11.3 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.3 + Tomcat 9.0 + Python 3.7）**
+**LNAMP笔记（Debian 11.4 + Nginx 1.14 + Apache 2.4 + MariaDB 10.3 + PHP 7.3 + Tomcat 9.0 + Python 3.7）**
 
 ~~/etc/apt/sources.list~~
 ```
@@ -31,9 +31,9 @@ mv composer.phar /usr/local/bin/composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.1.3-all-languages.tar.gz
-mv phpMyAdmin-5.1.3-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.2.0-all-languages.tar.gz
+mv phpMyAdmin-5.2.0-all-languages /var/www/html/phpmyadmin
 cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php

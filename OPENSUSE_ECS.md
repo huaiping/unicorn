@@ -1,4 +1,4 @@
-**openSUSE笔记（openSUSE 15.3 + Nginx 1.16 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.6）**
+**openSUSE笔记（openSUSE 15.4 + Nginx 1.16 + Apache 2.4 + MariaDB 10.4 + PHP 7.4 + Tomcat 9.0 + Python 3.6）**
 ```
 zypper refresh
 zypper update

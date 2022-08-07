@@ -1,13 +1,13 @@
-**MongoDB笔记（MongoDB 5.0）**
+**MongoDB笔记（MongoDB 6.0）**
 
 Debian 11.4
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
-wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
 ```
-/etc/apt/sources.list.d/mongodb-org-5.0.list
+/etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
-deb https://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main
+deb https://repo.mongodb.org/apt/debian buster/mongodb-org/6.0 main
 ```
 ```
 deb https://mirrors.aliyun.com/mongodb/apt/debian
@@ -21,14 +21,14 @@ systemctl status mongod
 ```
 CentOS 8.5
 
-/etc/yum.repos.d/mongodb-org-5.0.repo
+/etc/yum.repos.d/mongodb-org-6.0.repo
 ```
-[mongodb-org-5.0]
+[mongodb-org-6.0]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/x86_64/
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/6.0/x86_64/
 gpgcheck=1
 enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
 ```
 ```
 dnf install mongodb-org
