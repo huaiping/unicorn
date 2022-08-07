@@ -1,6 +1,6 @@
 **MongoDB笔记（MongoDB 5.0）**
 
-Debian 11.3
+Debian 11.4
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -

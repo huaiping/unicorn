@@ -1,6 +1,6 @@
-**Node.js笔记（Node.js 16.14.2 + npm 8.5.0）**
+**Node.js笔记（Node.js 16.16.0 + npm 8.11.0）**
 
-Debian 11.3
+Debian 11.4
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
