@@ -2,9 +2,9 @@
 
 ~~/etc/apt/sources.list~~
 ```
-deb https://mirrors.aliyun.com/debian            buster          main  contrib  non-free
-deb https://mirrors.aliyun.com/debian            buster-updates  main  contrib  non-free
-deb https://mirrors.aliyun.com/debian-security/  buster/updates  main  contrib  non-free
+deb https://mirrors.aliyun.com/debian           bullseye           main  contrib  non-free
+deb https://mirrors.aliyun.com/debian           bullseye-updates   main  contrib  non-free
+deb https://mirrors.aliyun.com/debian-security  bullseye-security  main  contrib  non-free
 ```
 ```
 dpkg-reconfigure tzdata
