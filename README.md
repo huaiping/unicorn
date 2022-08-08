@@ -47,6 +47,6 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 全能影视 [http://www.qnkk8.com](http://www.qnkk8.com)  
 
-奇迹MU [http://mu.zhaouc.com](http://mu.zhaouc.com/index.html)  
+奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
 中国色 [http://zhongguose.com](http://zhongguose.com)
