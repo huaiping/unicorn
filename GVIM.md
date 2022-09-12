@@ -1,4 +1,4 @@
-**GVim笔记（Debian 11.4 + Vim 8.2）**
+**GVim笔记（Debian 11.5 + Vim 8.2）**
 ```
 apt install vim-gtk
 ```
