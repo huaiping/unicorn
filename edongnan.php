@@ -6,7 +6,7 @@ CREATE TABLE `edongnan` (
   `xh` varchar(6) NOT NULL,
   `xm` varchar(16) NOT NULL,
   `bj` varchar(22) NOT NULL,
-  `zf` varchar(6) NOT NULL,
+  `zf` int(6) NOT NULL,
   `bm` varchar(2) NOT NULL,
   `jm` varchar(4) NOT NULL,
   `kh` varchar(12) NOT NULL,

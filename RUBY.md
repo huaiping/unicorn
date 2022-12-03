@@ -2,7 +2,7 @@
 ```
 apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
 apt install apache2 mysql-server libapache2-mod-passenger
-curl -sL http://deb.nodesource.com/setup_16.x | sudo bash -
+curl -sL http://deb.nodesource.com/setup_18.x | sudo bash -
 apt install nodejs
 
 mysql_secure_installation
@@ -55,7 +55,7 @@ Rails in Docker
 docker pull debian:latest
 docker run --name cynthia -i -t -p 3000:3000 -v /home/data:/data debian:latest /bin/bash
 apt install curl build-essential ruby2.5 ruby-dev libmariadb-dev libxml2-dev zlib1g-dev
-curl -sL http://deb.nodesource.com/setup_16.x | bash -
+curl -sL http://deb.nodesource.com/setup_18.x | bash -
 apt install nodejs
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 gem install mysql2 bundler rails

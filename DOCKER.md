@@ -15,16 +15,6 @@ apt install docker-ce docker-ce-cli containerd.io
 ```
 https://mirrors.aliyun.com/docker-ce/linux/debian
 ```
-CentOS 8.5
-```
-yum remove docker docker-client docker-client-latest docker-common docker-latest \
-    docker-latest-logrotate docker-logrotate docker-engine
-yum install yum-utils device-mapper-persistent-data lvm2
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum install docker-ce docker-ce-cli containerd.io
-systemctl start docker.service
-systemctl enable docker.service
-```
 ```
 docker pull debian:latest
 docker run --name test01 -i -t -p 9090:80 -v /home/data:/data debian:latest /bin/bash
