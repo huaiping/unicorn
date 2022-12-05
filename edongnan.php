@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS `exams` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8
 CREATE TABLE `edongnan` (
   `xh` varchar(6) NOT NULL,
   `xm` varchar(16) NOT NULL,
-  `bj` varchar(22) NOT NULL,
+  `bj` varchar(2) NOT NULL,
   `zf` int(6) NOT NULL,
   `bm` varchar(2) NOT NULL,
   `jm` varchar(4) NOT NULL,
@@ -15,14 +15,14 @@ CREATE TABLE `edongnan` (
 */
 
 
-$db = new PDO('mysql:host=localhost; dbname=exams', 'root', 'xxxx');
 print("<table>");
 try {
+    $db = new PDO('mysql:host=localhost; dbname=exams', 'root', 'xxxx');
     for ($m = 0; $m < 60; $m++) {
-        for ($i = 6; $i < 30; $i++) {
-            $query = $db->query("select xh,xm,kh from edongnan where bj=$i order by zf desc, xh asc limit $m,1");
+        for ($i = 6; $i < 23; $i++) {
+            $query = $db->query("SELECT xh,xm,kh FROM edongnan WHERE bj=$i ORDER BY zf DESC, xh ASC LIMIT $m,1");
             $row = $query->fetch();
-            print_r("<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>");
+            print_r("<tr><td>".$row['xh']."</td><td>".$row['kh']."</td><td>".$row['xm']."</td></tr>");
         }
     }
     $db = null;

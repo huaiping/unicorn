@@ -65,12 +65,12 @@ groupadd --system tomcat
 useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 ```
-wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz
-tar -zxvf apache-tomcat-9.0.65.tar.gz
+wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.tar.gz
+tar -zxvf apache-tomcat-9.0.69.tar.gz
 mv apache-tomcat-9.0.65 /usr/share/tomcat
 
-wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.6/mariadb-java-client-2.7.6.jar
-mv mariadb-java-client-2.7.6.jar /usr/share/tomcat/lib
+wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.7/mariadb-java-client-2.7.7.jar
+mv mariadb-java-client-2.7.7.jar /usr/share/tomcat/lib
 
 chown -R tomcat:tomcat /usr/share/tomcat
 chmod +x /usr/share/tomcat/bin/*.sh
@@ -118,7 +118,7 @@ systemctl enable tomcat.service
 ```
 ```
 rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-dnf install dotnet-sdk-6.0
+dnf install dotnet-sdk-7.0
 ```
 ```
 dnf install nginx
