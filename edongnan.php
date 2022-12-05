@@ -20,7 +20,7 @@ try {
     $db = new PDO('mysql:host=localhost; dbname=exams', 'root', 'xxxx');
     for ($m = 0; $m < 60; $m++) {
         for ($i = 6; $i < 23; $i++) {
-            $query = $db->query("SELECT xh,xm,kh FROM edongnan WHERE bj=$i ORDER BY zf DESC, xh ASC LIMIT $m,1");
+            $query = $db->query("SELECT xh, xm, kh FROM edongnan WHERE bj=$i ORDER BY zf DESC, xh ASC LIMIT $m,1");
             $row = $query->fetch();
             print_r("<tr><td>".$row['xh']."</td><td>".$row['kh']."</td><td>".$row['xm']."</td></tr>");
         }

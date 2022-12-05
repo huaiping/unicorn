@@ -1,4 +1,4 @@
-**Docker笔记（Docker 20.10.18-ce）**
+**Docker笔记（Docker 20.10.21-ce）**
 
 Debian 11.5
 ```
@@ -49,7 +49,7 @@ docker search httpd                      # 查找Hub上的httpd镜像
 docker commit 8a7db469d429 xxxx
 ```
 ```
-docker pull registry.docker-cn.com/library/ubuntu:20.04
+docker pull registry.docker-cn.com/library/ubuntu:22.04
 docker pull hub.c.163.com/library/tomcat:latest
 
 docker run --name master -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
