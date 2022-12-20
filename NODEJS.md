@@ -1,6 +1,6 @@
 **Node.js笔记（Node.js 18.12.1 + npm 8.19.2）**
 
-Debian 11.5
+Debian 11.6
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
