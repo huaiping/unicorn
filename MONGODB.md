@@ -1,6 +1,4 @@
-**MongoDB笔记（MongoDB 6.0）**
-
-Debian 11.6
+**MongoDB笔记（Debian 11.6 + MongoDB 6.0）**
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -

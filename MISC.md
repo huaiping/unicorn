@@ -24,14 +24,11 @@ sed -i 's/stretch/buster/g' /etc/apt/sources.list
 sed -i 's/15.1/15.3/g' /etc/zypp/repos.d/*.repo
 ```
 ```
-https://github.com/v2ray/v2ray-core/releases
 https://github.com/2dust/v2rayN/releases
 
-https://github.com/NetchX/Netch/releases
 https://github.com/Fndroid/clash_for_windows_pkg/releases
 
 https://github.com/Wind4/vlmcsd/releases
-https://github.com/myanaloglife/py-kms
 ```
 ```
 https://ssl-config.mozilla.org
@@ -85,7 +82,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.4.4 + Laravel 9.x
+Composer 2.5.1 + Laravel 9.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php

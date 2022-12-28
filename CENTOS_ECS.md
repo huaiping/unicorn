@@ -67,7 +67,7 @@ useradd -d /usr/share/tomcat -r -s /bin/false -g tomcat tomcat
 ```
 wget https://mirrors.aliyun.com/apache/tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.tar.gz
 tar -zxvf apache-tomcat-9.0.69.tar.gz
-mv apache-tomcat-9.0.65 /usr/share/tomcat
+mv apache-tomcat-9.0.69 /usr/share/tomcat
 
 wget https://downloads.mariadb.com/Connectors/java/connector-java-2.7.7/mariadb-java-client-2.7.7.jar
 mv mariadb-java-client-2.7.7.jar /usr/share/tomcat/lib

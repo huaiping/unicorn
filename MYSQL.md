@@ -1,4 +1,4 @@
-**MySQL笔记（Debian 11.6 + Docker 20.10.21 + MySQL 5.7）**
+**MySQL笔记（Debian 11.6 + Docker 20.10.22 + MySQL 5.7）**
 ```
 docker pull mysql:5.7
 docker run -p 3339:3306 --name mysql-master -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
