@@ -5,7 +5,7 @@ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add 
 ```
 /etc/apt/sources.list.d/mongodb-org-6.0.list
 ```
-deb https://repo.mongodb.org/apt/debian buster/mongodb-org/6.0 main
+deb https://repo.mongodb.org/apt/debian bullseye/mongodb-org/6.0 main
 ```
 ```
 deb https://mirrors.aliyun.com/mongodb/apt/debian
