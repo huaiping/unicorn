@@ -24,6 +24,11 @@ sed -i 's/stretch/buster/g' /etc/apt/sources.list
 sed -i 's/15.1/15.3/g' /etc/zypp/repos.d/*.repo
 ```
 ```
+https://github.com/massgravel/Microsoft-Activation-Scripts/
+irm https://massgrave.dev/get | iex
+
+https://github.com/zbezj/HEU_KMS_Activator
+
 https://github.com/2dust/v2rayN/releases
 
 https://github.com/Fndroid/clash_for_windows_pkg/releases
@@ -60,6 +65,8 @@ gpg --armor --export <Pub_key_ID>
 把GPG key 加到github帐号
 git config --global user.signingkey <Pub_key_ID>
 git config --global commit.gpgsign true
+
+git clone git@github.com:huaiping/unicorn.git
 ```
 Read the Docs
 ```
