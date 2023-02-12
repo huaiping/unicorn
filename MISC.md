@@ -24,10 +24,10 @@ sed -i 's/stretch/buster/g' /etc/apt/sources.list
 sed -i 's/15.1/15.3/g' /etc/zypp/repos.d/*.repo
 ```
 ```
-https://github.com/massgravel/Microsoft-Activation-Scripts/
+https://github.com/massgravel/Microsoft-Activation-Scripts/releases
 irm https://massgrave.dev/get | iex
 
-https://github.com/zbezj/HEU_KMS_Activator
+https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/2dust/v2rayN/releases
 

@@ -3,8 +3,6 @@
 ### Collections
 开源中国 [https://www.oschina.net](https://www.oschina.net)  
 
-cnBeta [https://www.cnbeta.com](https://www.cnbeta.com)  
-
 虎嗅网 [https://www.huxiu.com](https://www.huxiu.com)  
 
 36氪 [https://36kr.com](https://36kr.com)  
@@ -34,6 +32,8 @@ BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
 Rufus [https://rufus.ie](https://rufus.ie)  
+
+Ventoy [https://www.ventoy.net](https://www.ventoy.net/cn/)  
 
 驱动总裁 [https://www.sysceo.com](https://www.sysceo.com)  
 
