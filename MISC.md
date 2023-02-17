@@ -1,13 +1,13 @@
 **Miscellaneous（Debian 11.6）**
 
-Sudo 1.8.27
+Sudo 1.9.5
 ```
 usermod -aG sudo bob 或 gpasswd -a bob sudo
 
 visudo
 username ALL=(ALL) ALL
 ```
-Fcitx 4.2.9.6
+Fcitx 4.2.9.8
 ```
 sudo dpkg-reconfigure locales
 sudo apt install fcitx fcitx-sunpinyin fcitx-config-gtk2 fcitx-ui-classic
@@ -21,7 +21,7 @@ apt install intel-microcode firmware-realtek nvidia-driver
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
 
-sed -i 's/15.1/15.3/g' /etc/zypp/repos.d/*.repo
+sed -i 's/15.1/15.4/g' /etc/zypp/repos.d/*.repo
 ```
 ```
 https://github.com/massgravel/Microsoft-Activation-Scripts/releases
@@ -45,7 +45,7 @@ openssl rand -base64 14
 
 gpg2 --gen-random --armor 1 14
 ```
-Git 2.20.1
+Git 2.30.2
 ```
 apt install git
 
@@ -89,7 +89,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.5.1 + Laravel 9.x
+Composer 2.5.4 + Laravel 9.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
@@ -142,7 +142,7 @@ PubkeyAuthentication yes
 AuthorizedKeysFile      %h/.ssh/authorized_keys
 /etc/init.d/sshd restart
 ```
-Redis 5.0.3
+Redis 6.0.16
 ```
 sudo apt install redis-server
 openssl rand 60 | openssl base64 -A
