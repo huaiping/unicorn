@@ -10,7 +10,7 @@ username ALL=(ALL) ALL
 Fcitx 4.2.9.8
 ```
 sudo dpkg-reconfigure locales
-sudo apt install fcitx fcitx-sunpinyin fcitx-config-gtk2 fcitx-ui-classic
+sudo apt install fcitx fcitx-sunpinyin fcitx-config-gtk fcitx-ui-classic
 sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin

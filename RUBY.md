@@ -1,6 +1,6 @@
-**Ruby笔记（Debian 11.6 + Ruby 2.5.5 + Rails 7.0）**
+**Ruby笔记（Debian 11.6 + Ruby 2.7.4 + Rails 7.0）**
 ```
-apt install curl build-essential ruby2.5 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
+apt install curl build-essential ruby2.7 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
 apt install apache2 mysql-server libapache2-mod-passenger
 curl -sL http://deb.nodesource.com/setup_18.x | sudo bash -
 apt install nodejs
@@ -54,7 +54,7 @@ Rails in Docker
 ```
 docker pull debian:latest
 docker run --name cynthia -i -t -p 3000:3000 -v /home/data:/data debian:latest /bin/bash
-apt install curl build-essential ruby2.5 ruby-dev libmariadb-dev libxml2-dev zlib1g-dev
+apt install curl build-essential ruby2.7 ruby-dev libmariadb-dev libxml2-dev zlib1g-dev
 curl -sL http://deb.nodesource.com/setup_18.x | bash -
 apt install nodejs
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
