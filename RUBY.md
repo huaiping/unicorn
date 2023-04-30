@@ -1,4 +1,4 @@
-**Ruby笔记（Debian 11.6 + Ruby 2.7.4 + Rails 7.0）**
+**Ruby笔记（Debian 11.7 + Ruby 2.7.4 + Rails 7.0）**
 ```
 apt install curl build-essential ruby2.7 ruby-dev libmariadbclient-dev zlib1g-dev libxml2-dev
 apt install apache2 mysql-server libapache2-mod-passenger

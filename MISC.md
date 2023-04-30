@@ -1,4 +1,4 @@
-**Miscellaneous（Debian 11.6）**
+**Miscellaneous（Debian 11.7）**
 
 Sudo 1.9.5
 ```
@@ -26,6 +26,9 @@ sed -i 's/15.1/15.4/g' /etc/zypp/repos.d/*.repo
 ```
 https://github.com/massgravel/Microsoft-Activation-Scripts/releases
 irm https://massgrave.dev/get | iex
+
+https://www.microsoft.com/en-us/download/details.aspx?id=49117
+https://config.office.com/deploymentsettings
 
 https://github.com/zbezj/HEU_KMS_Activator/releases
 
@@ -89,7 +92,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.5.4 + Laravel 9.x
+Composer 2.5.5 + Laravel 9.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
