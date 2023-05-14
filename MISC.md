@@ -24,19 +24,17 @@ sed -i 's/stretch/buster/g' /etc/apt/sources.list
 sed -i 's/15.1/15.4/g' /etc/zypp/repos.d/*.repo
 ```
 ```
-https://github.com/massgravel/Microsoft-Activation-Scripts/releases
-irm https://massgrave.dev/get | iex
-
 https://www.microsoft.com/en-us/download/details.aspx?id=49117
 https://config.office.com/deploymentsettings
+
+https://github.com/massgravel/Microsoft-Activation-Scripts/releases
+irm https://massgrave.dev/get | iex
 
 https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/2dust/v2rayN/releases
 
 https://github.com/Fndroid/clash_for_windows_pkg/releases
-
-https://github.com/Wind4/vlmcsd/releases
 ```
 ```
 https://ssl-config.mozilla.org
