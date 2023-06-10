@@ -3,11 +3,11 @@
 ### Collections
 开源中国 [https://www.oschina.net](https://www.oschina.net)  
 
+IT之家 [https://www.ithome.com](https://www.ithome.com)  
+
 虎嗅网 [https://www.huxiu.com](https://www.huxiu.com)  
 
 36氪 [https://36kr.com](https://36kr.com)  
-
-IT之家 [https://www.ithome.com](https://www.ithome.com)  
 
 蓝点网 [https://www.landian.vip](https://otp.landian.vip)  
 
@@ -33,13 +33,13 @@ DistroWatch [https://distrowatch.com](https://distrowatch.com)
 
 Rufus [https://rufus.ie](https://rufus.ie)  
 
-Ventoy [https://www.ventoy.net](https://www.ventoy.net/cn/)  
+Ventoy [https://www.ventoy.net](https://www.ventoy.net)  
 
 驱动总裁 [https://www.sysceo.com](https://www.sysceo.com)  
 
 I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)  
 
-PDF24 [https://www.pdf24.org](https://www.pdf24.org)  
+PDF24 [https://www.pdf24.org](https://tools.pdf24.org)  
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 

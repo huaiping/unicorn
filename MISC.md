@@ -21,7 +21,7 @@ apt install intel-microcode firmware-realtek nvidia-driver
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
 
-sed -i 's/15.1/15.4/g' /etc/zypp/repos.d/*.repo
+sed -i 's/15.1/15.5/g' /etc/zypp/repos.d/*.repo
 ```
 ```
 https://www.microsoft.com/en-us/download/details.aspx?id=49117
@@ -35,6 +35,8 @@ https://github.com/zbezj/HEU_KMS_Activator/releases
 https://github.com/2dust/v2rayN/releases
 
 https://github.com/Fndroid/clash_for_windows_pkg/releases
+
+https://github.com/adobe-fonts/source-han-sans/releases
 ```
 ```
 https://ssl-config.mozilla.org
@@ -90,7 +92,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.5.5 + Laravel 9.x
+Composer 2.5.8 + Laravel 9.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
