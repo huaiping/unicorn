@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高三英语一轮词汇复习</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+<style>
+body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
+</style>
+</head>
+<body>
+<script>
+var arr = ["apple", "banana", "cherry", "durian", "elderberry", "contribution", "competition"];
+var result = [];
+for (var i = 0; i <= 4; i++) {
+  var index = Math.floor(Math.random() * arr.length);
+  var item = arr.splice(index, 1)[0];
+  result.push(item);
+}
+</script>
+
+<div id="content">
+  <div class="section" style="text-align: center;">
+    <div style="font-size:12vh;">
+      <div style="display: inline-block;"><script>document.write(result[0]);</script></div>
+      <div style="display: inline-block;"><script>document.write(result[1]);</script></div>
+      <div style="display: inline-block;"><script>document.write(result[2]);</script></div>  
+    </div>
+
+    <div style="margin-top:3vh; font-size:12vh;">
+      <div style="display: inline-block;"><script>document.write(result[3]);</script></div>
+      <div style="display: inline-block;"><script>document.write(result[4]);</script></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.6.4/jquery.slim.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/3.0.3/fullpage.min.js"></script>
+<script>
+$(function(){
+  $('#content').fullpage({
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    navigation: false,
+    slidesNavigation: false,
+    sectionsColor : ['#fff']
+  });
+});
+$(document).bind("contextmenu",function(){
+  return false;
+});
+$(document).bind("selectstart",function(){
+  return false;
+});
+</script>
+</body>
+</html>
