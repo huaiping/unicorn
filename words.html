@@ -10,11 +10,13 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
 <style>
 body {font-family:"Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;}
+.section {text-align:center; color:#fff;}
 </style>
 </head>
 <body>
 <script>
-var arr = ["apple", "banana", "cherry", "durian", "elderberry", "contribution", "competition"];
+var arr = ["exchange", "lecture", "registration", "nationality", "frightened", "outgoing", "concentrate", "impression", "confidence", "teenager","volunteer", "challenge", "recommend", "responsibility",
+ "obviously", "extra-curricular", "adventure", "behaviour", "generation", "literature"];
 var result = [];
 for (var i = 0; i <= 4; i++) {
   var index = Math.floor(Math.random() * arr.length);
@@ -24,16 +26,13 @@ for (var i = 0; i <= 4; i++) {
 </script>
 
 <div id="content">
-  <div class="section" style="text-align: center;">
-    <div style="font-size:12vh;">
-      <div style="display: inline-block;"><script>document.write(result[0]);</script></div>
-      <div style="display: inline-block;"><script>document.write(result[1]);</script></div>
-      <div style="display: inline-block;"><script>document.write(result[2]);</script></div>  
-    </div>
-
-    <div style="margin-top:3vh; font-size:12vh;">
-      <div style="display: inline-block;"><script>document.write(result[3]);</script></div>
-      <div style="display: inline-block;"><script>document.write(result[4]);</script></div>
+  <div class="section">
+    <div style="font-size:14vh; margin-left:30px; margin-right:80px;">
+      <div style="display:inline-block;"><script>document.write(result[0]);</script></div>
+      <div style="display:inline-block; margin-left:80px;"><script>document.write(result[1]);</script></div>
+      <div style="display:inline-block; margin-left:80px;"><script>document.write(result[2]);</script></div>
+      <div style="display:inline-block; margin-left:80px;"><script>document.write(result[3]);</script></div>
+      <div style="display:inline-block; margin-left:80px;"><script>document.write(result[4]);</script></div>
     </div>
   </div>
 </div>
@@ -46,7 +45,7 @@ $(function(){
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     navigation: false,
     slidesNavigation: false,
-    sectionsColor : ['#fff']
+    sectionsColor : ['#144A74']
   });
 });
 $(document).bind("contextmenu",function(){
