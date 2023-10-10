@@ -1,4 +1,4 @@
-**Node.js笔记（Debian 12.1 + Node.js 18.17.0 + npm 9.6.7）**
+**Node.js笔记（Debian 12.2 + Node.js 18.18.0 + npm 9.8.1）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
@@ -65,5 +65,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 18.17.0
+n stable 或 sudo n 18.18.0
 ```
