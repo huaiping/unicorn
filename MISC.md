@@ -34,8 +34,6 @@ https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/2dust/v2rayN/releases
 
-https://github.com/Fndroid/clash_for_windows_pkg/releases
-
 https://github.com/adobe-fonts/source-han-sans/releases
 ```
 ```
@@ -92,7 +90,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.5.8 + Laravel 9.x
+Composer 2.6.5 + Laravel 9.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php

@@ -9,8 +9,6 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 36氪 [https://36kr.com](https://36kr.com)  
 
-蓝点网 [https://www.landian.vip](https://otp.landian.vip)  
-
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
 零散坑 [https://03k.org](https://03k.org)  
@@ -43,11 +41,9 @@ PDF24 [https://www.pdf24.org](https://tools.pdf24.org)
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 
-策驰影院 [https://www.ypdcn.com](https://www.ypdcn.com)  
-
-秀美影视 [https://www.caidedao.com](https://www.caidedao.com)  
-
 尘落影视 [https://www.50s.cc](https://www.chenluo.wang)  
+
+策驰影院 [https://www.ypdcn.com](https://www.ypdcn.com)  
 
 全能影视 [http://www.qnkk8.com](http://www.qnkk8.com)  
 

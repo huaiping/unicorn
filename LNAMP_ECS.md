@@ -1,4 +1,4 @@
-**LNAMP笔记（Debian 12.2 + Nginx 1.18 + Apache 2.4 + MariaDB 10.5 + PHP 7.4 + Tomcat 9.0 + Python 3.9）**
+**LNAMP笔记（Debian 12.2 + Nginx 1.22 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 10.1 + Python 3.11）**
 
 ~~/etc/apt/sources.list~~
 ```
@@ -55,7 +55,7 @@ ServerName 127.0.0.1                         /etc/apache2/conf-available/securit
 <VirtualHost *:81>                           ServerTokens Prod
     ServerAdmin xxx@xxx.net                  ServerSignature Off
     DocumentRoot /var/www
-    …                                        /etc/php/7.3/apache2/php.ini
+    …                                        /etc/php/8.2/apache2/php.ini
 </VirtualHost>                               expose_php = off
                                              upload_max_filesize = 10M
 a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
@@ -64,8 +64,8 @@ a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 AllowOverride All                            server_tokens = off
 ```
 ```
-apt install openjdk-11-jdk tomcat9 libmariadb-java
-cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
+apt install openjdk-17-jdk tomcat10 libmariadb-java
+cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat10/lib/
 ```
 /etc/tomcat9/tomcat-users.xml
 ```
@@ -80,9 +80,9 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat9/lib/
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
-apt install dotnet-sdk-7.0
+apt install dotnet-sdk-8.0
 ```
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip libmariadbd-dev
