@@ -1,11 +1,11 @@
-**MongoDB笔记（Debian 12.2 + MongoDB 6.0）**
+**MongoDB笔记（Debian 12.2 + MongoDB 7.0）**
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
-wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | sudo apt-key add -
 ```
-/etc/apt/sources.list.d/mongodb-org-6.0.list
+/etc/apt/sources.list.d/mongodb-org-7.0.list
 ```
-deb https://repo.mongodb.org/apt/debian bullseye/mongodb-org/6.0 main
+deb https://repo.mongodb.org/apt/debian bookworm/mongodb-org/7.0 main
 ```
 ```
 deb https://mirrors.aliyun.com/mongodb/apt/debian
