@@ -1,4 +1,4 @@
-**MongoDB笔记（Debian 12.2 + MongoDB 7.0）**
+**MongoDB笔记（Debian 12.4 + MongoDB 7.0）**
 ```
 https://docs.mongodb.com/manual/administration/install-on-linux/
 wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | sudo apt-key add -

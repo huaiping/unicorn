@@ -1,4 +1,4 @@
-**Node.js笔记（Debian 12.2 + Node.js 20.10.0 + npm 10.2.3）**
+**Node.js笔记（Debian 12.4 + Node.js 20.10.0 + npm 10.2.3）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_20.x | sudo bash -
