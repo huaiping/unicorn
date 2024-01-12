@@ -67,13 +67,13 @@ AllowOverride All                            server_tokens = off
 apt install openjdk-17-jdk tomcat10 libmariadb-java
 cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat10/lib/
 ```
-/etc/tomcat9/tomcat-users.xml
+/etc/tomcat10/tomcat-users.xml
 ```
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
-/etc/tomcat9/server.xml
+/etc/tomcat10/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
 <Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
