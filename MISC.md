@@ -1,6 +1,6 @@
 **Miscellaneous（Debian 12.5）**
 
-Sudo 1.9.5
+Sudo 1.9.13
 ```
 usermod -aG sudo bob 或 gpasswd -a bob sudo
 
@@ -90,7 +90,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.7.1 + Laravel 10.x
+Composer 2.7.4 + Laravel 11.0.6
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php

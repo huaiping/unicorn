@@ -11,7 +11,7 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
-零散坑 [https://03k.org](https://03k.org)  
+零散坑 [https://www.03k.org](https://www.03k.org)  
 
 Howtoforge [https://howtoforge.com](https://howtoforge.com)  
 
@@ -51,4 +51,4 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
-中国色 [https://zhongguose.com](https://www.zhongguose.com)
+中国色 [https://www.zhongguose.com](https://www.zhongguose.com)

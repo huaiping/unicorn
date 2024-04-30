@@ -1,4 +1,4 @@
-**Node.js笔记（Debian 12.5 + Node.js 20.11.1 + npm 10.2.4）**
+**Node.js笔记（Debian 12.5 + Node.js 20.12.2 + npm 10.5.0）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_20.x | sudo bash -
@@ -65,5 +65,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 20.11.1
+n stable 或 sudo n 20.12.2
 ```
