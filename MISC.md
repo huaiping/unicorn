@@ -29,12 +29,17 @@ https://config.office.com/deploymentsettings
 
 https://github.com/massgravel/Microsoft-Activation-Scripts/releases
 irm https://massgrave.dev/get | iex
+irm https://get.activated.win | iex
 
 https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/2dust/v2rayN/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
+
+https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x64-701sc.exe
+
+https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe
 ```
 ```
 https://ssl-config.mozilla.org
