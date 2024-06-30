@@ -11,7 +11,7 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
-零散坑 [https://www.03k.org](https://www.03k.org)  
+零散坑 [https://www.03k.org](https://blog.03k.org)  
 
 Howtoforge [https://howtoforge.com](https://howtoforge.com)  
 
@@ -38,6 +38,8 @@ Ventoy [https://www.ventoy.net](https://www.ventoy.net)
 I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)  
 
 PDF24 [https://www.pdf24.org](https://tools.pdf24.org)  
+
+VCF工具 [https://vcftool.com](https://vcftool.com)  
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 
