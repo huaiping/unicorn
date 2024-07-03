@@ -39,7 +39,7 @@ I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)
 
 PDF24 [https://www.pdf24.org](https://tools.pdf24.org)  
 
-VCF Tool [https://vcftool.com](https://vcftool.com)  
+VCF Tool [https://vcftool.com](https://vcftool.com/zh-cn/)  
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 

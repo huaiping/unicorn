@@ -1,4 +1,4 @@
-**LNAMP笔记（Debian 12.5 + Nginx 1.22 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 10.1 + Python 3.11）**
+**LNAMP笔记（Debian 12.6 + Nginx 1.22 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 10.1 + Python 3.11）**
 
 ~~/etc/apt/sources.list~~
 ```
