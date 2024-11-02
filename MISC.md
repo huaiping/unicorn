@@ -1,4 +1,4 @@
-**Miscellaneous（Debian 12.6）**
+**Miscellaneous（Debian 12.7）**
 
 Sudo 1.9.13
 ```
@@ -21,14 +21,13 @@ apt install intel-microcode firmware-realtek nvidia-driver
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
 
-sed -i 's/15.1/15.5/g' /etc/zypp/repos.d/*.repo
+sed -i 's/15.1/15.6/g' /etc/zypp/repos.d/*.repo
 ```
 ```
 https://www.microsoft.com/en-us/download/details.aspx?id=49117
 https://config.office.com/deploymentsettings
 
 https://github.com/massgravel/Microsoft-Activation-Scripts/releases
-irm https://massgrave.dev/get | iex
 irm https://get.activated.win | iex
 
 https://github.com/zbezj/HEU_KMS_Activator/releases
@@ -95,7 +94,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.7.4 + Laravel 11.0.6
+Composer 2.8.2 + Laravel 11.29.0
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php

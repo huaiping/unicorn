@@ -1,7 +1,7 @@
-**Node.js笔记（Debian 12.6 + Node.js 20.15.0 + npm 10.7.0）**
+**Node.js笔记（Debian 12.7 + Node.js 22.11.0 + npm 10.9.0）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
-curl -sL https://deb.nodesource.com/setup_20.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_22.x | sudo bash -
 apt install nodejs
 ```
 Express
