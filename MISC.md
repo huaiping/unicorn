@@ -1,4 +1,4 @@
-**Miscellaneous（Debian 12.8）**
+**Miscellaneous（Debian 12.9）**
 
 Sudo 1.9.13
 ```
