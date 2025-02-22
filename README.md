@@ -49,8 +49,6 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 策驰影院 [https://www.ypdcn.com](https://www.ypdcn.com)  
 
-全能影视 [https://www.qnkk8.com](https://www.qnkk8.com)  
-
 奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
 中国色 [https://www.zhongguose.com](https://www.zhongguose.com)

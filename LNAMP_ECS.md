@@ -31,9 +31,9 @@ mv composer.phar /usr/local/bin/composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 ```
-wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.tar.gz
-tar -zxvf phpMyAdmin-5.2.1-all-languages.tar.gz
-mv phpMyAdmin-5.2.1-all-languages /var/www/html/phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-all-languages.tar.gz
+tar -zxvf phpMyAdmin-5.2.2-all-languages.tar.gz
+mv phpMyAdmin-5.2.2-all-languages /var/www/html/phpmyadmin
 cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/config.inc.php
 ```
 /var/www/html/phpmyadmin/config.inc.php
