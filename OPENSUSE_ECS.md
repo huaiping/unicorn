@@ -22,8 +22,8 @@ systemctl enable apache2.service
 /srv/www/htdocs/
 ```
 ```
-zypper install php7 php7-mysql php7-gd php7-mbstring apache2-mod_php7 phpMyAdmin php-composer
-a2enmod php7
+zypper install php8 php8-mysql php8-gd php8-mbstring apache2-mod_php8 phpMyAdmin php-composer
+a2enmod php8
 systemctl restart apache2.service
 ```
 /etc/apache2/listen.conf
@@ -47,7 +47,7 @@ cp /srv/www/htdocs/phpMyAdmin/config.sample.inc.php /srv/www/htdocs/phpMyAdmin/c
 $cfg['blowfish_secret'] = 'odW{XxY{8UWxAw8q}wuF/6xw5{PiwmmV';
 ```
 ```
-zypper install java-11-openjdk tomcat
+zypper install java-17-openjdk tomcat
 systemctl start tomcat.service
 systemctl enable tomcat.service
 /srv/tomcat/webapps/
