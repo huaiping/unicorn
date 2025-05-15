@@ -49,8 +49,6 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 尘落影视 [https://www.50s.cc](https://www.chenluo.wang)  
 
-策驰影院 [https://www.ypdcn.com](https://www.ypdcn.com)  
-
 奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
 中国色 [https://www.zhongguose.com](https://www.zhongguose.com)
