@@ -15,11 +15,7 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 Howtoforge [https://howtoforge.com](https://howtoforge.com)  
 
-Linuxize [https://linuxize.com](https://linuxize.com)  
-
 LinuxHint [https://linuxhint.com](https://linuxhint.com)  
-
-ITzGeek [https://www.itzgeek.com](https://www.itzgeek.com)  
 
 TecMint [https://www.tecmint.com](https://www.tecmint.com)  
 
@@ -40,6 +36,10 @@ I Tell You [https://next.itellyou.cn](https://next.itellyou.cn)
 PDF24 [https://www.pdf24.org](https://tools.pdf24.org)  
 
 VCF Tool [https://vcftool.com](https://vcftool.com/zh-cn/)  
+
+Alger Music [https://mc.alger.fun](https://mc.alger.fun)  
+
+ChinaTextbook [https://github.com/TapXWorld/ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook/)  
 
 draw.io [https://www.drawio.com](https://app.diagrams.net)  
 
