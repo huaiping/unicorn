@@ -39,7 +39,7 @@ VCF Tool [https://vcftool.com](https://vcftool.com/zh-cn/)
 
 Alger Music [https://mc.alger.fun](https://mc.alger.fun)  
 
-ChinaTextbook [https://github.com/TapXWorld/](https://github.com/TapXWorld/ChinaTextbook/)  
+ChinaTextbook [https://github.com](https://github.com/TapXWorld/ChinaTextbook/)  
 
 draw.io [https://www.drawio.com](https://app.diagrams.net)  
 

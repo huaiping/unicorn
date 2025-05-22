@@ -26,13 +26,16 @@ sed -i 's/15.1/15.6/g' /etc/zypp/repos.d/*.repo
 ```
 https://www.microsoft.com/en-us/download/details.aspx?id=49117
 https://config.office.com/deploymentsettings
+setup.exe /configure .\office.xml
 
 https://github.com/massgravel/Microsoft-Activation-Scripts/releases
 irm https://get.activated.win | iex
 
-https://github.com/zbezj/HEU_KMS_Activator/releases
-
+https://dotnet.microsoft.com/zh-cn/download/dotnet
 https://github.com/2dust/v2rayN/releases
+https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+
+https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
 
