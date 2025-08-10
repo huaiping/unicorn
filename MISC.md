@@ -1,13 +1,13 @@
-**Miscellaneous（Debian 12.11）**
+**Miscellaneous（Debian 13.0）**
 
-Sudo 1.9.13
+Sudo 1.9.16
 ```
 usermod -aG sudo bob 或 gpasswd -a bob sudo
 
 visudo
 username ALL=(ALL) ALL
 ```
-Fcitx 4.2.9.8
+Fcitx 4.2.9.9
 ```
 sudo dpkg-reconfigure locales
 sudo apt install fcitx fcitx-sunpinyin fcitx-config-gtk fcitx-ui-classic
@@ -39,7 +39,7 @@ https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
 
-https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x64-701sc.exe
+https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240804/wrr/winrar-x64-713sc.exe
 
 https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe
 ```
@@ -53,7 +53,7 @@ openssl rand -base64 14
 
 gpg2 --gen-random --armor 1 14
 ```
-Git 2.30.2
+Git 2.47.2
 ```
 apt install git
 
@@ -150,7 +150,7 @@ PubkeyAuthentication yes
 AuthorizedKeysFile      %h/.ssh/authorized_keys
 /etc/init.d/sshd restart
 ```
-Redis 6.0.16
+Redis 8.0.2
 ```
 sudo apt install redis-server
 openssl rand 60 | openssl base64 -A

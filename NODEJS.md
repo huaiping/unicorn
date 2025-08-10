@@ -1,4 +1,4 @@
-**Node.js笔记（Debian 12.11 + Node.js 22.18.0 + npm 10.9.3）**
+**Node.js笔记（Debian 13.0 + Node.js 22.18.0 + npm 10.9.3）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_22.x | sudo bash -

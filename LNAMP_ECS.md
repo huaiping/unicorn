@@ -1,10 +1,10 @@
-**LNAMP笔记（Debian 12.11 + Nginx 1.22 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 10.1 + Python 3.11）**
+**LNAMP笔记（Debian 13.0 + Nginx 1.26 + Apache 2.4 + MariaDB 11.8 + PHP 8.4 + Tomcat 11.0 + Python 3.13）**
 
 ~~/etc/apt/sources.list~~
 ```
-deb https://mirrors.aliyun.com/debian           bookworm           main  contrib  non-free
-deb https://mirrors.aliyun.com/debian           bookworm-updates   main  contrib  non-free
-deb https://mirrors.aliyun.com/debian-security  bookworm-security  main  contrib  non-free
+deb https://mirrors.aliyun.com/debian           trixie           main  contrib  non-free
+deb https://mirrors.aliyun.com/debian           trixie-updates   main  contrib  non-free
+deb https://mirrors.aliyun.com/debian-security  trixie-security  main  contrib  non-free
 ```
 ```
 dpkg-reconfigure tzdata
@@ -55,7 +55,7 @@ ServerName 127.0.0.1                         /etc/apache2/conf-available/securit
 <VirtualHost *:81>                           ServerTokens Prod
     ServerAdmin xxx@xxx.net                  ServerSignature Off
     DocumentRoot /var/www
-    …                                        /etc/php/8.2/apache2/php.ini
+    …                                        /etc/php/8.4/apache2/php.ini
 </VirtualHost>                               expose_php = off
                                              upload_max_filesize = 10M
 a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
@@ -64,23 +64,23 @@ a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 AllowOverride All                            server_tokens = off
 ```
 ```
-apt install openjdk-17-jdk tomcat10 libmariadb-java
-cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat10/lib/
+apt install openjdk-21-jdk tomcat11 libmariadb-java
+cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat11/lib/
 ```
-/etc/tomcat10/tomcat-users.xml
+/etc/tomcat11/tomcat-users.xml
 ```
 <role rolename="admin-gui"/>
 <role rolename="manager-gui"/>
 <user username="admin" password="xxx" roles="admin-gui,manager-gui"/>
 ```
-/etc/tomcat10/server.xml
+/etc/tomcat11/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
 <Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
 <Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
 ```
 ```
-wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/debian/13/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
 apt install dotnet-sdk-8.0
 ```
