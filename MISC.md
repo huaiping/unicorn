@@ -39,7 +39,7 @@ https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
 
-https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240804/wrr/winrar-x64-713sc.exe
+https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/wrr/winrar-x64-713sc.exe
 
 https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe
 ```
