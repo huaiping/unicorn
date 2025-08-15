@@ -1,4 +1,4 @@
-**openSUSE笔记（openSUSE 15.6 + Nginx 1.16 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 9.0 + Python 3.6）**
+**openSUSE笔记（openSUSE 15.6 + Nginx 1.21 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 9.0 + Python 3.6）**
 ```
 zypper refresh
 zypper update
@@ -30,7 +30,7 @@ systemctl restart apache2.service
 ```
 Listen 81
 ```
-/etc/php7/apache2/php.ini
+/etc/php8/apache2/php.ini
 ```
 expose_php = Off
 date.timezone = Asia/Shanghai
@@ -47,7 +47,7 @@ cp /srv/www/htdocs/phpMyAdmin/config.sample.inc.php /srv/www/htdocs/phpMyAdmin/c
 $cfg['blowfish_secret'] = 'odW{XxY{8UWxAw8q}wuF/6xw5{PiwmmV';
 ```
 ```
-zypper install java-17-openjdk tomcat
+zypper install java-21-openjdk tomcat
 systemctl start tomcat.service
 systemctl enable tomcat.service
 /srv/tomcat/webapps/
