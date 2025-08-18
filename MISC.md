@@ -44,6 +44,13 @@ https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/wrr/winrar-x64-7
 https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe
 ```
 ```
+https://www.debian.org
+https://www.opensuse.org
+https://www.amd.com/zh-cn/support/download/drivers.html
+https://www.nvidia.cn/drivers/
+https://support.hp.com/cn-zh/drivers/printers
+https://next.itellyou.cn/Identity/Account/Login
+
 https://ssl-config.mozilla.org
 ```
 ```
