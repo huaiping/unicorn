@@ -1,4 +1,4 @@
-**Python笔记（Debian 13.0 + Python 3.13.5 + Django 5.2）**
+**Python笔记（Debian 13.1 + Python 3.13.5 + Django 5.2）**
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip mysql-server libmariadbd-dev
 pip3 install --upgrade pip

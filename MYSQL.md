@@ -1,4 +1,4 @@
-**MySQL笔记（Debian 13.0 + Docker 20.10.24 + MySQL 8.4）**
+**MySQL笔记（Debian 13.1 + Docker 20.10.24 + MySQL 8.4）**
 ```
 docker pull mysql:8.4
 docker run -p 3339:3306 --name mysql-master -e MYSQL_ROOT_PASSWORD=123456 -d mysql:8.4
