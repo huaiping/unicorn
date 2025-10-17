@@ -1,4 +1,4 @@
-**openSUSE笔记（openSUSE 15.6 + Nginx 1.21 + Apache 2.4 + MariaDB 10.11 + PHP 8.2 + Tomcat 9.0 + Python 3.6）**
+**openSUSE笔记（openSUSE 16.0 + Nginx 1.27 + Apache 2.4 + MariaDB 11.8 + PHP 8.4 + Tomcat 11.0 + Python 3.13）**
 ```
 zypper refresh
 zypper update
@@ -47,7 +47,7 @@ cp /srv/www/htdocs/phpMyAdmin/config.sample.inc.php /srv/www/htdocs/phpMyAdmin/c
 $cfg['blowfish_secret'] = 'odW{XxY{8UWxAw8q}wuF/6xw5{PiwmmV';
 ```
 ```
-zypper install java-21-openjdk tomcat
+zypper install java-21-openjdk tomcat11
 systemctl start tomcat.service
 systemctl enable tomcat.service
 /srv/tomcat/webapps/
@@ -71,7 +71,7 @@ systemctl start nginx.service
 systemctl enable nginx.service
 ```
 ```
-zypper install python3 python3-pip python3-setuptools python3-wheel
+zypper install python313 python3-pip python3-setuptools python3-wheel
 pip3 install --upgrade pip
 
 zypper install python3-certbot

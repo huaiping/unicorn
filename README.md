@@ -37,7 +37,7 @@ PDF24 [https://www.pdf24.org](https://tools.pdf24.org)
 
 VCF Tool [https://vcftool.com](https://vcftool.com/zh-cn/)  
 
-Alger Music [https://mc.alger.fun](https://mc.alger.fun)  
+Alger Music [http://music.alger.fun](http://music.alger.fun)  
 
 ChinaTextbook [https://github.com](https://github.com/TapXWorld/ChinaTextbook/)  
 
@@ -47,7 +47,7 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 电影天堂 [https://www.dygod.net](https://www.dy2018.com)  
 
-尘落影视 [https://www.50s.cc](https://www.chenluo.wang)  
+尘落影视 [http://www.50s.cc](http://www.chenluo.wang)  
 
 奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
