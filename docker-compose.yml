@@ -1,9 +1,10 @@
 services:
-  web:
-    container_name: nginx
+  nginx:
     image: nginx:latest
+    container_name: nginx
     ports:
       - "5001:80"
+      - "443:443"
     volumes:
       - ./code:/usr/share/nginx/html
       - ./site.conf:/etc/nginx/conf.d/default.conf
@@ -19,6 +20,9 @@ services:
       - "9000:9000"
     volumes:
       - ./code:/usr/share/nginx/html
+    depends_on:
+      - mariadb
+      - memcached
 
   mariadb:
     image: mariadb:latest
@@ -29,7 +33,12 @@ services:
       MARIADB_DATABASE: default_database
       MARIADB_USER: user
       MARIADB_PASSWORD: password
-      MARIADB_ROOT_HOST: '%'
+
+  memcached:
+    image: memcached:latest
+    container_name: memcached
+    ports:
+      - "11211:11211"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
