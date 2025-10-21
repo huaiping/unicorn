@@ -1,10 +1,18 @@
 **LNAMP笔记（Debian 13.1 + Nginx 1.26 + Apache 2.4 + MariaDB 11.8 + PHP 8.4 + Tomcat 11.0 + Python 3.13）**
 
-~~/etc/apt/sources.list~~
+/etc/apt/sources.list.d/debian.sources
 ```
-deb https://mirrors.aliyun.com/debian           trixie           main  contrib  non-free
-deb https://mirrors.aliyun.com/debian           trixie-updates   main  contrib  non-free
-deb https://mirrors.aliyun.com/debian-security  trixie-security  main  contrib  non-free
+Types: deb
+URIs: https://mirrors.aliyun.com/debian
+Suites: trixie trixie-updates trixie-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+URIs: https://mirrors.aliyun.com/debian-security
+Suites: trixie-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 ```
 ```
 dpkg-reconfigure tzdata
