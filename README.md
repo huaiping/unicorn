@@ -45,9 +45,9 @@ draw.io [https://www.drawio.com](https://app.diagrams.net)
 
 Excalidraw [https://excalidraw.com](https://excalidraw.com)  
 
-电影天堂 [https://www.dygod.net](https://www.dy2018.com)  
+电影天堂 [https://www.dygod.net](https://dydytt.net)  
 
-尘落影视 [http://www.50s.cc](http://www.chenluo.wang)  
+影视天堂 [https://www.ysttv.com](https://www.ysttv.com)  
 
 奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
