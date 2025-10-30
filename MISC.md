@@ -21,7 +21,7 @@ apt install intel-microcode firmware-realtek nvidia-driver
 ```
 sed -i 's/stretch/buster/g' /etc/apt/sources.list
 
-sed -i 's/15.1/15.6/g' /etc/zypp/repos.d/*.repo
+sed -i 's/15.6/16.0/g' /etc/zypp/repos.d/*.repo
 ```
 ```
 https://www.microsoft.com/en-us/download/details.aspx?id=49117
@@ -34,8 +34,6 @@ irm https://get.activated.win | iex
 https://dotnet.microsoft.com/zh-cn/download/dotnet
 https://github.com/2dust/v2rayN/releases
 https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-
-https://github.com/zbezj/HEU_KMS_Activator/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
 
@@ -104,7 +102,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.8.10 + Laravel 12.x
+Composer 2.8.12 + Laravel 12.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
@@ -141,8 +139,8 @@ git push origin HEAD --force
 ```
 ```
 https://mirrors.cloud.tencent.com
-https://mirrors.163.com
 https://mirrors.ustc.edu.cn
+https://mirrors.sustech.edu.cn
 https://mirrors.tuna.tsinghua.edu.cn
 ```
 ```

@@ -72,7 +72,7 @@ a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
 AllowOverride All                            server_tokens = off
 ```
 ```
-apt install openjdk-21-jdk tomcat11 libmariadb-java
+apt install openjdk-25-jdk tomcat11 libmariadb-java
 cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat11/lib/
 ```
 /etc/tomcat11/tomcat-users.xml
