@@ -34,6 +34,7 @@ irm https://get.activated.win | iex
 https://dotnet.microsoft.com/zh-cn/download/dotnet
 https://github.com/2dust/v2rayN/releases
 https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+https://github.com/beck-8/subs-check/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
 
