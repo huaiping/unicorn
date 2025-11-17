@@ -1,4 +1,4 @@
-**Docker笔记（Debian 13.1 + Docker 28.5.2-ce）**
+**Docker笔记（Debian 13.2 + Docker 29.0.1-ce）**
 ```
 apt remove docker docker-engine docker.io containerd runc
 apt update
