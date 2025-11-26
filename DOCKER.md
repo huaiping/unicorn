@@ -1,4 +1,4 @@
-**Docker笔记（Debian 13.2 + Docker 29.0.1-ce）**
+**Docker笔记（Debian 13.2 + Docker 29.0.4-ce）**
 ```
 apt remove docker docker-engine docker.io containerd runc
 apt update
@@ -50,7 +50,7 @@ docker commit 8a7db469d429 xxxx
 docker pull registry.docker-cn.com/library/ubuntu:22.04
 docker pull hub.c.163.com/library/tomcat:latest
 
-docker run --name master -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker run --name master -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8.4
 docker run --name wordpress --link master:mysql -p 88:80 -v /data:/var/lib/mysql -d wordpress
 
 docker run --name t2 -tdi --privileged=true -p 8989:80 centos:latest /usr/sbin/init

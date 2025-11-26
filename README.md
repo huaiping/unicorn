@@ -11,17 +11,9 @@ IT之家 [https://www.ithome.com](https://www.ithome.com)
 
 博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
 
-零散坑 [https://www.03k.org](https://blog.03k.org)  
-
 Howtoforge [https://howtoforge.com](https://howtoforge.com)  
 
-LinuxHint [https://linuxhint.com](https://linuxhint.com)  
-
-TecMint [https://www.tecmint.com](https://www.tecmint.com)  
-
 Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)  
-
-BootCDN [https://www.bootcdn.cn](https://www.bootcdn.cn)  
 
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
