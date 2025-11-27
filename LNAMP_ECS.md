@@ -90,7 +90,7 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat11/lib/
 ```
 wget https://packages.microsoft.com/config/debian/13/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
-apt install dotnet-sdk-8.0
+apt install dotnet-sdk-10.0
 ```
 ```
 apt install apache2 libapache2-mod-wsgi-py3 python3-pip libmariadbd-dev

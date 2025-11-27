@@ -6,7 +6,7 @@ apt install nodejs
 ```
 Express
 ```
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 npm install -g express-generator
 express -e demo
 cd demo

@@ -59,7 +59,7 @@ openssl rand -base64 14
 
 gpg2 --gen-random --armor 1 14
 ```
-Git 2.47.2
+Git 2.47.3
 ```
 apt install git
 
@@ -103,7 +103,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.8.12 + Laravel 12.x
+Composer 2.9.2 + Laravel 12.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
