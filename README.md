@@ -39,8 +39,6 @@ Excalidraw [https://excalidraw.com](https://excalidraw.com)
 
 电影天堂 [https://www.dygod.net](https://dydytt.net)  
 
-影视天堂 [https://www.ysttv.com](https://www.ysttv.com)  
-
 奇迹MU [https://mu.zhaouc.com](https://mu.zhaouc.com/index.html)  
 
 中国色 [https://www.zhongguose.com](https://www.zhongguose.com)
