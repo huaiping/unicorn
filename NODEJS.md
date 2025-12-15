@@ -1,7 +1,7 @@
-**Node.js笔记（Debian 13.2 + Node.js 22.21.1 + npm 10.9.4）**
+**Node.js笔记（Debian 13.2 + Node.js 24.12.0 + npm 11.6.2）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
-curl -sL https://deb.nodesource.com/setup_22.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_24.x | sudo bash -
 apt install nodejs
 ```
 Express
@@ -65,5 +65,5 @@ npm uninstall express       # 删除指定的模块
 ```
 npm cache clean -f
 npm install -g n
-n stable 或 sudo n 24.11.1
+n stable 或 sudo n 22.21.1
 ```

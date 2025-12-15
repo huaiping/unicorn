@@ -33,7 +33,6 @@ irm https://get.activated.win | iex
 
 https://dotnet.microsoft.com/zh-cn/download/dotnet
 https://github.com/2dust/v2rayN/releases
-https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
 https://github.com/beck-8/subs-check/releases
 
 https://github.com/adobe-fonts/source-han-sans/releases
@@ -43,13 +42,6 @@ https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/wrr/winrar-x64-7
 https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe
 ```
 ```
-https://www.debian.org
-https://www.opensuse.org
-https://www.amd.com/zh-cn/support/download/drivers.html
-https://www.nvidia.cn/drivers/
-https://support.hp.com/cn-zh/drivers/printers
-https://next.itellyou.cn/Identity/Account/Login
-
 https://ssl-config.mozilla.org
 ```
 ```
@@ -155,19 +147,6 @@ RSAAuthentication yes
 PubkeyAuthentication yes
 AuthorizedKeysFile      %h/.ssh/authorized_keys
 /etc/init.d/sshd restart
-```
-Redis 8.0.2
-```
-sudo apt install redis-server
-openssl rand 60 | openssl base64 -A
-
-sudo nano /etc/redis/redis.conf
-bind 127.0.0.1
-supervised systemd
-requirepass xxxxxxxxxxxxxxxxxxx
-
-sudo systemctl restart redis.service
-sudo systemctl status redis
 ```
 ```
 帐号权限
