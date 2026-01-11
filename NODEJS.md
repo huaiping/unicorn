@@ -1,4 +1,4 @@
-**Node.js笔记（Debian 13.2 + Node.js 24.12.0 + npm 11.6.2）**
+**Node.js笔记（Debian 13.3 + Node.js 24.12.0 + npm 11.6.2）**
 ```
 apt install curl apt-transport-https gnupg2 lsb-release
 curl -sL https://deb.nodesource.com/setup_24.x | sudo bash -
