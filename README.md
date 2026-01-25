@@ -1,25 +1,11 @@
 ### Unicorn [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://github.com/huaiping/unicorn/blob/master/LICENSE)
 
 ### Collections
-开源中国 [https://www.oschina.net](https://www.oschina.net)  
-
-IT之家 [https://www.ithome.com](https://www.ithome.com)  
-
-虎嗅网 [https://www.huxiu.com](https://www.huxiu.com)  
-
-36氪 [https://36kr.com](https://36kr.com)  
-
-博客园 [https://www.cnblogs.com](https://www.cnblogs.com)  
-
-Howtoforge [https://howtoforge.com](https://howtoforge.com)  
-
 Let's Encrypt [https://letsencrypt.org](https://letsencrypt.org)  
 
 DistroWatch [https://distrowatch.com](https://distrowatch.com)  
 
 Rufus [https://rufus.ie](https://rufus.ie)  
-
-Ventoy [https://www.ventoy.net](https://www.ventoy.net)  
 
 驱动总裁 [https://www.sysceo.com](https://www.sysceo.com)  
 

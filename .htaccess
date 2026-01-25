@@ -1,6 +1,0 @@
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /v2/index.php/$1 [L]
-RewriteCond %{HTTP_HOST} ^huaiping.net [NC]
-RewriteRule /webroot/(.*)$ http://static.huaiping.net/v3/webroot/$1 [L]
