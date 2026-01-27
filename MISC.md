@@ -35,6 +35,12 @@ https://dotnet.microsoft.com/zh-cn/download/dotnet
 https://github.com/2dust/v2rayN/releases
 https://github.com/beck-8/subs-check/releases
 
+https://pc.xunlei.com
+https://sunlogin.oray.com/download
+https://www.voidtools.com/zh-cn/downloads
+https://pixpin.cn
+https://rufus.ie
+
 https://github.com/adobe-fonts/source-han-sans/releases
 
 https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20250804/wrr/winrar-x64-713sc.exe
