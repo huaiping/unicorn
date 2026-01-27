@@ -37,7 +37,7 @@ https://github.com/beck-8/subs-check/releases
 
 https://pc.xunlei.com
 https://sunlogin.oray.com/download
-https://www.voidtools.com/zh-cn/downloads
+https://www.voidtools.com/zh-cn/downloads/
 https://pixpin.cn
 https://rufus.ie
 
