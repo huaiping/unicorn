@@ -15,13 +15,15 @@ sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
+OpenClaw + Ollama
 ```
-apt install intel-microcode firmware-realtek nvidia-driver
-```
-```
-sed -i 's/stretch/buster/g' /etc/apt/sources.list
-
-sed -i 's/15.6/16.0/g' /etc/zypp/repos.d/*.repo
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull qwen2.5:7b
+curl -fsSL https://openclaw.ai/install.sh | bash
+openclaw onboard --install-daemon
+选择 Ollama 作为模型供应商，API 地址填写（不需要任何 API Key）
+http://127.0.0.1:11434/v1
+openclaw dashboard
 ```
 ```
 https://www.microsoft.com/en-us/download/details.aspx?id=49117
@@ -49,6 +51,14 @@ https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe
 ```
 ```
 https://ssl-config.mozilla.org
+```
+```
+apt install intel-microcode firmware-realtek nvidia-driver
+```
+```
+sed -i 's/stretch/buster/g' /etc/apt/sources.list
+
+sed -i 's/15.6/16.0/g' /etc/zypp/repos.d/*.repo
 ```
 ```
 pwgen -s 14 5 或 pwgen -cnys 14 5
