@@ -1,4 +1,4 @@
-**Miscellaneous（Debian 13.3）**
+**Miscellaneous（Debian 13.4）**
 
 Sudo 1.9.16
 ```
@@ -18,7 +18,8 @@ configure中添加sunpinyin
 Ollama 0.17.7 + OpenClaw 2026.3.13
 ```
 curl -fsSL https://ollama.com/install.sh | sh
-ollama pull qwen2.5:7b
+ollama -v
+ollama pull qwen3:8b
 curl -fsSL https://openclaw.ai/install.sh | bash
 openclaw onboard --install-daemon
 选择 Ollama 作为模型供应商，API 地址填写（不需要任何 API Key）
