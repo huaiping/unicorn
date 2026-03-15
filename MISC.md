@@ -15,7 +15,7 @@ sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
-OpenClaw + Ollama
+Ollama 0.17.7 + OpenClaw 2026.3.13
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull qwen2.5:7b
