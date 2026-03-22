@@ -19,8 +19,8 @@ Ollama 0.17.7 + OpenClaw 2026.3.13
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ollama run qwen3:8b
-curl -fsSL https://openclaw.ai/install.sh | bash
 ollama launch openclaw --config
+curl -fsSL https://openclaw.ai/install.sh | bash
 openclaw onboard --install-daemon
 选择 Ollama 作为模型供应商，API 地址填写（不需要任何 API Key）
 http://127.0.0.1:11434/v1
@@ -38,11 +38,14 @@ https://dotnet.microsoft.com/zh-cn/download/dotnet
 https://github.com/2dust/v2rayN/releases
 https://github.com/beck-8/subs-check/releases
 
+https://rufus.ie
 https://pc.xunlei.com
 https://sunlogin.oray.com/download
 https://www.voidtools.com/zh-cn/downloads/
 https://pixpin.cn
-https://rufus.ie
+
+https://www.amd.com/zh-cn/support/download/drivers.html
+https://www.nvidia.cn/drivers/
 
 https://github.com/adobe-fonts/source-han-sans/releases
 
