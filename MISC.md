@@ -15,15 +15,15 @@ sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
-Ollama 0.17.7 + OpenClaw 2026.3.28
+Ollama 0.17.7 + OpenClaw 2026.3.28 + qwen3:8b
 ```
 curl -fsSL https://ollama.com/install.sh | sh
-ollama run qwen3:8b
-ollama launch openclaw --config
+ollama pull qwen3:8b
+ollama launch openclaw
 curl -fsSL https://openclaw.ai/install.sh | bash
 openclaw onboard --install-daemon
 选择 Ollama 作为模型供应商，API 地址填写（不需要任何 API Key）
-http://127.0.0.1:11434/v1
+http://127.0.0.1:11434
 openclaw dashboard
 ```
 ```
