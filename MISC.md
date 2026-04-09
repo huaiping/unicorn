@@ -17,7 +17,7 @@ configure中添加sunpinyin
 ```
 Ollama 0.20.4 + OpenClaw 2026.4.9 + qwen3:8b
 ```
-npm config set registry https://registry.npmmirror.com/
+npm config set registry https://registry.npmmirror.com
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull qwen3:8b
 ollama launch openclaw
@@ -40,10 +40,10 @@ https://github.com/2dust/v2rayN/releases
 https://github.com/beck-8/subs-check/releases
 
 https://rufus.ie
-https://pc.xunlei.com
-https://sunlogin.oray.com/download
 https://www.voidtools.com/zh-cn/downloads/
 https://pixpin.cn
+https://pc.xunlei.com
+https://sunlogin.oray.com/download
 
 https://www.amd.com/zh-cn/support/download/drivers.html
 https://www.nvidia.cn/drivers/
