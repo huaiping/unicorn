@@ -20,7 +20,6 @@ Ollama 0.20.4 + OpenClaw 2026.4.9 + qwen3:8b
 npm config set registry https://registry.npmmirror.com
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull qwen3:8b
-ollama launch openclaw
 curl -fsSL https://openclaw.ai/install.sh | bash
 openclaw onboard --install-daemon
 选择 Ollama 作为模型供应商，API 地址填写（不需要任何 API Key）
