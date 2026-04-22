@@ -15,14 +15,14 @@ sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
-Ollama 0.20.7 + OpenClaw 2026.4.12 + qwen3:8b
+Ollama 0.21.0 + OpenClaw 2026.4.21 + qwen3:8b
 ```
 npm config set registry https://registry.npmmirror.com
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull qwen3:8b
 curl -fsSL https://openclaw.ai/install.sh | bash
 openclaw onboard --install-daemon
-选择 Ollama 作为模型供应商，API 地址填写（不需要任何 API Key）
+选择 Ollama 作为模型供应商，API 地址填写（不需要API Key）
 http://127.0.0.1:11434
 openclaw dashboard
 ```
@@ -115,7 +115,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.9.2 + Laravel 12.x
+Composer 2.9.7 + Laravel 13.6.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
