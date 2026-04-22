@@ -44,6 +44,9 @@ https://pixpin.cn
 https://pc.xunlei.com
 https://sunlogin.oray.com/download
 
+https://www.google.com/intl/zh-CN/chrome/browser/?standalone=1
+https://www.firefox.com/en-US/download/all/desktop-release/win64/zh-CN/
+
 https://www.amd.com/zh-cn/support/download/drivers.html
 https://www.nvidia.cn/drivers/
 
