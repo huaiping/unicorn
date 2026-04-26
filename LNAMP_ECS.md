@@ -4,7 +4,7 @@
 ```
 Types: deb
 URIs: https://mirrors.aliyun.com/debian
-Suites: trixie trixie-updates trixie-backports
+Suites: trixie trixie-updates
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
@@ -26,8 +26,8 @@ mysql_secure_installation
 ```
 ```
 mysql -u root -p
-MariaDB> CREATE USER 'user123'@'%' IDENTIFIED BY 'pass123';
-MariaDB> GRANT SELECT,INSERT,UPDATE,DELETE ON *.* TO 'user123'@'%';
+MariaDB> CREATE USER 'user123'@'localhost' IDENTIFIED BY 'pass123';
+MariaDB> GRANT SELECT,INSERT,UPDATE,DELETE ON *.* TO 'user123'@'localhost';
 MariaDB> FLUSH PRIVILEGES;
 ```
 ```
@@ -60,14 +60,15 @@ chmod 700 /var/www/html/phpmyadmin/tmp
 /etc/apache2/ports.conf
 ```
 Listen 127.0.0.1:81
+Listen 127.0.0.1:82
 ```
 /etc/apache2/sites-available/000-default.conf
 ```
 ServerName 127.0.0.1                         /etc/php/8.4/apache2/php.ini
 <VirtualHost *:81>                           expose_php = off
-    ServerAdmin xxx@xxx.net                  upload_max_filesize = 10M
+    ServerAdmin xxx@xxx.net                  upload_max_filesize = 20M
     DocumentRoot /var/www/html               date.timezone = Asia/Shanghai
-    …                                        post_max_size = 10M
+    …                                        post_max_size = 20M
 </VirtualHost>                               max_execution_time = 60
                                              memory_limit = 256M
 a2enmod rewrite ssl                          
@@ -108,11 +109,10 @@ pip3 install --upgrade pip
 /etc/pip.conf
 ```
 [global]
-trusted-host = mirrors.aliyun.com pypi.tuna.tsinghua.edu.cn
+trusted-host = mirrors.aliyun.com
 index-url = https://mirrors.aliyun.com/pypi/simple/
-extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
-/etc/apache2/sites-available/000-default.conf
+/etc/apache2/sites-available/django.conf
 ```
 <VirtualHost *:82>
     ServerName xxx.net
@@ -153,7 +153,7 @@ proxy_set_header            Host $host;
 proxy_set_header            X-Real-IP $remote_addr;
 proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
 proxy_set_header            X-Forwarded-Proto $scheme;
-client_max_body_size        10m;
+client_max_body_size        20m;
 client_body_buffer_size     128k;
 proxy_connect_timeout       30;
 proxy_send_timeout          30;
@@ -224,12 +224,13 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
         }
 
         location /phpmyadmin/ {
-            proxy_pass http://php;
+            proxy_pass http://php/;
             include proxy_params;
+            proxy_set_header X-Forwarded-Prefix /phpmyadmin;
         }
 
-        location /python {
-            proxy_pass http://python;
+        location /python/ {
+            proxy_pass http://python/;
             include proxy_params;
         }
     }
