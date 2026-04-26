@@ -4,7 +4,7 @@
 ```
 Types: deb
 URIs: https://mirrors.aliyun.com/debian
-Suites: trixie trixie-updates
+Suites: trixie trixie-updates trixie-backports
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
@@ -141,7 +141,7 @@ apt install nginx libapache2-mod-rpaf
 ```
 /etc/apache2/mods-enable/rpaf.conf
 ```
-RPAheader X-Forwarded-For
+RPAF_Header X-Forwarded-For
 RPAF_ProxyIPs 127.0.0.1
 RPAF_SetHost On
 RPAF_SetHTTPS On
