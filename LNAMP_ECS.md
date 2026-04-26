@@ -37,6 +37,7 @@ apt install php-bcmath php-gd php-json php-mbstring php-mysql php-tokenizer php-
 ```
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+chmod +x /usr/local/bin/composer
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 ```
@@ -111,7 +112,7 @@ trusted-host = mirrors.aliyun.com pypi.tuna.tsinghua.edu.cn
 index-url = https://mirrors.aliyun.com/pypi/simple/
 extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
-/etc/apache2/sites-available/django.conf
+/etc/apache2/sites-available/000-default.conf
 ```
 <VirtualHost *:82>
     ServerName xxx.net
@@ -143,6 +144,8 @@ apt install nginx libapache2-mod-rpaf
 RPAheader X-Forwarded-For
 RPAF_ProxyIPs 127.0.0.1
 RPAF_SetHost On
+RPAF_SetHTTPS On
+RPAF_SetPort On
 ```
 /etc/nginx/proxy_params
 ```
@@ -210,9 +213,10 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
         resolver 8.8.8.8 8.8.4.4 valid=300s;
         resolver_timeout 30s;
 
-        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
-        add_header X-Frame-Options SAMEORIGIN;
-        add_header X-Content-Type-Options nosniff;
+        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains" always;
+        add_header X-Frame-Options SAMEORIGIN always;
+        add_header X-Content-Type-Options nosniff always;
+        add_header X-XSS-Protection "1; mode=block" always;
 
         location / {
             proxy_pass http://java;
