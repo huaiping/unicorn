@@ -26,8 +26,9 @@ mysql_secure_installation
 ```
 ```
 mysql -u root -p
-MariaDB> grant select,insert,update,delete on *.* to 'user123'@'%' Identified by 'pass123'; 
-MariaDB> flush privileges;
+MariaDB> CREATE USER 'user123'@'%' IDENTIFIED BY 'pass123';
+MariaDB> GRANT SELECT,INSERT,UPDATE,DELETE ON *.* TO 'user123'@'%';
+MariaDB> FLUSH PRIVILEGES;
 ```
 ```
 apt install apache2 php libapache2-mod-php
@@ -47,11 +48,13 @@ cp /var/www/html/phpmyadmin/config.sample.inc.php  /var/www/html/phpmyadmin/conf
 /var/www/html/phpmyadmin/config.inc.php
 ```
 $cfg['blowfish_secret'] = 'CHBj{O6P5]c8LE428ltUqpyp6xaJ2xN5';
+$cfg['TempDir'] = '/var/www/html/phpmyadmin/tmp/';
 ```
 ```
 mysql < /var/www/html/phpmyadmin/sql/create_tables.sql -u root -p
 mkdir /var/www/html/phpmyadmin/tmp
-chmod 777 /var/www/html/phpmyadmin/tmp
+chown -R www-data:www-data /var/www/html/phpmyadmin/tmp
+chmod 700 /var/www/html/phpmyadmin/tmp
 ```
 /etc/apache2/ports.conf
 ```
@@ -59,17 +62,21 @@ Listen 127.0.0.1:81
 ```
 /etc/apache2/sites-available/000-default.conf
 ```
-ServerName 127.0.0.1                         /etc/apache2/conf-available/security.conf
-<VirtualHost *:81>                           ServerTokens Prod
-    ServerAdmin xxx@xxx.net                  ServerSignature Off
-    DocumentRoot /var/www
-    …                                        /etc/php/8.4/apache2/php.ini
-</VirtualHost>                               expose_php = off
-                                             upload_max_filesize = 10M
-a2enmod rewrite ssl                          date.timezone = Asia/Shanghai
+ServerName 127.0.0.1                         /etc/php/8.4/apache2/php.ini
+<VirtualHost *:81>                           expose_php = off
+    ServerAdmin xxx@xxx.net                  upload_max_filesize = 10M
+    DocumentRoot /var/www/html               date.timezone = Asia/Shanghai
+    …                                        post_max_size = 10M
+</VirtualHost>                               max_execution_time = 60
+                                             memory_limit = 256M
+a2enmod rewrite ssl                          
 
 /etc/apache2/apache2.conf                    /etc/nginx/nginx.conf
 AllowOverride All                            server_tokens = off
+
+/etc/apache2/conf-available/security.conf
+ServerTokens Prod
+ServerSignature Off
 ```
 ```
 apt install openjdk-25-jdk tomcat11 libmariadb-java
@@ -84,12 +91,13 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat11/lib/
 /etc/tomcat11/server.xml
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
-<Connector port="8009" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
-<Context path="" docBase="ROOT" debug="0" reloadable="true"/>     #在<Host>节点里面添加
+<Connector port="8009" address="127.0.0.1" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
+<Context path="" docBase="ROOT" reloadable="false"/>     #在<Host>节点里面添加
 ```
 ```
 wget https://packages.microsoft.com/config/debian/13/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
+apt update
 apt install dotnet-sdk-10.0
 ```
 ```
@@ -99,18 +107,18 @@ pip3 install --upgrade pip
 /etc/pip.conf
 ```
 [global]
-trusted-host = mirrors.aliyun.com
-index-url = https://mirrors.aliyun.com/pypi/simple
-extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+trusted-host = mirrors.aliyun.com pypi.tuna.tsinghua.edu.cn
+index-url = https://mirrors.aliyun.com/pypi/simple/
+extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
-/etc/apache2/sites-available/000-default.conf
+/etc/apache2/sites-available/django.conf
 ```
-<VirtualHost *:81>
+<VirtualHost *:82>
     ServerName xxx.net
     WSGIScriptAlias / /var/www/demo/django.wsgi
     <Directory "/var/www/demo">
-        Options FollowSymLinks Indexes
-        AllowOverride all
+        Options FollowSymLinks
+        AllowOverride All
         Require all granted
     </Directory>
 
@@ -123,8 +131,8 @@ extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
         Require all granted
     </Directory>
 
-    ErrorLog "/var/log/apache2/py-error.log"
-    CustomLog "/var/log/apache2/py-access.log" combined
+    ErrorLog "/var/log/apache2/django-error.log"
+    CustomLog "/var/log/apache2/django-access.log" combined
 </VirtualHost>
 ```
 ```
@@ -133,18 +141,22 @@ apt install nginx libapache2-mod-rpaf
 /etc/apache2/mods-enable/rpaf.conf
 ```
 RPAheader X-Forwarded-For
+RPAF_ProxyIPs 127.0.0.1
+RPAF_SetHost On
 ```
 /etc/nginx/proxy_params
 ```
 proxy_set_header            Host $host;
 proxy_set_header            X-Real-IP $remote_addr;
 proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header            X-Forwarded-Proto $scheme;
 client_max_body_size        10m;
 client_body_buffer_size     128k;
 proxy_connect_timeout       30;
 proxy_send_timeout          30;
 proxy_read_timeout          60;
 proxy_buffers               8 128k;
+proxy_http_version          1.1;
 ```
 ```
 apt install certbot
@@ -153,7 +165,7 @@ certbot certonly --webroot -w /var/www/html -d xxx.net -m xxx@live.cn --agree-to
 ```
 certbot renew --dry-run
 crontab -e
-30 2 * * 1 /usr/bin/certbot renew >> /var/log/le-renew.log
+30 2 * * * /usr/bin/certbot renew --quiet >> /var/log/le-renew.log
 ```
 ```
 openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
@@ -166,52 +178,54 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
     upstream java {
         server 127.0.0.1:8080;
     }
+    upstream python {
+        server 127.0.0.1:82;
+    }
     server {
         server_name _;
         return 404;
     }
     server {
         listen 80;
-        server_name www.xxx.net;
-        location / {
-            index index.html;
-        }
+        server_name xxx.net www.xxx.net;
+        return 301 https://$host$request_uri;
     }
     server {
         listen 443 ssl http2;
-        server_name xxx.net;
-
-        ssl_dhparam /etc/ssl/certs/dhparam.pem;
-
-        ssl_session_timeout 1d;
-        ssl_session_cache shared:SSL:10m;
-        ssl_session_tickets off;
-
-        ssl_protocols TLSv1.2 TLSv1.3;
-        ssl_ciphers HIGH:!aNULL:!MD5;
-        ssl_prefer_server_ciphers on;
+        server_name xxx.net www.xxx.net;
 
         ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
         ssl_trusted_certificate /etc/letsencrypt/live/xxx.net/chain.pem;
+        ssl_dhparam /etc/ssl/certs/dhparam.pem;
 
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers HIGH:!aNULL:!MD5;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_timeout 1d;
+        ssl_session_tickets off;
         ssl_stapling on;
         ssl_stapling_verify on;
         resolver 8.8.8.8 8.8.4.4 valid=300s;
         resolver_timeout 30s;
 
-        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
-        add_header X-Frame-Options DENY;
+        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+        add_header X-Frame-Options SAMEORIGIN;
         add_header X-Content-Type-Options nosniff;
 
         location / {
             proxy_pass http://java;
-            proxy_redirect off;
             include proxy_params;
         }
 
         location /phpmyadmin/ {
             proxy_pass http://php;
+            include proxy_params;
+        }
+
+        location /python {
+            proxy_pass http://python;
             include proxy_params;
         }
     }
