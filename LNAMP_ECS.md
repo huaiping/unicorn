@@ -60,7 +60,6 @@ chmod 700 /var/www/html/phpmyadmin/tmp
 /etc/apache2/ports.conf
 ```
 Listen 127.0.0.1:81
-Listen 127.0.0.1:82
 ```
 /etc/apache2/sites-available/000-default.conf
 ```
@@ -71,7 +70,7 @@ ServerName 127.0.0.1                         /etc/php/8.4/apache2/php.ini
     …                                        post_max_size = 20M
 </VirtualHost>                               max_execution_time = 60
                                              memory_limit = 256M
-a2enmod rewrite ssl                          
+a2enmod rewrite ssl                          disable_functions = exec, system
 
 /etc/apache2/apache2.conf                    /etc/nginx/nginx.conf
 AllowOverride All                            server_tokens = off
@@ -119,7 +118,7 @@ index-url = https://mirrors.aliyun.com/pypi/simple/
     WSGIScriptAlias / /var/www/demo/django.wsgi
     <Directory "/var/www/demo">
         Options FollowSymLinks
-        AllowOverride All
+        AllowOverride None
         Require all granted
     </Directory>
 
@@ -224,13 +223,13 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
         }
 
         location /phpmyadmin/ {
-            proxy_pass http://php/;
+            proxy_pass http://php;
             include proxy_params;
             proxy_set_header X-Forwarded-Prefix /phpmyadmin;
         }
 
         location /python/ {
-            proxy_pass http://python/;
+            proxy_pass http://python;
             include proxy_params;
         }
     }
