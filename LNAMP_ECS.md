@@ -113,21 +113,21 @@ index-url = https://mirrors.aliyun.com/pypi/simple/
 ```
 /etc/apache2/sites-available/django.conf
 ```
-<VirtualHost *:82>
+<VirtualHost *:81>
     ServerName xxx.net
-    WSGIScriptAlias / /var/www/demo/django.wsgi
-    <Directory "/var/www/demo">
+    WSGIScriptAlias / /var/www/python/django.wsgi
+    <Directory "/var/www/python">
         Options FollowSymLinks
         AllowOverride None
         Require all granted
     </Directory>
 
-    Alias /robots.txt /var/www/demo/static/robots.txt
-    Alias /static /var/www/demo/static
+    Alias /robots.txt /var/www/python/static/robots.txt
+    Alias /static /var/www/python/static
     <Location "/static">
         SetHandler None
     </Location>
-    <Directory "/var/www/demo/static">
+    <Directory "/var/www/python/static">
         Require all granted
     </Directory>
 
@@ -174,14 +174,14 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 /etc/nginx/sites-available/default
 ```
-    upstream php {
+    upstream apache_backend {
         server 127.0.0.1:81;
     }
-    upstream java {
+    upstream tomcat_backend {
         server 127.0.0.1:8080;
     }
-    upstream python {
-        server 127.0.0.1:82;
+    upstream dotnet_backend {
+        server 127.0.0.1:5000;
     }
     server {
         server_name _;
@@ -189,12 +189,12 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
     }
     server {
         listen 80;
-        server_name xxx.net www.xxx.net;
+        server_name xxx.net;
         return 301 https://$host$request_uri;
     }
     server {
         listen 443 ssl http2;
-        server_name xxx.net www.xxx.net;
+        server_name xxx.net;
 
         ssl_certificate /etc/letsencrypt/live/xxx.net/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/xxx.net/privkey.pem;
@@ -218,7 +218,7 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
         add_header X-XSS-Protection "1; mode=block" always;
 
         location / {
-            proxy_pass http://java;
+            proxy_pass http://apache_backend;
             include proxy_params;
         }
 
@@ -228,8 +228,13 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
             proxy_set_header X-Forwarded-Prefix /phpmyadmin;
         }
 
-        location /python/ {
-            proxy_pass http://python;
+        location /java/ {
+            proxy_pass http://java_backend;
+            include proxy_params;
+        }
+
+        location /dotnet/ {
+            proxy_pass http://dotnet_backend;
             include proxy_params;
         }
     }
