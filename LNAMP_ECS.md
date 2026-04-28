@@ -93,7 +93,7 @@ cp /usr/share/java/mariadb-java-client.jar /usr/share/tomcat11/lib/
 ```
 <Connector port="8080" address="127.0.0.1" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
 <Connector port="8009" address="127.0.0.1" protocol="AJP1.3" redirectPort="8443"/>    #取消注释
-<Context path="" docBase="ROOT" reloadable="false"/>     #在<Host>节点里面添加
+<Context path="" docBase="ROOT" reloadable="false"/>    #在<Host>节点里面添加
 ```
 ```
 wget https://packages.microsoft.com/config/debian/13/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -223,13 +223,13 @@ openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
         }
 
         location /phpmyadmin/ {
-            proxy_pass http://php;
+            proxy_pass http://apache_backend;
             include proxy_params;
             proxy_set_header X-Forwarded-Prefix /phpmyadmin;
         }
 
         location /java/ {
-            proxy_pass http://java_backend;
+            proxy_pass http://tomcat_backend;
             include proxy_params;
         }
 
