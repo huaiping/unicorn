@@ -15,7 +15,7 @@ sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
-Ollama 0.30.7 + OpenClaw 2026.6.5 + qwen3:8b
+Ollama 0.30.8 + OpenClaw 2026.6.6 + qwen3:8b
 ```
 npm config set registry https://registry.npmmirror.com
 curl -fsSL https://ollama.com/install.sh | sh
@@ -118,7 +118,7 @@ npm install -g @vue/cli
 vue --version
 vue create demo
 ```
-Composer 2.9.7 + Laravel 13.6.x
+Composer 2.10.1 + Laravel 13.8.x
 ```
 sudo apt install curl php-cli php-gd php-mbstring php-mysql php-xml
 curl -sS https://getcomposer.org/installer | php
