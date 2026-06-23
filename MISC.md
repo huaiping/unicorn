@@ -15,7 +15,7 @@ sudo apt install wget bash-completion fonts-wqy-microhei
 sudo reboot
 configure中添加sunpinyin
 ```
-Ollama 0.30.8 + OpenClaw 2026.6.6 + qwen3:8b
+Ollama 0.30.10 + OpenClaw 2026.6.9 + qwen3:8b
 ```
 npm config set registry https://registry.npmmirror.com
 curl -fsSL https://ollama.com/install.sh | sh
